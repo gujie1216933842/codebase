@@ -31,11 +31,12 @@ cursor = connect.cursor()
 
 
 # 查询数据
-sql = "SELECT * from jd_mobile WHERE id = '%s' "
-data = (1)
-cursor.execute(sql % data)
-for row in cursor.fetchall():
-    print("Name:%s\tSaving:%.2f" % row)
+sql = "SELECT * from jd_mobile WHERE id = %s "
+# data = (1)
+cursor.execute(sql , 159)
+ret = cursor.fetchall()
+for row in ret:
+    print(row)
 print('共查找出', cursor.rowcount, '条数据')
 #
 # # 删除数据
