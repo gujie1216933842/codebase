@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3bbe9038-4ea0-4e2f-9e36-1ba487a2a708" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pymysql_test.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pymysql_test.py" afterPath="$PROJECT_DIR$/pymysql_test.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,9 +17,17 @@
       <file leaf-file-name="pymysql_test.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pymysql_test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="500">
+              <caret line="66" column="0" lean-forward="true" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+              <folding>
+                <marker date="1521894456559" expanded="true" signature="227:296" ph="INSERT INTO trade... " />
+                <marker date="1521894456559" expanded="true" signature="442:493" ph="UPDATE trade... " />
+                <marker date="1521894456559" expanded="true" signature="632:671" ph="SELECT name,... trade" />
+                <marker date="1521894456559" expanded="true" signature="840:887" ph="DELETE FROM " />
+                <marker date="1521894456559" expanded="true" signature="1027:1096" ph="UPDATE trade... " />
+                <marker date="1521894456559" expanded="true" signature="1110:1179" ph="UPDATE trade... " />
+                <marker date="1521894456559" expanded="true" signature="1193:1262" ph="UPDATE trade... " />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -304,9 +311,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pymysql_test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="500">
+          <caret line="66" column="0" lean-forward="true" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+          <folding>
+            <marker date="1521894456559" expanded="true" signature="227:296" ph="INSERT INTO trade... " />
+            <marker date="1521894456559" expanded="true" signature="442:493" ph="UPDATE trade... " />
+            <marker date="1521894456559" expanded="true" signature="632:671" ph="SELECT name,... trade" />
+            <marker date="1521894456559" expanded="true" signature="840:887" ph="DELETE FROM " />
+            <marker date="1521894456559" expanded="true" signature="1027:1096" ph="UPDATE trade... " />
+            <marker date="1521894456559" expanded="true" signature="1110:1179" ph="UPDATE trade... " />
+            <marker date="1521894456559" expanded="true" signature="1193:1262" ph="UPDATE trade... " />
+          </folding>
         </state>
       </provider>
     </entry>
