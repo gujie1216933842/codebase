@@ -1,51 +1,51 @@
-²é¿´python°æ±¾
+æŸ¥çœ‹pythonç‰ˆæœ¬
 python
 import  django
 django get_version()
 
 
 
-´´½¨Ò»¸öÏîÄ¿(²»ÔÚpython½Å±¾)
-django-admin ÐèÒªÅäÖÃ»·¾³±äÁ¿
+åˆ›å»ºä¸€ä¸ªé¡¹ç›®(ä¸åœ¨pythonè„šæœ¬)
+django-admin éœ€è¦é…ç½®çŽ¯å¢ƒå˜é‡
 django-admin  startproject  mysite
          - mysite
             - mysite
                 - init
-                - wsgi    ¹æÔò,½Ó¿Ú,×ñÑ­wsgi·À·¶
-          - manage.py     ¹ÜÀídjango³ÌÐò
+                - wsgi    è§„åˆ™,æŽ¥å£,éµå¾ªwsgié˜²èŒƒ
+          - manage.py     ç®¡ç†djangoç¨‹åº
                      python manage.py    
-                     python manage.py  startapp  xx     (ÔÚmanage.pyÎÄ¼þÍ¬¼¶ÏÂ´´½¨)
+                     python manage.py  startapp  xx     (åœ¨manage.pyæ–‡ä»¶åŒçº§ä¸‹åˆ›å»º)
                      python manage.py  makemigrations
                      python manage.py  migrate
 
-django´´½¨Ó¦ÓÃÌáÊ¾Ã»ÓÐmysqldbÄ£¿é¶ø±¨´í
-½â¾ö·½·¨:
-ÔÚÏîÄ¿µÄsetting.pyÎÄ¼þÍ·²¿Ìí¼ÓÏÂÃæÁ½¶Ë´úÂë(py2ÖÐµÄmysqldbÏàµ±ÓÚpy3ÖÐµÄpymysql)
+djangoåˆ›å»ºåº”ç”¨æç¤ºæ²¡æœ‰mysqldbæ¨¡å—è€ŒæŠ¥é”™
+è§£å†³æ–¹æ³•:
+åœ¨é¡¹ç›®çš„setting.pyæ–‡ä»¶å¤´éƒ¨æ·»åŠ ä¸‹é¢ä¸¤ç«¯ä»£ç (py2ä¸­çš„mysqldbç›¸å½“äºŽpy3ä¸­çš„pymysql)
 import pymysql
 pymysql.install_as_MySQLdb()
 
-ÔÚsetting.pyÎÄ¼þÖÐinstalled_appsÁÐ±íÖÐÌí¼ÓÅäÖÃ
-Ö´ÐÐÃüÁî  °²×°: python manage.py makemigrations   Éú³ÉÒ»¸öpyÎÄ¼þ
-          Ç¨ÒÆ: python manage.py migrate
+åœ¨setting.pyæ–‡ä»¶ä¸­installed_appsåˆ—è¡¨ä¸­æ·»åŠ é…ç½®
+æ‰§è¡Œå‘½ä»¤  å®‰è£…: python manage.py makemigrations   ç”Ÿæˆä¸€ä¸ªpyæ–‡ä»¶
+          è¿ç§»: python manage.py migrate
 
 
 python manage.py runserver
 
-{%csrf_token%} /*ÎªÁË·ÀÖ¹±íµ¥Ìá½»±¨403´íÎó*/
+{%csrf_token%} /*ä¸ºäº†é˜²æ­¢è¡¨å•æäº¤æŠ¥403é”™è¯¯*/
 
 
-ÓÃpycharmÒ²ÄÜ´´½¨django³ÌÐò    file/new project      
+ç”¨pycharmä¹Ÿèƒ½åˆ›å»ºdjangoç¨‹åº    file/new project      
            
 
-appÎÄ¼þ¼ÐÏÂ×Ô½¨ÎÄ¼þµÄ×÷ÓÃ
-      migreation   Êý¾ÝÐÞ¸Ä±í½á¹¹
-      admin    djangoÎªÎÒÃÇÌá¹©µÄºóÌ¨¹ÜÀí
-      apps     ÅäÖÃµ±Ç°µÄapp
-      models   orm,Ð´Ö¸¶¨µÄÀà  Í¨¹ýÃüÁî¿ÉÒÔ´´½¨Êý¾Ý¿â½á¹¹
-      tests    µ¥Ôª²âÊÔ
-      views    ÒµÎñ´úÂë                      
+appæ–‡ä»¶å¤¹ä¸‹è‡ªå»ºæ–‡ä»¶çš„ä½œç”¨
+      migreation   æ•°æ®ä¿®æ”¹è¡¨ç»“æž„
+      admin    djangoä¸ºæˆ‘ä»¬æä¾›çš„åŽå°ç®¡ç†
+      apps     é…ç½®å½“å‰çš„app
+      models   orm,å†™æŒ‡å®šçš„ç±»  é€šè¿‡å‘½ä»¤å¯ä»¥åˆ›å»ºæ•°æ®åº“ç»“æž„
+      tests    å•å…ƒæµ‹è¯•
+      views    ä¸šåŠ¡ä»£ç                       
 
-Ö÷Ó¦ÓÃÎÄ¼þÏÂÃ»ÓÐview.pyÎÄ¼þ   (Ö÷Ó¦ÓÃÎÄ¼þ¼ÐÃûºÍdjangoÏîÄ¿ÃûÒ»ÖÂ)
+ä¸»åº”ç”¨æ–‡ä»¶ä¸‹æ²¡æœ‰view.pyæ–‡ä»¶   (ä¸»åº”ç”¨æ–‡ä»¶å¤¹åå’Œdjangoé¡¹ç›®åä¸€è‡´)
 
 
                   
@@ -53,47 +53,47 @@ appÎÄ¼þ¼ÐÏÂ×Ô½¨ÎÄ¼þµÄ×÷ÓÃ
     
 
 
-½øÈëmysite(²»ÔÚpython½Å±¾ÄÚ)  
-python  manage.py  runserver  127.0.0.1:8001    (×¢:¶Ë¿ÚºÅ¿É×Ô¼º¶¨Òå)
+è¿›å…¥mysite(ä¸åœ¨pythonè„šæœ¬å†…)  
+python  manage.py  runserver  127.0.0.1:8001    (æ³¨:ç«¯å£å·å¯è‡ªå·±å®šä¹‰)
 
 
-´´½¨ÍêÏîÄ¿Ö®ºó,ÅäÖÃÄ£°åµÄÂ·¾¶,ÅäÖÃ¾²Ì¬Ä¿Â¼
-   ¾²Ì¬ÎÄ¼þ:setting.pyÏÂ
+åˆ›å»ºå®Œé¡¹ç›®ä¹‹åŽ,é…ç½®æ¨¡æ¿çš„è·¯å¾„,é…ç½®é™æ€ç›®å½•
+   é™æ€æ–‡ä»¶:setting.pyä¸‹
                STATICFIFLES_DIRS=(
                      os.path.join(BASE_DIR,'static'),
 )
 
 
-ÔÙÔÚÄ£°åÎÄ¼þÖÐ
+å†åœ¨æ¨¡æ¿æ–‡ä»¶ä¸­
                 <link rel='stylesheet' href='/static/commons.css'>
 
 
 
-csrfÏÈ×¢ÊÍµô     settings.pyÖÐmiddlewareÖÐÕÒµ½
+csrfå…ˆæ³¨é‡ŠæŽ‰     settings.pyä¸­middlewareä¸­æ‰¾åˆ°
 
 
 
-django Ä£°åÓïÑÔÖÐforÑ­»·ºÍif
+django æ¨¡æ¿è¯­è¨€ä¸­forå¾ªçŽ¯å’Œif
 { % for  item in items %}
    {{ item.name }}
    {{ item.age }}
 { % endfor %}
 
-Ìõ¼þÅÐ¶Ï {% if Ìõ¼þ %}{% else %}{% endif %}
+æ¡ä»¶åˆ¤æ–­ {% if æ¡ä»¶ %}{% else %}{% endif %}
 
 
-djangoÇëÇóÉúÃüÖÜÆÚ
-Ä£°åÒ³ÃæÏòºóÌ¨·¢ËÍÇëÇóurlµÄ×Ö·û´®,ºóÌ¨·þÎñÆ÷ÖÐÒÑ¾­´æÔÚµÄ¶ÔÓ¦¹ØÏµ,Ò»¸östr¶ÔÓ¦Ò»¸öº¯Êý,Èç¹ûÆ¥Åä³É¹¦,¾ÍÖ´ÐÐÏàÓ¦µÄ·½·¨,²¢ÇÒÍ¨¹ýopenº¯Êý´ò¿ªhtmlÎÄ¼þ,Èç¹ûÐèÒª´«µÝÉ¶²ÎÊýµÄ¾ÍÐèÒª×Ö·û´®Ìæ»»,È»ºóresponse·µ»ØÒ»¸öhtmlµÄ×Ö·û´®,·µ»Ø¸øÓÃ»§(äÖÈ¾¹ý³Ì)
+djangoè¯·æ±‚ç”Ÿå‘½å‘¨æœŸ
+æ¨¡æ¿é¡µé¢å‘åŽå°å‘é€è¯·æ±‚urlçš„å­—ç¬¦ä¸²,åŽå°æœåŠ¡å™¨ä¸­å·²ç»å­˜åœ¨çš„å¯¹åº”å…³ç³»,ä¸€ä¸ªstrå¯¹åº”ä¸€ä¸ªå‡½æ•°,å¦‚æžœåŒ¹é…æˆåŠŸ,å°±æ‰§è¡Œç›¸åº”çš„æ–¹æ³•,å¹¶ä¸”é€šè¿‡openå‡½æ•°æ‰“å¼€htmlæ–‡ä»¶,å¦‚æžœéœ€è¦ä¼ é€’å•¥å‚æ•°çš„å°±éœ€è¦å­—ç¬¦ä¸²æ›¿æ¢,ç„¶åŽresponseè¿”å›žä¸€ä¸ªhtmlçš„å­—ç¬¦ä¸²,è¿”å›žç»™ç”¨æˆ·(æ¸²æŸ“è¿‡ç¨‹)
 
 mysite
     mysite
-       - ÅäÖÃÎÄ¼þ
+       - é…ç½®æ–‡ä»¶
        - url.py
        - setting.py
     cmdb
        - view.py
        - admin.py
-       - models.py     #Ä£ÐÍ²ã,´´½¨Êý¾Ý¿â±í
+       - models.py     #æ¨¡åž‹å±‚,åˆ›å»ºæ•°æ®åº“è¡¨
    
 
 
@@ -101,56 +101,56 @@ mysite
 
 
 def  func(request):
-    #°üº¬ÇëÇóÊý¾Ý
-     return  HttpResponse('×Ö·û´®')
-     return  render(request ,'index.html',{'':""})  #´ø×Öµä´«²ÎÊý
-     return  render(request ,'index.html')  #²»´ø²ÎÊýÕ¹Ê¾Ä£°å
-     return  redirect('url')    #ÖØ¶¨Ïò,Ìø×ªÆäËûÒ³Ãæ
+    #åŒ…å«è¯·æ±‚æ•°æ®
+     return  HttpResponse('å­—ç¬¦ä¸²')
+     return  render(request ,'index.html',{'':""})  #å¸¦å­—å…¸ä¼ å‚æ•°
+     return  render(request ,'index.html')  #ä¸å¸¦å‚æ•°å±•ç¤ºæ¨¡æ¿
+     return  redirect('url')    #é‡å®šå‘,è·³è½¬å…¶ä»–é¡µé¢
 
 
-views.pyÖÐ»ñÈ¡Ç°¶Ë´«ÈëºóÌ¨µÄÄÚÈÝ
-     request.GET.get('username',None)  ´Ë·½·¨¸ü±£ÏÕ,²»±¨´í,get()ÊÇ×ÖµäÖÐÈ¡Êý¾ÝµÄ·½·¨
+views.pyä¸­èŽ·å–å‰ç«¯ä¼ å…¥åŽå°çš„å†…å®¹
+     request.GET.get('username',None)  æ­¤æ–¹æ³•æ›´ä¿é™©,ä¸æŠ¥é”™,get()æ˜¯å­—å…¸ä¸­å–æ•°æ®çš„æ–¹æ³•
      request.POST['username']
      request.FILES
 
-     #checkboxµÈ¶àÑ¡µÄÄÚÈÝ
+     #checkboxç­‰å¤šé€‰çš„å†…å®¹
      obj = request.POST.getlist()
 
-     #ÉÏ´«ÎÄ¼þ
+     #ä¸Šä¼ æ–‡ä»¶
      obj = open(obj.name , mode = 'wb')
      for  item in obj.chunks():
                f.write(item)
      f.close()
 
 
-FBVºÍCBV
+FBVå’ŒCBV
 fbv:  function base view
     url.py
-        index ->º¯ÊýÃû
+        index ->å‡½æ•°å
     view.py
-        def º¯Êý(request):
+        def å‡½æ•°(request):
              ..... 
 cbv:  class base view
      
       
 
-ÃæÏò¶ÔÏóÖÐ,Èç¹û×ÓÀàÖÐµÄ·½·¨ÃûºÍ¸¸ÀàÖÐµÄ·½·¨ÃûÏàÍ¬,
-Èç¹û²»×ö´¦Àí,Ö»»áÖ´ÐÐ×ÓÀàÖÐµÄ·½·¨,
-Èç¹û¼ÈÏëÖ´ÐÐ×ÓÀàÖÐµÄ·½·¨,Ò²ÏëÖ´ÐÐ¸¸ÀàÖÐµÄ·½·¨,ÐèÒªÐ´
-(ÒÔdispatchÎªÀý)
+é¢å‘å¯¹è±¡ä¸­,å¦‚æžœå­ç±»ä¸­çš„æ–¹æ³•åå’Œçˆ¶ç±»ä¸­çš„æ–¹æ³•åç›¸åŒ,
+å¦‚æžœä¸åšå¤„ç†,åªä¼šæ‰§è¡Œå­ç±»ä¸­çš„æ–¹æ³•,
+å¦‚æžœæ—¢æƒ³æ‰§è¡Œå­ç±»ä¸­çš„æ–¹æ³•,ä¹Ÿæƒ³æ‰§è¡Œçˆ¶ç±»ä¸­çš„æ–¹æ³•,éœ€è¦å†™
+(ä»¥dispatchä¸ºä¾‹)
 super(Home,self).dispatch(.......)
 
 
 
 
-  Ä£¿é:ÓÃÀ´´ÓÂß¼­ÉÏ×éÖ¯python´úÂë ,±¾ÖÊÉÏÊÇÒÔpy½áÎ²µÄÎÄ¼þ
-  °ü: ±¾ÖÊ¾ÍÊÇÒ»¸öÎÄ¼þ¼Ð,Ä¿Â¼(Çø±ð¾ÍÊÇ±ØÐë´øÓÐÒ»¸ö__init__.pyÎÄ¼þ) 
-      °üÊÇÓÃÀ´´ÓÂß¼­ÉÏ×éÖ¯Ä£¿éµÄ,ÀïÃæ´æ·ÅµÄÒ»¶ÑpythonÎÄ¼þ
-      µ¼Èë°ü±¾ÖÊ¾ÍÊÇÖ´ÐÐ°üÏÂµÄ__init__.pyÎÄ¼þ 
-  µ¼Èë·½·¨:  
+  æ¨¡å—:ç”¨æ¥ä»Žé€»è¾‘ä¸Šç»„ç»‡pythonä»£ç  ,æœ¬è´¨ä¸Šæ˜¯ä»¥pyç»“å°¾çš„æ–‡ä»¶
+  åŒ…: æœ¬è´¨å°±æ˜¯ä¸€ä¸ªæ–‡ä»¶å¤¹,ç›®å½•(åŒºåˆ«å°±æ˜¯å¿…é¡»å¸¦æœ‰ä¸€ä¸ª__init__.pyæ–‡ä»¶) 
+      åŒ…æ˜¯ç”¨æ¥ä»Žé€»è¾‘ä¸Šç»„ç»‡æ¨¡å—çš„,é‡Œé¢å­˜æ”¾çš„ä¸€å †pythonæ–‡ä»¶
+      å¯¼å…¥åŒ…æœ¬è´¨å°±æ˜¯æ‰§è¡ŒåŒ…ä¸‹çš„__init__.pyæ–‡ä»¶ 
+  å¯¼å…¥æ–¹æ³•:  
      import  module1_name  ,module2_name
 
-  import±¾ÖÊ:
+  importæœ¬è´¨:
 
 
 
@@ -158,96 +158,96 @@ super(Home,self).dispatch(.......)
 
 
 
-URLError:(²úÉúµÄÔ­Òò)
-1:Á¬²»ÉÏ·þÎñÆ÷
-2:Ô¶³ÌµÄurl²»´æÔÚ
-3:¼ÓÈë±¾µØÃ»ÍøÂç
-4:¼ÙÈç´Ù·¢×ÓÀàHTTPError
+URLError:(äº§ç”Ÿçš„åŽŸå› )
+1:è¿žä¸ä¸ŠæœåŠ¡å™¨
+2:è¿œç¨‹çš„urlä¸å­˜åœ¨
+3:åŠ å…¥æœ¬åœ°æ²¡ç½‘ç»œ
+4:å‡å¦‚ä¿ƒå‘å­ç±»HTTPError
 
 
-±íµ¥Ìá½»ÍøÒ³http://www.iqianyue.com/mypost/
+è¡¨å•æäº¤ç½‘é¡µhttp://www.iqianyue.com/mypost/
 
 
-scrapy¿ò¼ÜÓÐÁ½ÖÖÃüÁî
-È«¾ÖÃüÁîºÍÏîÄ¿ÃüÁî    ÏîÄ¿ÀïÃæ×ÔÈ»Ò²¿ÉÒÔÊ¹ÓÃÈ«¾ÖÃüÁî
-Óöµ½²»¶®µÄÃüÁî   scrapy  ÃüÁî  -h   ÏÔÊ¾¸ÃÃüÁîµÄÊ¹ÓÃ·½Ê½
-shellÃüÁî½øÈëscrapyµÄÃüÁîÖÕ¶Ë
-view ÏÂÔØÄ³¸öÍøÒ³,²¢ÇÒÓÃä¯ÀÀÆ÷²é¿´
+scrapyæ¡†æž¶æœ‰ä¸¤ç§å‘½ä»¤
+å…¨å±€å‘½ä»¤å’Œé¡¹ç›®å‘½ä»¤    é¡¹ç›®é‡Œé¢è‡ªç„¶ä¹Ÿå¯ä»¥ä½¿ç”¨å…¨å±€å‘½ä»¤
+é‡åˆ°ä¸æ‡‚çš„å‘½ä»¤   scrapy  å‘½ä»¤  -h   æ˜¾ç¤ºè¯¥å‘½ä»¤çš„ä½¿ç”¨æ–¹å¼
+shellå‘½ä»¤è¿›å…¥scrapyçš„å‘½ä»¤ç»ˆç«¯
+view ä¸‹è½½æŸä¸ªç½‘é¡µ,å¹¶ä¸”ç”¨æµè§ˆå™¨æŸ¥çœ‹
      
 
 
 
 
-scrapy startproject  first  ´´½¨ÏîÄ¿
+scrapy startproject  first  åˆ›å»ºé¡¹ç›®
 
 
-ÐÂ½¨ÅÀ³æÎÄ¼þ
+æ–°å»ºçˆ¬è™«æ–‡ä»¶
 
 
-ÕýÔò±í´ïÊ½
-xpath±í´ïÊ½    ÔËÐÐËÙ¶È±ÈÕýÔò±í´ïÊ½Òª¿ì,»ùÓÚhtml±êÇ©
+æ­£åˆ™è¡¨è¾¾å¼
+xpathè¡¨è¾¾å¼    è¿è¡Œé€Ÿåº¦æ¯”æ­£åˆ™è¡¨è¾¾å¼è¦å¿«,åŸºäºŽhtmlæ ‡ç­¾
 
 
 
-½øÈëÅÀ³æÏîÄ¿
-   item.py       Ö÷ÒªÉèÖÃÅÀÈ¡µÄÄ¿±ê
-   piplines.py   Ö÷ÒªÓÃÀ´ºóÐø´¦Àí
-   settings.py   Ö÷ÒªÓÃÀ´ÉèÖÃ¶ÔÓ¦µÄÅäÖÃ
- spidersÎÄ¼þ¼ÐÏÂÐ´ÅÀ³æÎÄ¼þ
-   ¼ÙÉèspider.py  
+è¿›å…¥çˆ¬è™«é¡¹ç›®
+   item.py       ä¸»è¦è®¾ç½®çˆ¬å–çš„ç›®æ ‡
+   piplines.py   ä¸»è¦ç”¨æ¥åŽç»­å¤„ç†
+   settings.py   ä¸»è¦ç”¨æ¥è®¾ç½®å¯¹åº”çš„é…ç½®
+ spidersæ–‡ä»¶å¤¹ä¸‹å†™çˆ¬è™«æ–‡ä»¶
+   å‡è®¾spider.py  
 
- ÔÚÅÀ³æÎÄ¼þ¼ÐÔËÐÐÅÀ³æ
-    scrapy  crawl  pacong(ÅÀ³æÃû)  --nolog   (²»ÐèÒªÈÕÖ¾)
-
-
- ×Ô¶¯ÅÀ³æÊµÏÖµÄÁ½ÖÖË¼Â·
-   1.Í¨¹ýforÑ­»·Ò»Ö±ÅÀÏÂÈ¥
-   2.³õÊ¼ÍøÖ·->»ñµÃ³õÊ¼ÍøÖ·ÖÐµÄËùÓÐµÄÁ¬½Ó->ÒÀ´ÎµÄÈ¥ÅÀËùÓÐµÄÁ¬½Ó->ÒÀ´ÎÅÀÍøÒ³ÖÐµÄËùÓÐµÄÁ´½Ó  (ËÑË÷ÒýÇæµÄÅÀ³æÍ¨³£ÒÔÕâÖÖ·½Ê½)   
-
- ÏîÄ¿ÏÂ´´½¨Ò»¸öÆÕÍ¨ÅÀ³æÎÄ¼þ
-    scrapy  genspider  -t basic qiushibaike  qiushibaike.com     (ÒÔôÜÊÂ°Ù¿ÆÍøÕ¾ÎªÀý)
+ åœ¨çˆ¬è™«æ–‡ä»¶å¤¹è¿è¡Œçˆ¬è™«
+    scrapy  crawl  pacong(çˆ¬è™«å)  --nolog   (ä¸éœ€è¦æ—¥å¿—)
 
 
- ´´½¨Ò»¸ö×Ô¶¯ÅÀ³æ  
-    ÐÂ½¨ÅÀ³æÏîÄ¿     scrapy  startproject  qsauto
-    ´´½¨ÅÀ³æÎÄ¼þ  (ÏÈ²é¿´ÓÐÄÄÐ©Ä£°å)   scrapy  genspider -l
+ è‡ªåŠ¨çˆ¬è™«å®žçŽ°çš„ä¸¤ç§æ€è·¯
+   1.é€šè¿‡forå¾ªçŽ¯ä¸€ç›´çˆ¬ä¸‹åŽ»
+   2.åˆå§‹ç½‘å€->èŽ·å¾—åˆå§‹ç½‘å€ä¸­çš„æ‰€æœ‰çš„è¿žæŽ¥->ä¾æ¬¡çš„åŽ»çˆ¬æ‰€æœ‰çš„è¿žæŽ¥->ä¾æ¬¡çˆ¬ç½‘é¡µä¸­çš„æ‰€æœ‰çš„é“¾æŽ¥  (æœç´¢å¼•æ“Žçš„çˆ¬è™«é€šå¸¸ä»¥è¿™ç§æ–¹å¼)   
+
+ é¡¹ç›®ä¸‹åˆ›å»ºä¸€ä¸ªæ™®é€šçˆ¬è™«æ–‡ä»¶
+    scrapy  genspider  -t basic qiushibaike  qiushibaike.com     (ä»¥ç³—äº‹ç™¾ç§‘ç½‘ç«™ä¸ºä¾‹)
 
 
- ×Ô¶¯Ä£ÄâµÇÂ¼ÅÀ³æ(ÒÔ¶¹°êÎªÀý)
+ åˆ›å»ºä¸€ä¸ªè‡ªåŠ¨çˆ¬è™«  
+    æ–°å»ºçˆ¬è™«é¡¹ç›®     scrapy  startproject  qsauto
+    åˆ›å»ºçˆ¬è™«æ–‡ä»¶  (å…ˆæŸ¥çœ‹æœ‰å“ªäº›æ¨¡æ¿)   scrapy  genspider -l
+
+
+ è‡ªåŠ¨æ¨¡æ‹Ÿç™»å½•çˆ¬è™«(ä»¥è±†ç“£ä¸ºä¾‹)
   1. scrapy startproject douban
-  2. ½øÈëÏîÄ¿ÎÄ¼þ¼Ð  cd douban  ´´½¨ÅÀ³æÎÄ¼þ
+  2. è¿›å…¥é¡¹ç›®æ–‡ä»¶å¤¹  cd douban  åˆ›å»ºçˆ¬è™«æ–‡ä»¶
      scrapy  genspider -t  basic  db  douban.com 
-  3. È¥±àÐ´ÅÀ³æÎÄ¼þ½Å±¾
-  4.ÔËÐÐÅÀ³æ   scrapy  crawl  db  (ÅÀ³æ½Å±¾ÃûÎªdb)
+  3. åŽ»ç¼–å†™çˆ¬è™«æ–‡ä»¶è„šæœ¬
+  4.è¿è¡Œçˆ¬è™«   scrapy  crawl  db  (çˆ¬è™«è„šæœ¬åä¸ºdb)
 
 
-  ÑéÖ¤ÂëµÄ´¦Àí·½Ê½ÓÐ
-     1.Í¼Æ¬Ê¶±ð
-     2.Í¨¹ý´òÂë½Ó¿Ú
-     3.²ÉÓÃ°ë×Ô¶¯µÄ·½Ê½:¼ÙÈç·¢ÏÖÑéÖ¤Âë,°ÑÑéÖ¤ÂëµÄÍ¼Æ¬ÏÂÔØµ½±¾µØ,È»ºóÔÙÊÖ¶¯ÊäÈë ,ÐèÒªÅäºÏÊ¹ÓÃurllibÄ£¿é
+  éªŒè¯ç çš„å¤„ç†æ–¹å¼æœ‰
+     1.å›¾ç‰‡è¯†åˆ«
+     2.é€šè¿‡æ‰“ç æŽ¥å£
+     3.é‡‡ç”¨åŠè‡ªåŠ¨çš„æ–¹å¼:å‡å¦‚å‘çŽ°éªŒè¯ç ,æŠŠéªŒè¯ç çš„å›¾ç‰‡ä¸‹è½½åˆ°æœ¬åœ°,ç„¶åŽå†æ‰‹åŠ¨è¾“å…¥ ,éœ€è¦é…åˆä½¿ç”¨urllibæ¨¡å—
 
- pip install scrapy==1.1.0rc3   scrapy ³£ÓÃ°æ±¾
+ pip install scrapy==1.1.0rc3   scrapy å¸¸ç”¨ç‰ˆæœ¬
 
 
- setting.pyÎÄ¼þÖÐ¼ÓÈë´úÂë
+ setting.pyæ–‡ä»¶ä¸­åŠ å…¥ä»£ç 
  USER_AGENT = 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'
 
 
 
- ·Ö²¼Ê½ÅÀ³æµÄ¹¹¼þË¼Â·:
-   ÓÃµ½Èý¸öÄ£¿é: scrapy   scrapy-redis   redis
-   ×¢:ËäÈ»redis¹Ù·½Ëµ·¨²»Ö§³Öwindows,µ«ÊÇÔÚgithubÉÏ»¹ÊÇÓÐ¸Ä¹ýµÄwindows°æ±¾
+ åˆ†å¸ƒå¼çˆ¬è™«çš„æž„ä»¶æ€è·¯:
+   ç”¨åˆ°ä¸‰ä¸ªæ¨¡å—: scrapy   scrapy-redis   redis
+   æ³¨:è™½ç„¶rediså®˜æ–¹è¯´æ³•ä¸æ”¯æŒwindows,ä½†æ˜¯åœ¨githubä¸Šè¿˜æ˜¯æœ‰æ”¹è¿‡çš„windowsç‰ˆæœ¬
 
 
 
 socket
-·þÎñ¶Ë:
+æœåŠ¡ç«¯:
    1.server = socket.socket(AF.INET,sock.SOCK_SREAM)
            AF.INET      IPV4
            AF.INET6  
    2.server.bind(localhost,9999)
    3.server.listen()
-   4.conn,addr = server.accept()    ¿ªÊ¼×èÈû
+   4.conn,addr = server.accept()    å¼€å§‹é˜»å¡ž
    5   while  true:
 
 
@@ -255,14 +255,14 @@ socket
 
 
 
- socket´«µÝÊý¾Ý,ÏÈ°ÑÊý¾Ý´«µÝµ½»º³åÇø
-   1:Êý¾Ý´óÐ¡²»µ½»º³åÇøµÄÈÝÁ¿´óÐ¡
+ socketä¼ é€’æ•°æ®,å…ˆæŠŠæ•°æ®ä¼ é€’åˆ°ç¼“å†²åŒº
+   1:æ•°æ®å¤§å°ä¸åˆ°ç¼“å†²åŒºçš„å®¹é‡å¤§å°
 
 
 
-   decode() ×ª»¯³Éstr  
-   encode() ×ª»¯³Ébyte
-   a = '°¡'
+   decode() è½¬åŒ–æˆstr  
+   encode() è½¬åŒ–æˆbyte
+   a = 'å•Š'
    len(a)=1   
    len(a.encode()) = 3 
 
@@ -271,18 +271,18 @@ socket
    int()
    str()
 
-socket½ÓÊÕÊý¾ÝÔ­Àí
-    ¿Í»§¶Ë°ÑÃüÁî´«µÝ¸ø·þÎñ¶Ë
-    ·þÎñÆ÷¶Ë¸ù¾Ý½ÓÊÜµÄÃüÁî¸ø¿Í»§¶Ë·µ»ØÊý¾Ý
-       (¼ÙÉè·µ»ØµÄÊý¾ÝÓÐ2000,¶ø¿Í»§¶ËÒ»´Î½ÓÊÕµÄÊý¾Ý1000,ÕâÀïÓÐ»º³åÇøbufferµÄ¸ÅÄî,Ê£ÓàµÄ1000¾Í·ÅÔÚ»º³åÇøÀï.ÏÂÒ»´ÎÔÙ´Î½»»¥µÄÊý¾ÝµÄÊ±ºò,ÓÅÏÈ½»»¥»º³åÇøÀïµÄÊý¾Ý,
-       È»ºóÄãµÄÐÂµÄÊý¾Ý·ÅÈë»º³åÇø,Ö±µ½»º³åÇøÂúÁËÖ®ºó,ÔÚsend³öÈ¥)   
+socketæŽ¥æ”¶æ•°æ®åŽŸç†
+    å®¢æˆ·ç«¯æŠŠå‘½ä»¤ä¼ é€’ç»™æœåŠ¡ç«¯
+    æœåŠ¡å™¨ç«¯æ ¹æ®æŽ¥å—çš„å‘½ä»¤ç»™å®¢æˆ·ç«¯è¿”å›žæ•°æ®
+       (å‡è®¾è¿”å›žçš„æ•°æ®æœ‰2000,è€Œå®¢æˆ·ç«¯ä¸€æ¬¡æŽ¥æ”¶çš„æ•°æ®1000,è¿™é‡Œæœ‰ç¼“å†²åŒºbufferçš„æ¦‚å¿µ,å‰©ä½™çš„1000å°±æ”¾åœ¨ç¼“å†²åŒºé‡Œ.ä¸‹ä¸€æ¬¡å†æ¬¡äº¤äº’çš„æ•°æ®çš„æ—¶å€™,ä¼˜å…ˆäº¤äº’ç¼“å†²åŒºé‡Œçš„æ•°æ®,
+       ç„¶åŽä½ çš„æ–°çš„æ•°æ®æ”¾å…¥ç¼“å†²åŒº,ç›´åˆ°ç¼“å†²åŒºæ»¡äº†ä¹‹åŽ,åœ¨sendå‡ºåŽ»)   
 
-    ½â¾öÎÊÌâµÄ·½·¨:·þÎñ¶Ë¸ø¿Í»§¶Ë·¢Êý¾ÝÖ®Ç°,ÏÈ¼ÆËãÒ»ÏÂÊý¾Ý´óÐ¡,°ÑÊý¾Ý´óÐ¡Í¬Ê±·¢¸ø¿Í»§¶Ë
-                    Ñ­»··¢ËÍ  
+    è§£å†³é—®é¢˜çš„æ–¹æ³•:æœåŠ¡ç«¯ç»™å®¢æˆ·ç«¯å‘æ•°æ®ä¹‹å‰,å…ˆè®¡ç®—ä¸€ä¸‹æ•°æ®å¤§å°,æŠŠæ•°æ®å¤§å°åŒæ—¶å‘ç»™å®¢æˆ·ç«¯
+                    å¾ªçŽ¯å‘é€  
 
 
- linux»·¾³ÏÂÕ³°ü(python2.7ÔÚwindowsÉÏÒ²»á´æÔÚÕâÑùµÄÇé¿ö,python3Èç¹û²âÊÔ´ÎÊýºÜ¶à,Ò²»á³öÏÖÕâÑùµÄÎÊÌâ) 
-          »º³åÇø»á°ÑÁ½´Îsend²Ù×÷µ±³ÉÒ»´Î·¢¸ø¿Í»§¶Ë,µ¼ÖÂÊý¾Ýð¤ÔÚÒ»Æð                     
+ linuxçŽ¯å¢ƒä¸‹ç²˜åŒ…(python2.7åœ¨windowsä¸Šä¹Ÿä¼šå­˜åœ¨è¿™æ ·çš„æƒ…å†µ,python3å¦‚æžœæµ‹è¯•æ¬¡æ•°å¾ˆå¤š,ä¹Ÿä¼šå‡ºçŽ°è¿™æ ·çš„é—®é¢˜) 
+          ç¼“å†²åŒºä¼šæŠŠä¸¤æ¬¡sendæ“ä½œå½“æˆä¸€æ¬¡å‘ç»™å®¢æˆ·ç«¯,å¯¼è‡´æ•°æ®é»åœ¨ä¸€èµ·                     
              
 
 
@@ -294,302 +294,302 @@ socket½ÓÊÕÊý¾ÝÔ­Àí
 
 
 
-ÕýÔòÆ¥Åä  ÈÎÒâÖµ  (.+?)
+æ­£åˆ™åŒ¹é…  ä»»æ„å€¼  (.+?)
 
 
 
 
 
-Ïß³Ì      ²Ù×÷ÏµÍ³¶ÔÓ²¼þ²Ù×÷µÄÒ»¶ÑÖ¸ÁîµÄ¼¯ºÏ,ÊÇ×îÏÈµÄµ÷¶Èµ¥Î»
-          Ïß³Ì±»°üº¬ÔÚ½ø³ÌÖÐ 
+çº¿ç¨‹      æ“ä½œç³»ç»Ÿå¯¹ç¡¬ä»¶æ“ä½œçš„ä¸€å †æŒ‡ä»¤çš„é›†åˆ,æ˜¯æœ€å…ˆçš„è°ƒåº¦å•ä½
+          çº¿ç¨‹è¢«åŒ…å«åœ¨è¿›ç¨‹ä¸­ 
           
 
-½ø³Ì      qqÐèÒªÒÔÒ»¸öÕûÌåµÄÐÎÊ½±©Â¶¸ø²Ù×÷ÏµÍ³¹ÜÀí,ÀïÃæ°üº¬¶Ô¸÷ÖÖ
-          ×ÊÔ´(ÄÚ´æ,Íø¿¨,Éù¿¨,cpu)µÄµ÷ÓÃ,ÄÚ´æµÄ¹ÜÀí,ÍøÂç½Ó¿ÚµÄµ÷ÓÃµÈ
-          ¶Ô¸÷ÖÖ×ÊÔ´¹ÜÀíµÄ¼¯ºÏ 
-          ½ø³ÌÒª²Ù×÷cpu½øÐÐÔËËã,±ØÐëÒª´´½¨Ò»¸ö½ø³Ì  
-          ½ø³ÌÖÁÉÙ°üº¬Ò»¸öÏß³Ì  
+è¿›ç¨‹      qqéœ€è¦ä»¥ä¸€ä¸ªæ•´ä½“çš„å½¢å¼æš´éœ²ç»™æ“ä½œç³»ç»Ÿç®¡ç†,é‡Œé¢åŒ…å«å¯¹å„ç§
+          èµ„æº(å†…å­˜,ç½‘å¡,å£°å¡,cpu)çš„è°ƒç”¨,å†…å­˜çš„ç®¡ç†,ç½‘ç»œæŽ¥å£çš„è°ƒç”¨ç­‰
+          å¯¹å„ç§èµ„æºç®¡ç†çš„é›†åˆ 
+          è¿›ç¨‹è¦æ“ä½œcpuè¿›è¡Œè¿ç®—,å¿…é¡»è¦åˆ›å»ºä¸€ä¸ªè¿›ç¨‹  
+          è¿›ç¨‹è‡³å°‘åŒ…å«ä¸€ä¸ªçº¿ç¨‹  
 
-Çø±ð:Ïß³Ì¹²ÏíÄÚ´æ¿Õ¼ä,½ø³ÌÊÇ¶ÀÁ¢µÄ(qq²»ÄÜ·ÃÎÊword)
-     Í¬Ò»¸ö½ø³ÌµÄÏß³ÌÖ®¼ä¿ÉÒÔÖ±½Ó½»Á÷,Á½¸ö½ø³ÌÏòÍ¨ÐÅ,±ØÐëÓÐÒ»¸öÖÐ¼ä½ø³Ì×ö´úÀí   
-     ´´½¨Ïß³ÌºÜ¼òµ¥,´´½¨ÐÂ½ø³ÌÐèÒª¶ÔÆä¸¸½ø³Ì½øÐÐ¿ËÂ¡
-     Ò»¸öÏß³Ì¿ÉÒÔ¿ØÖÆ²Ù×÷Í¬Ò»¸ö½ø³ÌÀïµÄÆäËûÏß³Ì,µ«ÊÇ½ø³ÌÖ»ÄÜ²Ù×÷×Ó½ø³Ì
-
-
+åŒºåˆ«:çº¿ç¨‹å…±äº«å†…å­˜ç©ºé—´,è¿›ç¨‹æ˜¯ç‹¬ç«‹çš„(qqä¸èƒ½è®¿é—®word)
+     åŒä¸€ä¸ªè¿›ç¨‹çš„çº¿ç¨‹ä¹‹é—´å¯ä»¥ç›´æŽ¥äº¤æµ,ä¸¤ä¸ªè¿›ç¨‹å‘é€šä¿¡,å¿…é¡»æœ‰ä¸€ä¸ªä¸­é—´è¿›ç¨‹åšä»£ç†   
+     åˆ›å»ºçº¿ç¨‹å¾ˆç®€å•,åˆ›å»ºæ–°è¿›ç¨‹éœ€è¦å¯¹å…¶çˆ¶è¿›ç¨‹è¿›è¡Œå…‹éš†
+     ä¸€ä¸ªçº¿ç¨‹å¯ä»¥æŽ§åˆ¶æ“ä½œåŒä¸€ä¸ªè¿›ç¨‹é‡Œçš„å…¶ä»–çº¿ç¨‹,ä½†æ˜¯è¿›ç¨‹åªèƒ½æ“ä½œå­è¿›ç¨‹
 
 
 
-     ÎÊÌâ:Æô¶¯Ò»¸ö½ø³Ì¿ì,»¹ÊÇÆô¶¯Ò»¸öÏß³Ì¿ì?   Ïß³Ì¿ì
-          ÏÖÓÐÏß³Ì,ÔÙÓÐ½ø³Ì
-          Æô¶¯½ø³Ì:Ïàµ±ÓÚÐÞÒ»¼äÎÝ×Ó
-          Æô¶¯Ïß³Ì:Ïàµ±ÓÚÀ­Ò»¸öÈË½øÀ´      
-
-pythonµÄÏß³ÌÆäÊµµ÷ÓÃcÓïÑÔµÄÔ­ÉúÏß³Ì
-python sleepµÄÊ±ºòÊÇ²»Õ¼ÓÃcpuµÄ
 
 
-µÝ¹éËø:Ò»¸ö´óËøÀïÃæ»¹Òª°üº¬×ÓËø
+     é—®é¢˜:å¯åŠ¨ä¸€ä¸ªè¿›ç¨‹å¿«,è¿˜æ˜¯å¯åŠ¨ä¸€ä¸ªçº¿ç¨‹å¿«?   çº¿ç¨‹å¿«
+          çŽ°æœ‰çº¿ç¨‹,å†æœ‰è¿›ç¨‹
+          å¯åŠ¨è¿›ç¨‹:ç›¸å½“äºŽä¿®ä¸€é—´å±‹å­
+          å¯åŠ¨çº¿ç¨‹:ç›¸å½“äºŽæ‹‰ä¸€ä¸ªäººè¿›æ¥      
 
-¶ÓÁÐqueue:¶ÓÁÐÊý¾Ý·ÅÄÚ´æÖÐ  Ä¬ÈÏÏÈÈëÏÈ³ö      lifoqueue ºó½øÏÈ³ö
-          ×÷ÓÃ:³ÌÐòµÄ½âñî,Ê¹³ÌÐòÖ®¼äÊµÏÖËÉñîºÏ
-               Ìá¸ß´¦ÀíÐ§ÂÊ
+pythonçš„çº¿ç¨‹å…¶å®žè°ƒç”¨cè¯­è¨€çš„åŽŸç”Ÿçº¿ç¨‹
+python sleepçš„æ—¶å€™æ˜¯ä¸å ç”¨cpuçš„
+
+
+é€’å½’é”:ä¸€ä¸ªå¤§é”é‡Œé¢è¿˜è¦åŒ…å«å­é”
+
+é˜Ÿåˆ—queue:é˜Ÿåˆ—æ•°æ®æ”¾å†…å­˜ä¸­  é»˜è®¤å…ˆå…¥å…ˆå‡º      lifoqueue åŽè¿›å…ˆå‡º
+          ä½œç”¨:ç¨‹åºçš„è§£è€¦,ä½¿ç¨‹åºä¹‹é—´å®žçŽ°æ¾è€¦åˆ
+               æé«˜å¤„ç†æ•ˆçŽ‡
                fifo    first in first out
                lifo    last in  first  out
 
 
-io²Ù×÷²»Õ¼ÓÃcpu(´ÓÓ²ÅÌ¶Á·¢Êý¾Ý,ÖØÍøÂçÉÏ¶Á·¢Êý¾Ý)(socket server)
-¼ÆËãÕ¼ÓÃcpu
+ioæ“ä½œä¸å ç”¨cpu(ä»Žç¡¬ç›˜è¯»å‘æ•°æ®,é‡ç½‘ç»œä¸Šè¯»å‘æ•°æ®)(socket server)
+è®¡ç®—å ç”¨cpu
 
-pythonµÄ¶àÏß³Ì²»ÊÊºÏcpuÃÜ¼¯²Ù×÷ÐÍµÄÈÎÎñ,ÊÊºÏioÃÜ¼¯ÐÍµÄÈÎÎñ
-linuxÉÏÃ¿Ò»¸ö½ø³Ì¶¼ÊÇ¸¸½ø³ÌÆô¶¯µÄ
-
-
-½ø³Ì³Ø:Í¬Ò»Ê±¼äÓÐ¶àÉÙ½ø³ÌÔÚcpuÉÏÔËÐÐ
+pythonçš„å¤šçº¿ç¨‹ä¸é€‚åˆcpuå¯†é›†æ“ä½œåž‹çš„ä»»åŠ¡,é€‚åˆioå¯†é›†åž‹çš„ä»»åŠ¡
+linuxä¸Šæ¯ä¸€ä¸ªè¿›ç¨‹éƒ½æ˜¯çˆ¶è¿›ç¨‹å¯åŠ¨çš„
 
 
-
-if __name__=='__main__':   ÒâË¼ÊÇÈç¹ûÊÇÖ÷¶¯Ö´ÐÐ¸Ã½Å±¾,ÔòÖ´ÐÐifÏÂÃæµÄ´úÂë
-                                 Èç¹ûÊÇ¸Ã½Å±¾×÷ÎªÄ£¿é±»ÆäËû»ù±¾µ÷ÓÃ,ÄÇÃ´ifÏÂÃæµÄ´úÂë¾Í²»Ö´ÐÐÁË
-
-Ð­³Ì:ÓÃ»§Ì¬ÇáÁ¿¼¶µÄÏß³Ì,Î¢Ïß³Ì
-     ÓÃ»§×Ô¼º¿ØÖÆµÄ,cpu¸ü±¾¶¼²»ÖªµÀËûµÄ´æÔÚ
-Ð­³ÌµÄºÃ´¦:  
-    ÎÞÐèÏß³ÌÉÏÏÂÎÄÇÐ»»µÄ¿ªÏú,ËùÒÔ¿ÉÒÔÕâÑùÀí½â,Í¨¹ýÐ­³ÌÊµÏÖµÄ¶à²¢·¢,Æä ÊµÊÇ²»Í¬º¯ÊýÖ®¼äµÄÀ´»ØÇÐ»»
-    ²»Éæ¼°cpuµÄÇÐ»»
-    ÎÞÐè²Ù×÷Ëø(³ÌÐòÔÚ´®ÐÍµÄ×´Ì¬ÏÂÖ´ÐÐµÄ)
-    ¸ß²¢·¢,¸ßÀ©Õ¹ÐÔ,µÍ³É±¾
-
-È±µã:ÎÞ·¨ÀûÓÃ¶àºËµÄ×ÊÔ´,
-
-
-RabbitMQ:ÏûÏ¢¶ÓÁÐ     erlangÓïÑÔ¿ª·¢µÄ
+è¿›ç¨‹æ± :åŒä¸€æ—¶é—´æœ‰å¤šå°‘è¿›ç¨‹åœ¨cpuä¸Šè¿è¡Œ
 
 
 
-redisÔÚlinuxÏµÍ³°²×°Ä¿Â¼ÏÂÈý¸öÎÄ¼þ
-redis.confÀï¿´daemonoize no/yes   ±íÊ¾ÔÚºóÌ¨/Ç°Ì¨Æô¶¯  Ò»°ãÎÒÃÇÐ´yes,Ê¹redis·þÎñÔÚÇ°Ì¨Æô¶¯
+if __name__=='__main__':   æ„æ€æ˜¯å¦‚æžœæ˜¯ä¸»åŠ¨æ‰§è¡Œè¯¥è„šæœ¬,åˆ™æ‰§è¡Œifä¸‹é¢çš„ä»£ç 
+                                 å¦‚æžœæ˜¯è¯¥è„šæœ¬ä½œä¸ºæ¨¡å—è¢«å…¶ä»–åŸºæœ¬è°ƒç”¨,é‚£ä¹ˆifä¸‹é¢çš„ä»£ç å°±ä¸æ‰§è¡Œäº†
+
+åç¨‹:ç”¨æˆ·æ€è½»é‡çº§çš„çº¿ç¨‹,å¾®çº¿ç¨‹
+     ç”¨æˆ·è‡ªå·±æŽ§åˆ¶çš„,cpuæ›´æœ¬éƒ½ä¸çŸ¥é“ä»–çš„å­˜åœ¨
+åç¨‹çš„å¥½å¤„:  
+    æ— éœ€çº¿ç¨‹ä¸Šä¸‹æ–‡åˆ‡æ¢çš„å¼€é”€,æ‰€ä»¥å¯ä»¥è¿™æ ·ç†è§£,é€šè¿‡åç¨‹å®žçŽ°çš„å¤šå¹¶å‘,å…¶ å®žæ˜¯ä¸åŒå‡½æ•°ä¹‹é—´çš„æ¥å›žåˆ‡æ¢
+    ä¸æ¶‰åŠcpuçš„åˆ‡æ¢
+    æ— éœ€æ“ä½œé”(ç¨‹åºåœ¨ä¸²åž‹çš„çŠ¶æ€ä¸‹æ‰§è¡Œçš„)
+    é«˜å¹¶å‘,é«˜æ‰©å±•æ€§,ä½Žæˆæœ¬
+
+ç¼ºç‚¹:æ— æ³•åˆ©ç”¨å¤šæ ¸çš„èµ„æº,
+
+
+RabbitMQ:æ¶ˆæ¯é˜Ÿåˆ—     erlangè¯­è¨€å¼€å‘çš„
+
+
+
+redisåœ¨linuxç³»ç»Ÿå®‰è£…ç›®å½•ä¸‹ä¸‰ä¸ªæ–‡ä»¶
+redis.confé‡Œçœ‹daemonoize no/yes   è¡¨ç¤ºåœ¨åŽå°/å‰å°å¯åŠ¨  ä¸€èˆ¬æˆ‘ä»¬å†™yes,ä½¿redisæœåŠ¡åœ¨å‰å°å¯åŠ¨
                                   ./redis-server redis.conf
-             È»ºóÆô¶¯redis¿Í»§¶Ë  ./redis-cli 
-redisÄ¬ÈÏÓÐ16¸ödb,0~15
+             ç„¶åŽå¯åŠ¨rediså®¢æˆ·ç«¯  ./redis-cli 
+redisé»˜è®¤æœ‰16ä¸ªdb,0~15
 
-keys *   ²é¿´ËùÓÐµÄ¼ü
-del ¼üÃû  É¾³ýredis
-get ¼üÃû  ²é¿´redis
-
-
+keys *   æŸ¥çœ‹æ‰€æœ‰çš„é”®
+del é”®å  åˆ é™¤redis
+get é”®å  æŸ¥çœ‹redis
 
 
 
 
 
-¼¯ºÏÊý¾ÝµÄÒ»¸öÌØµã:ÎÞÐò             
 
 
-±¾»úlinuxÐéÄâ»úÉÏ½øÈëmysql(Ê×ÏÈ¿´mysql·þÎñÓÐÃ»ÓÐÆô¶¯)    ./mysql -uroot -p123 
+é›†åˆæ•°æ®çš„ä¸€ä¸ªç‰¹ç‚¹:æ— åº             
 
-ps -A | grep mysql  ²é¿´mysql·þÎñÊÇ·ñÆô¶¯ÆðÀ´
-mysqlÊÚÈ¨:   grant  all privileges on *.* to 'root'@'%' identified  by  '123';
+
+æœ¬æœºlinuxè™šæ‹Ÿæœºä¸Šè¿›å…¥mysql(é¦–å…ˆçœ‹mysqlæœåŠ¡æœ‰æ²¡æœ‰å¯åŠ¨)    ./mysql -uroot -p123 
+
+ps -A | grep mysql  æŸ¥çœ‹mysqlæœåŠ¡æ˜¯å¦å¯åŠ¨èµ·æ¥
+mysqlæŽˆæƒ:   grant  all privileges on *.* to 'root'@'%' identified  by  '123';
              flush privileges;
-    %:±íÊ¾ÔÊÐíÈÎÒâip¶¼ÄÜÔ¶³Ì·ÃÎÊ,¿ÉÒÔÐ´¾ßÌåµÄip
+    %:è¡¨ç¤ºå…è®¸ä»»æ„ipéƒ½èƒ½è¿œç¨‹è®¿é—®,å¯ä»¥å†™å…·ä½“çš„ip
 
-windowsÉÏµÄnavcatÁ¬½Ó²»ÉÏÐéÄâ»úÉÏµÄmysql
-    GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY '123' WITH GRANT OPTION;   //123Ö¸rootÉèÖÃµÄÃÜÂë
+windowsä¸Šçš„navcatè¿žæŽ¥ä¸ä¸Šè™šæ‹Ÿæœºä¸Šçš„mysql
+    GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY '123' WITH GRANT OPTION;   //123æŒ‡rootè®¾ç½®çš„å¯†ç 
     flush privileges;
-navicat Ô¶³ÌÁ¬½ÓlinuxÉÏµÄmysql·þÎñ
-Á¬½ÓÊôÐÔ  (³£¹æ)Ö÷»úÃû»òip :localhost    (SSH)Ö÷»úÃû»òip:linux·þÎñÆ÷Ãû×Ö 
+navicat è¿œç¨‹è¿žæŽ¥linuxä¸Šçš„mysqlæœåŠ¡
+è¿žæŽ¥å±žæ€§  (å¸¸è§„)ä¸»æœºåæˆ–ip :localhost    (SSH)ä¸»æœºåæˆ–ip:linuxæœåŠ¡å™¨åå­— 
 
 
 
 
-alt+pÉèÖÃxshell×ÖÌå
+alt+pè®¾ç½®xshellå­—ä½“
 
 
 
-ÔÚ±¾µØÐÂ½¨Ò»¸ö·ÖÖ§£º git branch Branch1
-ÇÐ»»µ½ÄãµÄÐÂ·ÖÖ§: git checkout Branch1
-½«ÐÂ·ÖÖ§·¢²¼ÔÚgithubÉÏ£º git push origin Branch1
-ÔÚ±¾µØÉ¾³ýÒ»¸ö·ÖÖ§£º git branch -d Branch1
-ÔÚgithubÔ¶³Ì¶ËÉ¾³ýÒ»¸ö·ÖÖ§£º git push origin :Branch1   (·ÖÖ§ÃûÇ°µÄÃ°ºÅ´ú±íÉ¾³ý)
+åœ¨æœ¬åœ°æ–°å»ºä¸€ä¸ªåˆ†æ”¯ï¼š git branch Branch1
+åˆ‡æ¢åˆ°ä½ çš„æ–°åˆ†æ”¯: git checkout Branch1
+å°†æ–°åˆ†æ”¯å‘å¸ƒåœ¨githubä¸Šï¼š git push origin Branch1
+åœ¨æœ¬åœ°åˆ é™¤ä¸€ä¸ªåˆ†æ”¯ï¼š git branch -d Branch1
+åœ¨githubè¿œç¨‹ç«¯åˆ é™¤ä¸€ä¸ªåˆ†æ”¯ï¼š git push origin :Branch1   (åˆ†æ”¯åå‰çš„å†’å·ä»£è¡¨åˆ é™¤)
 
-//ÐèÒªÊÖ¹¤ÍÆ´úÂë²Å»áÓÃµ½
+//éœ€è¦æ‰‹å·¥æŽ¨ä»£ç æ‰ä¼šç”¨åˆ°
 git remote add origin https://github.com/gujie1216933842/mysite.git
-git push -u origin master        °Ñ±¾µØ´úÂëÍÆµ½Ô¶¶ËÖ÷·ÖÖ§
-//ÐèÒªÊÖ¹¤ÍÆ´úÂë²Å»áÓÃµ½
+git push -u origin master        æŠŠæœ¬åœ°ä»£ç æŽ¨åˆ°è¿œç«¯ä¸»åˆ†æ”¯
+//éœ€è¦æ‰‹å·¥æŽ¨ä»£ç æ‰ä¼šç”¨åˆ°
 
-linuxÉÏ³õÊ¼»¯git
+linuxä¸Šåˆå§‹åŒ–git
 
 
-githubÊ¹ÓÃÁ÷³Ì×Ü½á:
-1.µÇÂ¼githubÍøÕ¾,ÐÂ½¨²Ö¿â(×¢:·ÖÖ§ÔÚ±¾µØ½¨ºÃÖ®ºóÍÆµ½Ô¶³Ì²Ö¿âÈ¥,ÔÚÍøÕ¾ÉÏÎÒÃ»ÓÐÕÒµ½ÐÂ½¨²Ö¿âµÄµØ·½)
-2.ÓÃsourcetree¿ËÂ¡¹¦ÄÜ°ÑÔ¶³Ì²Ö¿âÀ­µ½±¾µØ(windwos),ÍÆ¼öÊ¹ÓÃ(¼ÙÈçÎ´°²×°sourcetree,´ò¿ªgitbash ÊäÈëÃüÁî git clone  https://github.com/gujie1216933842/mysite.git)
-3.ÔÚwindows±¾µØ²Ö¿âÐÂ½¨Ò»¸öÎÄ¼þ,ÍÆµ½Ô¶³Ì²Ö¿â,¼¤»îÖ÷¸Émaster,ÍÆ¼öÊ¹ÓÃsorcetree,ÈçÎ´°²×°sorcetree,gitbashÖÐÊäÈëÃüÁîgit remote add origin https://github.com/gujie1216933842/mysite.git
-4.ÔÚlinux±¾µØÐÂ½¨²Ö¿â,Ö»ÄÜÊ¹ÓÃÃüÁîgit clone  https://github.com/gujie1216933842/mysite.git,¿ËÂ¡Íê³É,¼¤»îÖ÷¸É git checkout master
+githubä½¿ç”¨æµç¨‹æ€»ç»“:
+1.ç™»å½•githubç½‘ç«™,æ–°å»ºä»“åº“(æ³¨:åˆ†æ”¯åœ¨æœ¬åœ°å»ºå¥½ä¹‹åŽæŽ¨åˆ°è¿œç¨‹ä»“åº“åŽ»,åœ¨ç½‘ç«™ä¸Šæˆ‘æ²¡æœ‰æ‰¾åˆ°æ–°å»ºä»“åº“çš„åœ°æ–¹)
+2.ç”¨sourcetreeå…‹éš†åŠŸèƒ½æŠŠè¿œç¨‹ä»“åº“æ‹‰åˆ°æœ¬åœ°(windwos),æŽ¨èä½¿ç”¨(å‡å¦‚æœªå®‰è£…sourcetree,æ‰“å¼€gitbash è¾“å…¥å‘½ä»¤ git clone  https://github.com/gujie1216933842/mysite.git)
+3.åœ¨windowsæœ¬åœ°ä»“åº“æ–°å»ºä¸€ä¸ªæ–‡ä»¶,æŽ¨åˆ°è¿œç¨‹ä»“åº“,æ¿€æ´»ä¸»å¹²master,æŽ¨èä½¿ç”¨sorcetree,å¦‚æœªå®‰è£…sorcetree,gitbashä¸­è¾“å…¥å‘½ä»¤git remote add origin https://github.com/gujie1216933842/mysite.git
+4.åœ¨linuxæœ¬åœ°æ–°å»ºä»“åº“,åªèƒ½ä½¿ç”¨å‘½ä»¤git clone  https://github.com/gujie1216933842/mysite.git,å…‹éš†å®Œæˆ,æ¿€æ´»ä¸»å¹² git checkout master
 5.ok
 
 
 
-×¢:git²»Ê¶±ð¿ÕÎÄ¼þ¼Ð,ÔÝÎª´¦Àí(½â¾ö·½·¨:¿ÉÊÇÔÝÊ±ÔÚ¿ÕÎÄ¼þ¼ÐÏÂÔö¼ÓÒ»¸ö¿ÕÎÄ¼þ)
+æ³¨:gitä¸è¯†åˆ«ç©ºæ–‡ä»¶å¤¹,æš‚ä¸ºå¤„ç†(è§£å†³æ–¹æ³•:å¯æ˜¯æš‚æ—¶åœ¨ç©ºæ–‡ä»¶å¤¹ä¸‹å¢žåŠ ä¸€ä¸ªç©ºæ–‡ä»¶)
 
 git clone  https://github.com/gujie1216933842/mysite.git
-ÇÐ·ÖÖ§  git checkout -b ·ÖÖ§Ãû   
-linuxÉÏ ´ÓÔ¶³ÌgithubÉÏÀ­´úÂë 
+åˆ‡åˆ†æ”¯  git checkout -b åˆ†æ”¯å   
+linuxä¸Š ä»Žè¿œç¨‹githubä¸Šæ‹‰ä»£ç  
 git pull origin python2017
 
 
- git ºöÂÔ Pycharm ÖÐµÄ workspace.xml ÎÄ¼þ
- .gitignore ÖÐÒªÐ´ÉÏ workspace.xml
- Èç¹ûÒÑ¾­²»ÐÒÖ®Ç°commit workspace.xml µÄ»°£¬±ØÐëÖ´ÐÐÒÔÏÂÃüÁî
+ git å¿½ç•¥ Pycharm ä¸­çš„ workspace.xml æ–‡ä»¶
+ .gitignore ä¸­è¦å†™ä¸Š workspace.xml
+ å¦‚æžœå·²ç»ä¸å¹¸ä¹‹å‰commit workspace.xml çš„è¯ï¼Œå¿…é¡»æ‰§è¡Œä»¥ä¸‹å‘½ä»¤
 git rm --cached .idea/workspace.xml
 
 
-git ÔÚ±¾µØÐÂ½¨·ÖÖ§²¢ÍÆËÍµ½Ô¶¶Ë
+git åœ¨æœ¬åœ°æ–°å»ºåˆ†æ”¯å¹¶æŽ¨é€åˆ°è¿œç«¯
 git branch feature/180310_data
 git checkout feature/180310_data
 git push origin feature/180310_data   
-·ÖÒÔÉÏÈý²½
+åˆ†ä»¥ä¸Šä¸‰æ­¥
 
 
 
     
-postman     googleµÄÕËºÅ  gujie1216933842  ÃÜÂë86917307x   ÓÊÏä1216933842@qq.com
+postman     googleçš„è´¦å·  gujie1216933842  å¯†ç 86917307x   é‚®ç®±1216933842@qq.com
 
 
 
   
 
 
-pythonÖÐ==ºÍis
-    ==ÅÐ¶ÏÁ½¸ö±äÁ¿ÊÇ·ñÏàµÈ
-    is  ÅÐ¶ÏÁ½¸ö±äÁ¿ÊÇ·ñÖ¸ÏòÁËÍ¬Ò»¸öÄÚ´æµØÖ·
+pythonä¸­==å’Œis
+    ==åˆ¤æ–­ä¸¤ä¸ªå˜é‡æ˜¯å¦ç›¸ç­‰
+    is  åˆ¤æ–­ä¸¤ä¸ªå˜é‡æ˜¯å¦æŒ‡å‘äº†åŒä¸€ä¸ªå†…å­˜åœ°å€
 
-Éî¿½±´ºÍÇ³¿½±´
-     b = a  ¸³Öµ,±äÁ¿ÒýÓÃ 
-     c = copy.copy(a)       Ç³¿½±´
-     d = copy.deepcopy(a)    Éî¿½±´
+æ·±æ‹·è´å’Œæµ…æ‹·è´
+     b = a  èµ‹å€¼,å˜é‡å¼•ç”¨ 
+     c = copy.copy(a)       æµ…æ‹·è´
+     d = copy.deepcopy(a)    æ·±æ‹·è´
      
-    ÉîÇ³¿½±´µÄÇø±ð: ¼ÙÈçb¶ÔÏóÖÐÈÔÈ»°üº¬¶ÔÏó,ÄÇÃ´Ç³¿½±´ÔÚÀïÃæ¶ÔÏóÄÇÒ»²ã¾Í²»»áÖØÐÂ¿ª±ÙÄÚ´æµØÖ·ÁË
-                    ¶øÉî¿½±´»á¼ÌÐø¿ª±ÙÐÂµÄÄÚ´æµØÖ·
-    Èç  a = [1,2,['a']]
+    æ·±æµ…æ‹·è´çš„åŒºåˆ«: å‡å¦‚bå¯¹è±¡ä¸­ä»ç„¶åŒ…å«å¯¹è±¡,é‚£ä¹ˆæµ…æ‹·è´åœ¨é‡Œé¢å¯¹è±¡é‚£ä¸€å±‚å°±ä¸ä¼šé‡æ–°å¼€è¾Ÿå†…å­˜åœ°å€äº†
+                    è€Œæ·±æ‹·è´ä¼šç»§ç»­å¼€è¾Ÿæ–°çš„å†…å­˜åœ°å€
+    å¦‚  a = [1,2,['a']]
         a.append(3)
         a[3].append('b')
-        ³ÌÐòÖ´ÐÐ½á¹û: b = [1,2,['a','b'],3]
+        ç¨‹åºæ‰§è¡Œç»“æžœ: b = [1,2,['a','b'],3]
                       c = [1,2,['a','b']]
                       d = [1,2,['a']]    
 
 
 func(*args,**kwargs)   
-     *args : ²ÎÊýÒ»Ôª×éµÄÐÎÊ½´«µÝ½øÈ¥
-     **kwargs:²ÎÊýÒÔ×ÖµäµÄÐÎÊ½´«µÝ½øÈ¥
+     *args : å‚æ•°ä¸€å…ƒç»„çš„å½¢å¼ä¼ é€’è¿›åŽ»
+     **kwargs:å‚æ•°ä»¥å­—å…¸çš„å½¢å¼ä¼ é€’è¿›åŽ»
 
 
-´òÓ¡:  print('----test-a=%d,b=%d'%(1,2))   
+æ‰“å°:  print('----test-a=%d,b=%d'%(1,2))   
 
 
-globals()  Õ¹Ê¾pythonµÄËùÓÐÈ«¾Ö±äÁ¿
-locals()   Õ¹Ê¾pythonµÄËùÓÐ¾Ö²¿±äÁ¿
+globals()  å±•ç¤ºpythonçš„æ‰€æœ‰å…¨å±€å˜é‡
+locals()   å±•ç¤ºpythonçš„æ‰€æœ‰å±€éƒ¨å˜é‡
 
-pythonÊÇ¶¯Ì¬ÓïÑÔ,¿ÉÒÔÔÙÔËÐÐµÄ¹ý³ÌÖÐ¸øËýÐÞ¸Ä´úÂë,±ÈÈç½«±äÁ¿ÖØÕûÐÎ¸ÄÎªº¯ÊýÀàÐÍ
-ÒÔcÓïÑÔ/c++Îª´ú±íµÄÊÇ¾²Ì¬ÓïÑÔ,ÌØµãÊÇÔËÐÐÖ®Ç°ÏÈ±àÒë 
-
-
-
-Ê²Ã´ÊÇÉú³ÉÆ÷,µü´úÆ÷,±Õ°ü,×°ÊÎÆ÷
-
-Éú³ÉÆ÷:
-Éú³ÉÆ÷µÄµÚÒ»ÖÓ·½Ê½:  a = (i*2 for i in range(1000))
-Éú³ÉÆ÷µÄµÚ¶þÖÖ·½Ê½:  º¯ÊýÀïÓÐyield,È»ºóÈ¥µ÷ÓÃº¯Êý
+pythonæ˜¯åŠ¨æ€è¯­è¨€,å¯ä»¥å†è¿è¡Œçš„è¿‡ç¨‹ä¸­ç»™å¥¹ä¿®æ”¹ä»£ç ,æ¯”å¦‚å°†å˜é‡é‡æ•´å½¢æ”¹ä¸ºå‡½æ•°ç±»åž‹
+ä»¥cè¯­è¨€/c++ä¸ºä»£è¡¨çš„æ˜¯é™æ€è¯­è¨€,ç‰¹ç‚¹æ˜¯è¿è¡Œä¹‹å‰å…ˆç¼–è¯‘ 
 
 
 
+ä»€ä¹ˆæ˜¯ç”Ÿæˆå™¨,è¿­ä»£å™¨,é—­åŒ…,è£…é¥°å™¨
 
-pythonÀ¬»ø»ØÊÕ»úÖÆ
-   ÒýÓÃ¼ÆÊý
-   ¸ô´ú»ØÊÕ
-   ²é¿´ÒýÓÃ¼ÆÊý
+ç”Ÿæˆå™¨:
+ç”Ÿæˆå™¨çš„ç¬¬ä¸€é’Ÿæ–¹å¼:  a = (i*2 for i in range(1000))
+ç”Ÿæˆå™¨çš„ç¬¬äºŒç§æ–¹å¼:  å‡½æ•°é‡Œæœ‰yield,ç„¶åŽåŽ»è°ƒç”¨å‡½æ•°
 
 
-ÄÚ½¨ÊôÐÔ
+
+
+pythonåžƒåœ¾å›žæ”¶æœºåˆ¶
+   å¼•ç”¨è®¡æ•°
+   éš”ä»£å›žæ”¶
+   æŸ¥çœ‹å¼•ç”¨è®¡æ•°
+
+
+å†…å»ºå±žæ€§
     
 
-¼¯ºÏset   Ò»°ãÇé¿öÏÂºÜÉÙÓÃµ½  
-          ×÷ÓÃ: ÁÐ±íÈ¥ÖØ  ·µ»Ø¼¯ºÏÀàÐÍ
-                ¿ÉÒÔÈ¡½»¼¯,²¢¼¯,²î¼¯ 
+é›†åˆset   ä¸€èˆ¬æƒ…å†µä¸‹å¾ˆå°‘ç”¨åˆ°  
+          ä½œç”¨: åˆ—è¡¨åŽ»é‡  è¿”å›žé›†åˆç±»åž‹
+                å¯ä»¥å–äº¤é›†,å¹¶é›†,å·®é›† 
 
 
-python¿ªÆôÒ»¸ö¼òµ¥µÄ·þÎñÆ÷
+pythonå¼€å¯ä¸€ä¸ªç®€å•çš„æœåŠ¡å™¨
      python -m http.server 8888
 
 
 
-linux¸´ÖÆÎÄ¼þ¼Ð    cp -r 01part/. 02part/
-linuxÎÄ¼þ¼ÐÖØÃüÃû  mv  ab  abc
-½ø³ÌºÍ³ÌÐòµÄÇø±ð:´úÂëÊÇÍ¬Ò»·Ý´úÂë,Êý¾ÝÊÇ¸÷×ÔµÄÊý¾Ý 
+linuxå¤åˆ¶æ–‡ä»¶å¤¹    cp -r 01part/. 02part/
+linuxæ–‡ä»¶å¤¹é‡å‘½å  mv  ab  abc
+è¿›ç¨‹å’Œç¨‹åºçš„åŒºåˆ«:ä»£ç æ˜¯åŒä¸€ä»½ä»£ç ,æ•°æ®æ˜¯å„è‡ªçš„æ•°æ® 
 
 
-´´½¨½ø³ÌµÄ¼¸ÖÖ·½Ê½
- 1. ret = os.fork()  ÖªµÀ´´½¨¹ý³Ì,ÁË½â¾ÍÐÐ
+åˆ›å»ºè¿›ç¨‹çš„å‡ ç§æ–¹å¼
+ 1. ret = os.fork()  çŸ¥é“åˆ›å»ºè¿‡ç¨‹,äº†è§£å°±è¡Œ
  2. p1 = Process(target = xxx)
     p1.start()
-    ×Ó½ø³Ì×öÊÂÇé,Ö÷½ø³ÌÒ²×öÊÂÇé 
+    å­è¿›ç¨‹åšäº‹æƒ…,ä¸»è¿›ç¨‹ä¹Ÿåšäº‹æƒ… 
 
- 3. ½ø³Ì³Ø    #Ö÷½ø³ÌÒ»ÑùÓÃÀ´µÈ´ý,ÕæÕýµÄÈÎÎñ¶¼ÔÚ×Ó½ø³ÌÖÐÖ´ÐÐ    
-              #Ò»°ã¶¼ÊÇ×Ó½ø³ÌÔÚ×öÊÂÇé
-    apply_async  ·Ç×èÈûµÄ·½Ê½
-
-
-½ø³Ì¼äÍ¨ÐÅ--queue
+ 3. è¿›ç¨‹æ±     #ä¸»è¿›ç¨‹ä¸€æ ·ç”¨æ¥ç­‰å¾…,çœŸæ­£çš„ä»»åŠ¡éƒ½åœ¨å­è¿›ç¨‹ä¸­æ‰§è¡Œ    
+              #ä¸€èˆ¬éƒ½æ˜¯å­è¿›ç¨‹åœ¨åšäº‹æƒ…
+    apply_async  éžé˜»å¡žçš„æ–¹å¼
 
 
-
-Ïß³ÌÒ²ÊÇÓÃÀ´ÊµÏÖ¶àÈÎÎñµÄ¹¤¾ß
-Ïß³Ì thread
-
-½ø³ÌÊÇ     µÄµ¥Î»,¶ÔÓ¦µÄÊÇ²Ù×÷ÏµÍ³¶ÔÓ¦µÄÃ¿Ò»¸ö³ÌÐò
-Ïß³ÌÊÇ     µÄµ¥Î»,¶ÔÓ¦µÄÊÇÃ¿Ò»¸ö³ÌÐòÍ¬Ê±Ö´ÐÐ
+è¿›ç¨‹é—´é€šä¿¡--queue
 
 
-Ö»ÒªÒ»¸ö³ÌÐòÏòÏÂÖ´ÐÐ,¾ÍÒ»¶¨»áÓÐÒ»¸öÏß³Ì
 
-Í¬²½,Òì²½Ö¸Á½¸öÏß³Ì°¤¸öÖ´ÐÐ
+çº¿ç¨‹ä¹Ÿæ˜¯ç”¨æ¥å®žçŽ°å¤šä»»åŠ¡çš„å·¥å…·
+çº¿ç¨‹ thread
+
+è¿›ç¨‹æ˜¯     çš„å•ä½,å¯¹åº”çš„æ˜¯æ“ä½œç³»ç»Ÿå¯¹åº”çš„æ¯ä¸€ä¸ªç¨‹åº
+çº¿ç¨‹æ˜¯     çš„å•ä½,å¯¹åº”çš„æ˜¯æ¯ä¸€ä¸ªç¨‹åºåŒæ—¶æ‰§è¡Œ
+
+
+åªè¦ä¸€ä¸ªç¨‹åºå‘ä¸‹æ‰§è¡Œ,å°±ä¸€å®šä¼šæœ‰ä¸€ä¸ªçº¿ç¨‹
+
+åŒæ­¥,å¼‚æ­¥æŒ‡ä¸¤ä¸ªçº¿ç¨‹æŒ¨ä¸ªæ‰§è¡Œ
 
 
 
     
 
-´´½¨Êý¾Ý¿âÒÔÌìÌìÉúÏÊÎªÀý×Ó
+åˆ›å»ºæ•°æ®åº“ä»¥å¤©å¤©ç”Ÿé²œä¸ºä¾‹å­
   create  database  tiantian  charset=utf8
 
 
 
 
-·þÎñÆ÷·µ»ØµÄ×´Ì¬Âë
-  405   ÇëÇó·½Ê½·Ç·¨(Èç·þÎñÆ÷Ö»ÓÐpostµÄÇëÇó»òÕßÊÇÖ»ÓÐgetµÄÇëÇó·½Ê½)
+æœåŠ¡å™¨è¿”å›žçš„çŠ¶æ€ç 
+  405   è¯·æ±‚æ–¹å¼éžæ³•(å¦‚æœåŠ¡å™¨åªæœ‰postçš„è¯·æ±‚æˆ–è€…æ˜¯åªæœ‰getçš„è¯·æ±‚æ–¹å¼)
 
 
 
-tornado»ùÓÚepoll,epoll¹¤×÷Ô­Àí
-  epollÊÇlinux²Ù×÷ÏµÍ³Ìá¹©µÄ,epollµÄÔËÐÐÀë²»¿ª²Ù×÷ÏµÍ³,
-  epollÀ´µÄÊ±ºò,·þÎñÆ÷¿ªÆôsocket,¿Í»§¶ËÀ´ÁËÇëÇóÖ®ºó
-  epollÊ×ÏÈÌá¹©Ò»¸ö¼àÌýµÄsocket¶Ë¿Ú
-  epollµ±³ÉÒ»¸ö¹ÜÀíÔ±,¿´ÄÄÒ»¸ösocket´«µÝÏûÏ¢¹ýÀ´,ÎÒ¾Í²Ù×÷ÄÄÒ»¸ösocket,ÆäËûÎÒ¾Í²»ÓÃ¹ÜÁË
-  (¹ý³ÌÖÐ,²»¶ÏµÄÑ¯ÎÊepoll)
+tornadoåŸºäºŽepoll,epollå·¥ä½œåŽŸç†
+  epollæ˜¯linuxæ“ä½œç³»ç»Ÿæä¾›çš„,epollçš„è¿è¡Œç¦»ä¸å¼€æ“ä½œç³»ç»Ÿ,
+  epollæ¥çš„æ—¶å€™,æœåŠ¡å™¨å¼€å¯socket,å®¢æˆ·ç«¯æ¥äº†è¯·æ±‚ä¹‹åŽ
+  epollé¦–å…ˆæä¾›ä¸€ä¸ªç›‘å¬çš„socketç«¯å£
+  epollå½“æˆä¸€ä¸ªç®¡ç†å‘˜,çœ‹å“ªä¸€ä¸ªsocketä¼ é€’æ¶ˆæ¯è¿‡æ¥,æˆ‘å°±æ“ä½œå“ªä¸€ä¸ªsocket,å…¶ä»–æˆ‘å°±ä¸ç”¨ç®¡äº†
+  (è¿‡ç¨‹ä¸­,ä¸æ–­çš„è¯¢é—®epoll)
 
-tornadoµÄ²Ù×÷±£Ö¤Ã»ÓÐ×èÈûµÄÇé¿ö,Ò»µ©ÓÐ×èÈû,»áµ¼ÖÂÕû¸ötornadoµÄ²Ù×÷¶¼»áÍ£ÏÂÀ´
-tornadoÕû¸ö¹ý³Ì¶¼ÊÇµ¥Ïß³Ì
+tornadoçš„æ“ä½œä¿è¯æ²¡æœ‰é˜»å¡žçš„æƒ…å†µ,ä¸€æ—¦æœ‰é˜»å¡ž,ä¼šå¯¼è‡´æ•´ä¸ªtornadoçš„æ“ä½œéƒ½ä¼šåœä¸‹æ¥
+tornadoæ•´ä¸ªè¿‡ç¨‹éƒ½æ˜¯å•çº¿ç¨‹
 
 
-tornado×Ô¶¨Òå¿ò¼Ü½á¹¹
+tornadoè‡ªå®šä¹‰æ¡†æž¶ç»“æž„
    ihome_tornado
        handlers
        html
-       libs          ÒýÈëµÄ±ðÈËµÄÀà¿â
+       libs          å¼•å…¥çš„åˆ«äººçš„ç±»åº“
        logs
        statics
        utils 
 
 
-tornadoÁ¬½ÓÊý¾Ý¿âµÄÄ£¿étorndbÔÝÊ±»¹Ã»ÓÐÖ§³Öpython3
-ÌåÏÖÔÚtorndb.pyÎÄ¼þÖÐimport  mysqlDB   ÐèÒª¸Ä³É  import pymysql  pymysql.install_as_MySQLdb()
+tornadoè¿žæŽ¥æ•°æ®åº“çš„æ¨¡å—torndbæš‚æ—¶è¿˜æ²¡æœ‰æ”¯æŒpython3
+ä½“çŽ°åœ¨torndb.pyæ–‡ä»¶ä¸­import  mysqlDB   éœ€è¦æ”¹æˆ  import pymysql  pymysql.install_as_MySQLdb()
 
 
 
@@ -599,18 +599,18 @@ tornadoÁ¬½ÓÊý¾Ý¿âµÄÄ£¿étorndbÔÝÊ±»¹Ã»ÓÐÖ§³Öpython3
 
 
 
-ÄÜÓÃhttp´«µÝ²ÎÊýµÄ¼¸ÖÖ·½Ê½
-1.²éÑ¯×Ö·û´®²ÎÊý(Á½ÖÖ&ºÍ/) get
-2.ÇëÇóÌå   post
+èƒ½ç”¨httpä¼ é€’å‚æ•°çš„å‡ ç§æ–¹å¼
+1.æŸ¥è¯¢å­—ç¬¦ä¸²å‚æ•°(ä¸¤ç§&å’Œ/) get
+2.è¯·æ±‚ä½“   post
 3.cookie
-4.ÇëÇóÍ·  header
+4.è¯·æ±‚å¤´  header
 
 
 
 
 
 
-linux²é¿´½ø³Ì
+linuxæŸ¥çœ‹è¿›ç¨‹
   ps aux
     
 
@@ -618,69 +618,54 @@ linux²é¿´½ø³Ì
 
 
 
- pythonÖÐosÄ£¿éºÍsysÄ£¿éÓÐÊ²Ã´Çø±ð
- os:²Ù×÷ÏµÍ³
- sys:Ö¸python½âÎöÆ÷
+ pythonä¸­osæ¨¡å—å’Œsysæ¨¡å—æœ‰ä»€ä¹ˆåŒºåˆ«
+ os:æ“ä½œç³»ç»Ÿ
+ sys:æŒ‡pythonè§£æžå™¨
 
-os.path    ÏµÍ³µÄÂ·¾¶
-sys.path   µ÷ÓÃpython½âÎöÆ÷Ê±µÄÂ·¾¶
-
-
-
-tornadoÏîÄ¿×Ü½á
-×¢²áÒ³ÃæÑéÖ¤ÂëÔÚ·þÎñ¶ËÉú²ú   ÑéÖ¤ÂëÉú³Éºó´æ´¢ÔÚredisÖÐ
-
-×¢²áÒ³ÃæÊ×´Î¼ÓÔØ,ÐèÒª¼ÓÔØÒ»´ÎajaxÇëÇóÑéÖ¤ÂëµÄ½Ó¿Ú
-
-ÏÈÐ´ÑéÖ¤ÂëµÄ½Ó¿Ú´úÂë(python,Ö»Ð´¹ýphp^-^)
-a.Éú³ÉÑéÖ¤Âë(ÎÄ±¾,Í¼Æ¬)
-b.ÑéÖ¤ÂëµÄÎÄ±¾ÐÅÏ¢´æÔÚredisÖÐ(redisÉèÖÃÓÐÐ§ÆÚ)
-c.·µ»ØÍ¼Æ¬(·µ»ØµÄÍ¼Æ¬×ÊÔ´¶þ½øÖÆÊý¾Ý)´«¸øÇ°¶Ë
+os.path    ç³»ç»Ÿçš„è·¯å¾„
+sys.path   è°ƒç”¨pythonè§£æžå™¨æ—¶çš„è·¯å¾„
 
 
 
+tornadoé¡¹ç›®æ€»ç»“
+æ³¨å†Œé¡µé¢éªŒè¯ç åœ¨æœåŠ¡ç«¯ç”Ÿäº§   éªŒè¯ç ç”ŸæˆåŽå­˜å‚¨åœ¨redisä¸­
 
-python3ÖÐµÄÍ¼Ïñ´¦ÀíÄ£¿é  Pillow
+æ³¨å†Œé¡µé¢é¦–æ¬¡åŠ è½½,éœ€è¦åŠ è½½ä¸€æ¬¡ajaxè¯·æ±‚éªŒè¯ç çš„æŽ¥å£
+
+å…ˆå†™éªŒè¯ç çš„æŽ¥å£ä»£ç (python,åªå†™è¿‡php^-^)
+a.ç”ŸæˆéªŒè¯ç (æ–‡æœ¬,å›¾ç‰‡)
+b.éªŒè¯ç çš„æ–‡æœ¬ä¿¡æ¯å­˜åœ¨redisä¸­(redisè®¾ç½®æœ‰æ•ˆæœŸ)
+c.è¿”å›žå›¾ç‰‡(è¿”å›žçš„å›¾ç‰‡èµ„æºäºŒè¿›åˆ¶æ•°æ®)ä¼ ç»™å‰ç«¯
 
 
-tornadoÁ¬½ÓmysqlÓÃµ½µÄÄ£¿étorndb.py    ÓÉÓÚ¼æÈÝÐÔ½Ï²î,Êµ¼ÊÏîÄ¿ÖÐÒª×öÒ»Ð©ÐÞ¸Ä(py3.5)
-line139   itertools.izip(column_names, row) => zip(column_names, row)    (py2Óëpy3µÄÓï·¨²îÒì)
+
+
+python3ä¸­çš„å›¾åƒå¤„ç†æ¨¡å—  Pillow
+
+
+tornadoè¿žæŽ¥mysqlç”¨åˆ°çš„æ¨¡å—torndb.py    ç”±äºŽå…¼å®¹æ€§è¾ƒå·®,å®žé™…é¡¹ç›®ä¸­è¦åšä¸€äº›ä¿®æ”¹(py3.5)
+line139   itertools.izip(column_names, row) => zip(column_names, row)    (py2ä¸Žpy3çš„è¯­æ³•å·®å¼‚)
 line70    connect_timeout=none  => connect_timeout=10
 
 
 
 
 
-python3ÖÐin rangeµÄÏêÏ¸ÓÃ·¨
->>> range(1,5) #´ú±í´Ó1µ½5(²»°üº¬5)
+python3ä¸­in rangeçš„è¯¦ç»†ç”¨æ³•
+>>> range(1,5) #ä»£è¡¨ä»Ž1åˆ°5(ä¸åŒ…å«5)
 [1, 2, 3, 4]
->>> range(1,5,2) #´ú±í´Ó1µ½5£¬¼ä¸ô2(²»°üº¬5)
+>>> range(1,5,2) #ä»£è¡¨ä»Ž1åˆ°5ï¼Œé—´éš”2(ä¸åŒ…å«5)
 [1, 3]
->>> range(5) #´ú±í´Ó0µ½5(²»°üº¬5)
+>>> range(5) #ä»£è¡¨ä»Ž0åˆ°5(ä¸åŒ…å«5)
 [0, 1, 2, 3, 4]  
 
 
-sessionÖÐÈýÖÖÊý¾ÝÐÎÊ½
+sessionä¸­ä¸‰ç§æ•°æ®å½¢å¼
 
 
-python3 ÖÐjsonÄ£¿é dumps()ºÍloads()
-dumps()   °ÑpythonÖÐµÄdict list µÈ¶ÔÏóÐòÁÐ»¯³É×Ö·û´®
-loads()   °Ñjson×Ö·û´®·´ÐòÁÐ»¯³É  python¶ÔÏó(dict)
-
-
-
-
-
-
-
-nginx·´Ïò´úÀíµÄÀí½â:  ¿Í»§¶Ë -----  nginx·þÎñÆ÷ -------   ÒµÎñ·þÎñÆ÷(django/tornado·þÎñÆ÷)
-           ·´Ïò´úÀí:  ÓÃ»§µÄÇëÇóÓÉnginx·þÎñÆ÷×ª·¢¸øÒµÎñ·þÎñÆ÷
-                      ÒµÎñ·þÎñÆ÷´¦ÀíÍê×ª¸ønginx,nginxÔÙ×ª¸ø¿Í»§¶Ë  
-                      ¶ÔÓÚÓÃ»§¶øÑÔ,ÖªµÀµ½nginxµÄipºÍ¶Ë¿Ú,²»ÖªµÀ¾ßÌå´¦ÀíÒµÎñµÄÒµÎñ·þÎñÆ÷
-                      (nginxÖ»ÊÇÒ»¸ö´úÀí»ú¹¹)
-           ¸ºÔØ¾ùºâ:  ¶ÔÒµÎñ·þÎñÆ÷½øÐÐÒýÁ÷
-
-           ÕýÏò´úÀí:  
+python3 ä¸­jsonæ¨¡å— dumps()å’Œloads()
+dumps()   æŠŠpythonä¸­çš„dict list ç­‰å¯¹è±¡åºåˆ—åŒ–æˆå­—ç¬¦ä¸²
+loads()   æŠŠjsonå­—ç¬¦ä¸²ååºåˆ—åŒ–æˆ  pythonå¯¹è±¡(dict)
 
 
 
@@ -688,47 +673,49 @@ nginx·´Ïò´úÀíµÄÀí½â:  ¿Í»§¶Ë -----  nginx·þÎñÆ÷ -------   ÒµÎñ·þÎñÆ÷(django/torn
 
 
 
-python×°ÊÎÆ÷:
+nginxåå‘ä»£ç†çš„ç†è§£:  å®¢æˆ·ç«¯ -----  nginxæœåŠ¡å™¨ -------   ä¸šåŠ¡æœåŠ¡å™¨(django/tornadoæœåŠ¡å™¨)
+           åå‘ä»£ç†:  ç”¨æˆ·çš„è¯·æ±‚ç”±nginxæœåŠ¡å™¨è½¬å‘ç»™ä¸šåŠ¡æœåŠ¡å™¨
+                      ä¸šåŠ¡æœåŠ¡å™¨å¤„ç†å®Œè½¬ç»™nginx,nginxå†è½¬ç»™å®¢æˆ·ç«¯  
+                      å¯¹äºŽç”¨æˆ·è€Œè¨€,çŸ¥é“åˆ°nginxçš„ipå’Œç«¯å£,ä¸çŸ¥é“å…·ä½“å¤„ç†ä¸šåŠ¡çš„ä¸šåŠ¡æœåŠ¡å™¨
+                      (nginxåªæ˜¯ä¸€ä¸ªä»£ç†æœºæž„)
+           è´Ÿè½½å‡è¡¡:  å¯¹ä¸šåŠ¡æœåŠ¡å™¨è¿›è¡Œå¼•æµ
+
+           æ­£å‘ä»£ç†:  
+
+
+
+
+
+
+
+pythonè£…é¥°å™¨:
 
  
 
 
 
 
-linuxÏµÍ³ÏÂ°²×°python3
+linuxç³»ç»Ÿä¸‹å®‰è£…python3
 1.  tar -xvf  Python-3.5.2.tar
 2.  ./configure --prefix=/usr/local/python3
 3.  make && make install
-    ³ö´í: Ignoring ensurepip failure: pip 8.1.1 requires SSL/TLS
-    ½â¾ö: yum install openssl-devel
+    å‡ºé”™: Ignoring ensurepip failure: pip 8.1.1 requires SSL/TLS
+    è§£å†³: yum install openssl-devel
 
-4.  ¸øpyhton3 ÉèÖÃ»·¾³±äÁ¿
+4.  ç»™pyhton3 è®¾ç½®çŽ¯å¢ƒå˜é‡
     vi /etc/profile
-    ÔÚÎÄ¼þ×îÏÂÃæÌí¼Ó   export PATH="$PATH:/NEW_PATH"
+    åœ¨æ–‡ä»¶æœ€ä¸‹é¢æ·»åŠ    export PATH="$PATH:/NEW_PATH"
     
 
 
 
 
-ÆßÅ£ÔÆÊ¹ÓÃ
-https://portal.qiniu.com/bucket/ihome/resourceºóÌ¨µÇÂ¼
-ÄÚÈÝ¹ÜÀí  ²é¿´ÍâÁ´Ä¬ÈÏÓòÃû :   ÉÏ´«Í¼Æ¬Ö®ºó,Ä¬ÈÏµÄÍ¼Æ¬urlÇ°×º
-Ò³ÃæÓÐÊÖ¶¯ÉÏ´«Í¼Æ¬µÄ²Ù×÷,ÆäÊµÏàµ±ÓÚÎ¢ÐÅ´«Í¼ÖÐ×ª,ÆßÅ£Ìá¹©ÁËpythonÉÏ´«Í¼Æ¬µÄ½Ó¿Ú,°Ñpython´úÂë½ÓÈëµ½ihomeÏîÄ¿ÖÐ
+ä¸ƒç‰›äº‘ä½¿ç”¨
+https://portal.qiniu.com/bucket/ihome/resourceåŽå°ç™»å½•
+å†…å®¹ç®¡ç†  æŸ¥çœ‹å¤–é“¾é»˜è®¤åŸŸå :   ä¸Šä¼ å›¾ç‰‡ä¹‹åŽ,é»˜è®¤çš„å›¾ç‰‡urlå‰ç¼€
+é¡µé¢æœ‰æ‰‹åŠ¨ä¸Šä¼ å›¾ç‰‡çš„æ“ä½œ,å…¶å®žç›¸å½“äºŽå¾®ä¿¡ä¼ å›¾ä¸­è½¬,ä¸ƒç‰›æä¾›äº†pythonä¸Šä¼ å›¾ç‰‡çš„æŽ¥å£,æŠŠpythonä»£ç æŽ¥å…¥åˆ°ihomeé¡¹ç›®ä¸­
 
-ÆßÅ£  ¿ª·¢ÕßÖÐÐÄ https://developer.qiniu.com/kodo/sdk/1242/python  ÖÐÓÐÏà¹ØµÄÎÄµµ
-
-
-
-
-
-
-
-tornadbÖÐÃ»ÓÐÌá¹©ÊÂÎñ²Ù×÷
-ÊÂÎñ:Ò»×é²Ù×÷ÒªÃ´¶¼³É¹¦,ÒªÃ´¶¼Ê§°Ü
-
-
-json.loads() °Ñjson¸ñÊ½±ä³ÉpythonÖÐµÄÊý¾Ý¸ñÊ½
-json.dumps() °ÑpythonÖÐµÄÊý¾Ý¸ñÊ½±ä³ÉjsonÊý¾Ý¸ñÊ½ 
+ä¸ƒç‰›  å¼€å‘è€…ä¸­å¿ƒ https://developer.qiniu.com/kodo/sdk/1242/python  ä¸­æœ‰ç›¸å…³çš„æ–‡æ¡£
 
 
 
@@ -736,46 +723,59 @@ json.dumps() °ÑpythonÖÐµÄÊý¾Ý¸ñÊ½±ä³ÉjsonÊý¾Ý¸ñÊ½
 
 
 
-scrapyÖÐµÄÎÄ¼þ
-pipelines.py    ÅÀ³æºóÐø´¦ÀíµÄÎÄ¼þ    ±ÈÈç½²Êý¾ÝÐ´ÈëÊý¾Ý¿âÖÐ(process_item()·½·¨)
-setting.py    pipelinesÄ¬ÈÏÊÇ²»¿ªÆôµÄ    ¿ªÆô,ÐÞ¸ÄÒ»ÏÂÄ¬ÈÏ·½·¨
-ÅÀ³æÎÄ¼þÖÐ (ÒÔjdmobile.pyÎªÀý)  
+tornadbä¸­æ²¡æœ‰æä¾›äº‹åŠ¡æ“ä½œ
+äº‹åŠ¡:ä¸€ç»„æ“ä½œè¦ä¹ˆéƒ½æˆåŠŸ,è¦ä¹ˆéƒ½å¤±è´¥
+
+
+json.loads() æŠŠjsonæ ¼å¼å˜æˆpythonä¸­çš„æ•°æ®æ ¼å¼
+json.dumps() æŠŠpythonä¸­çš„æ•°æ®æ ¼å¼å˜æˆjsonæ•°æ®æ ¼å¼ 
+
+
+
+
+
+
+
+scrapyä¸­çš„æ–‡ä»¶
+pipelines.py    çˆ¬è™«åŽç»­å¤„ç†çš„æ–‡ä»¶    æ¯”å¦‚è®²æ•°æ®å†™å…¥æ•°æ®åº“ä¸­(process_item()æ–¹æ³•)
+setting.py    pipelinesé»˜è®¤æ˜¯ä¸å¼€å¯çš„    å¼€å¯,ä¿®æ”¹ä¸€ä¸‹é»˜è®¤æ–¹æ³•
+çˆ¬è™«æ–‡ä»¶ä¸­ (ä»¥jdmobile.pyä¸ºä¾‹)  
           start_urls = (
                   "https://item.jd.com/11334636448.html",
               )
-          ÍøÖ·ºóÒ»¶¨Òª¼Ó¶ººÅ,¿Ó¿Ó¿Ó
+          ç½‘å€åŽä¸€å®šè¦åŠ é€—å·,å‘å‘å‘
 
 
 
 
-scrapyÖÐµÄxpath±í´ïÊ½
-/   ´ÓÕû¸öhtmlÒ³Ãæ¶¥¶ËÏòÏÂÑ°ÕÒÄ³Ò»¸ö±êÇ©
-/div/span   ´ÓµÚÒ»¸ödivÏÂµÚÒ»¸öspanÄÚÈÝ   (×¢Òâ,ÒªÅÀÈ¡spanÏÂµÄËùÓÐÎÄ±¾ÄÚÈÝ,spanºóÃæ²»ÄÜ¼Ó/,·ñÔò»á±¨xpathÓï·¨´íÎó)
-/html/head     ËùÓÐhead±êÇ©ºÍhead±êÇ©ÏÂµÄÄÚÈÝ   <title id = "ddd">°¡°¡°¡°¡°¡</title>
-text()  ÌáÈ¡ÎÄ±¾ÐÅÏ¢
-@      ÌáÈ¡ÊôÐÔÐÅÏ¢
+scrapyä¸­çš„xpathè¡¨è¾¾å¼
+/   ä»Žæ•´ä¸ªhtmlé¡µé¢é¡¶ç«¯å‘ä¸‹å¯»æ‰¾æŸä¸€ä¸ªæ ‡ç­¾
+/div/span   ä»Žç¬¬ä¸€ä¸ªdivä¸‹ç¬¬ä¸€ä¸ªspanå†…å®¹   (æ³¨æ„,è¦çˆ¬å–spanä¸‹çš„æ‰€æœ‰æ–‡æœ¬å†…å®¹,spanåŽé¢ä¸èƒ½åŠ /,å¦åˆ™ä¼šæŠ¥xpathè¯­æ³•é”™è¯¯)
+/html/head     æ‰€æœ‰headæ ‡ç­¾å’Œheadæ ‡ç­¾ä¸‹çš„å†…å®¹   <title id = "ddd">å•Šå•Šå•Šå•Šå•Š</title>
+text()  æå–æ–‡æœ¬ä¿¡æ¯
+@      æå–å±žæ€§ä¿¡æ¯
 
-/html/head/text()     ×îÖÕÈ¡µ½µÄÊÇ"°¡°¡°¡°¡°¡"
+/html/head/text()     æœ€ç»ˆå–åˆ°çš„æ˜¯"å•Šå•Šå•Šå•Šå•Š"
 
-/html/head/@id     ×îÖÕÈ¡µ½µÄÊÇ"ddd"
+/html/head/@id     æœ€ç»ˆå–åˆ°çš„æ˜¯"ddd"
 
 
-//div   Ñ°ÕÒÕû¸öÒ³ÃæµÄËùÓÐµÄdiv±êÇ©
+//div   å¯»æ‰¾æ•´ä¸ªé¡µé¢çš„æ‰€æœ‰çš„divæ ‡ç­¾
 //div[@class="jifen"]   
-//div[@class="jifen"]/a/@href    Ñ°ÕÒËùÓÐÊôÐÔÊÇdivÏÂµÚÒ»¸öa±êÇ©µÄhrefÊôÐÔ
+//div[@class="jifen"]/a/@href    å¯»æ‰¾æ‰€æœ‰å±žæ€§æ˜¯divä¸‹ç¬¬ä¸€ä¸ªaæ ‡ç­¾çš„hrefå±žæ€§
 
 
 
 
-linux²é¿´·þÎñÃüÁî
-LinuxÏÂÈçºÎ²é¿´ÄÄÐ©½ø³ÌÕ¼ÓÃµÄCPUÄÚ´æ×ÊÔ´×î¶à
-linuxÏÂ»ñÈ¡Õ¼ÓÃCPU×ÊÔ´×î¶àµÄ10¸ö½ø³Ì£¬¿ÉÒÔÊ¹ÓÃÈçÏÂÃüÁî×éºÏ£º
+linuxæŸ¥çœ‹æœåŠ¡å‘½ä»¤
+Linuxä¸‹å¦‚ä½•æŸ¥çœ‹å“ªäº›è¿›ç¨‹å ç”¨çš„CPUå†…å­˜èµ„æºæœ€å¤š
+linuxä¸‹èŽ·å–å ç”¨CPUèµ„æºæœ€å¤šçš„10ä¸ªè¿›ç¨‹ï¼Œå¯ä»¥ä½¿ç”¨å¦‚ä¸‹å‘½ä»¤ç»„åˆï¼š
 
 ps aux|head -1;ps aux|grep -v PID|sort -rn -k +3|head
 
 
 
-linuxÏÂ»ñÈ¡Õ¼ÓÃÄÚ´æ×ÊÔ´×î¶àµÄ10¸ö½ø³Ì£¬¿ÉÒÔÊ¹ÓÃÈçÏÂÃüÁî×éºÏ£º
+linuxä¸‹èŽ·å–å ç”¨å†…å­˜èµ„æºæœ€å¤šçš„10ä¸ªè¿›ç¨‹ï¼Œå¯ä»¥ä½¿ç”¨å¦‚ä¸‹å‘½ä»¤ç»„åˆï¼š
 
 ps aux|head -1;ps aux|grep -v PID|sort -rn -k +4|head
 
@@ -784,13 +784,13 @@ ps aux|head -1;ps aux|grep -v PID|sort -rn -k +4|head
 
 
 
-ÃüÁî×éºÏ½âÎö£¨Õë¶ÔCPUµÄ£¬MENÒ²Í¬ÑùµÀÀí£©£º
+å‘½ä»¤ç»„åˆè§£æžï¼ˆé’ˆå¯¹CPUçš„ï¼ŒMENä¹ŸåŒæ ·é“ç†ï¼‰ï¼š
 
 ps aux|head -1;ps aux|grep -v PID|sort -rn -k +3|head
 
 
 
-¸ÃÃüÁî×éºÏÊµ¼ÊÉÏÊÇÏÂÃæÁ½¾äÃüÁî£º
+è¯¥å‘½ä»¤ç»„åˆå®žé™…ä¸Šæ˜¯ä¸‹é¢ä¸¤å¥å‘½ä»¤ï¼š
 
 ps aux|head -1
 
@@ -800,83 +800,83 @@ ps aux|grep -v PID|sort -rn -k +3|head
 
  
 
-¿ÉÒÔÊ¹ÓÃÒ»ÏÂÃüÁî²éÊ¹ÓÃÄÚ´æ×î¶àµÄ10¸ö½ø³Ì
+å¯ä»¥ä½¿ç”¨ä¸€ä¸‹å‘½ä»¤æŸ¥ä½¿ç”¨å†…å­˜æœ€å¤šçš„10ä¸ªè¿›ç¨‹
 
-²é¿´Õ¼ÓÃcpu×î¸ßµÄ½ø³Ì
+æŸ¥çœ‹å ç”¨cpuæœ€é«˜çš„è¿›ç¨‹
 
 ps aux|head -1;ps aux|grep -v PID|sort -rn -k +3|head
 
-»òÕßtop £¨È»ºó°´ÏÂM£¬×¢ÒâÕâÀïÊÇ´óÐ´£©
+æˆ–è€…top ï¼ˆç„¶åŽæŒ‰ä¸‹Mï¼Œæ³¨æ„è¿™é‡Œæ˜¯å¤§å†™ï¼‰
 
-²é¿´Õ¼ÓÃÄÚ´æ×î¸ßµÄ½ø³Ì
+æŸ¥çœ‹å ç”¨å†…å­˜æœ€é«˜çš„è¿›ç¨‹
 
 ps aux|head -1;ps aux|grep -v PID|sort -rn -k +4|head
 
-»òÕßtop £¨È»ºó°´ÏÂP£¬×¢ÒâÕâÀïÊÇ´óÐ´£©
+æˆ–è€…top ï¼ˆç„¶åŽæŒ‰ä¸‹Pï¼Œæ³¨æ„è¿™é‡Œæ˜¯å¤§å†™ï¼‰
 
-¸ÃÃüÁî×éºÏÊµ¼ÊÉÏÊÇÏÂÃæÁ½¾äÃüÁî£º
+è¯¥å‘½ä»¤ç»„åˆå®žé™…ä¸Šæ˜¯ä¸‹é¢ä¸¤å¥å‘½ä»¤ï¼š
 
 ps aux|head -1
 ps aux|grep -v PID|sort -rn -k +3|head
 
-ÆäÖÐµÚÒ»¾äÖ÷ÒªÊÇÎªÁË»ñÈ¡±êÌâ£¨USER PID %CPU %MEM VSZ RSS TTY STAT START TIME COMMAND£©¡£
-½ÓÏÂÀ´µÄgrep -v PIDÊÇ½«ps auxÃüÁîµÃµ½µÄ±êÌâÈ¥µô£¬¼´grep²»°üº¬PIDÕâÈý¸ö×ÖÄ¸×éºÏµÄÐÐ£¬ÔÙ½«ÆäÖÐ½á¹ûÊ¹ÓÃsortÅÅÐò¡£
-sort -rn -k +3¸ÃÃüÁîÖÐµÄ-rnµÄr±íÊ¾ÊÇ½á¹ûµ¹ÐòÅÅÁÐ£¬nÎªÒÔÊýÖµ´óÐ¡ÅÅÐò£¬¶ø-k +3ÔòÊÇÕë¶ÔµÚ3ÁÐµÄÄÚÈÝ½øÐÐÅÅÐò£¬ÔÙÊ¹ÓÃheadÃüÁî»ñÈ¡Ä¬ÈÏÇ°10ÐÐÊý¾Ý¡£(ÆäÖÐµÄ|±íÊ¾¹ÜµÀ²Ù×÷)
+å…¶ä¸­ç¬¬ä¸€å¥ä¸»è¦æ˜¯ä¸ºäº†èŽ·å–æ ‡é¢˜ï¼ˆUSER PID %CPU %MEM VSZ RSS TTY STAT START TIME COMMANDï¼‰ã€‚
+æŽ¥ä¸‹æ¥çš„grep -v PIDæ˜¯å°†ps auxå‘½ä»¤å¾—åˆ°çš„æ ‡é¢˜åŽ»æŽ‰ï¼Œå³grepä¸åŒ…å«PIDè¿™ä¸‰ä¸ªå­—æ¯ç»„åˆçš„è¡Œï¼Œå†å°†å…¶ä¸­ç»“æžœä½¿ç”¨sortæŽ’åºã€‚
+sort -rn -k +3è¯¥å‘½ä»¤ä¸­çš„-rnçš„rè¡¨ç¤ºæ˜¯ç»“æžœå€’åºæŽ’åˆ—ï¼Œnä¸ºä»¥æ•°å€¼å¤§å°æŽ’åºï¼Œè€Œ-k +3åˆ™æ˜¯é’ˆå¯¹ç¬¬3åˆ—çš„å†…å®¹è¿›è¡ŒæŽ’åºï¼Œå†ä½¿ç”¨headå‘½ä»¤èŽ·å–é»˜è®¤å‰10è¡Œæ•°æ®ã€‚(å…¶ä¸­çš„|è¡¨ç¤ºç®¡é“æ“ä½œ)
 
-²¹³ä:ÄÚÈÝ½âÊÍ
+è¡¥å……:å†…å®¹è§£é‡Š
 
-PID£º½ø³ÌµÄID
-USER£º½ø³ÌËùÓÐÕß
-PR£º½ø³ÌµÄÓÅÏÈ¼¶±ð£¬Ô½Ð¡Ô½ÓÅÏÈ±»Ö´ÐÐ
-NInice£ºÖµ
-VIRT£º½ø³ÌÕ¼ÓÃµÄÐéÄâÄÚ´æ
-RES£º½ø³ÌÕ¼ÓÃµÄÎïÀíÄÚ´æ
-SHR£º½ø³ÌÊ¹ÓÃµÄ¹²ÏíÄÚ´æ
-S£º½ø³ÌµÄ×´Ì¬¡£S±íÊ¾ÐÝÃß£¬R±íÊ¾ÕýÔÚÔËÐÐ£¬Z±íÊ¾½©ËÀ×´Ì¬£¬N±íÊ¾¸Ã½ø³ÌÓÅÏÈÖµÎª¸ºÊý
-%CPU£º½ø³ÌÕ¼ÓÃCPUµÄÊ¹ÓÃÂÊ
-%MEM£º½ø³ÌÊ¹ÓÃµÄÎïÀíÄÚ´æºÍ×ÜÄÚ´æµÄ°Ù·Ö±È
-TIME+£º¸Ã½ø³ÌÆô¶¯ºóÕ¼ÓÃµÄ×ÜµÄCPUÊ±¼ä£¬¼´Õ¼ÓÃCPUÊ¹ÓÃÊ±¼äµÄÀÛ¼ÓÖµ¡£
-COMMAND£º½ø³ÌÆô¶¯ÃüÁîÃû³Æ
-
- 
+PIDï¼šè¿›ç¨‹çš„ID
+USERï¼šè¿›ç¨‹æ‰€æœ‰è€…
+PRï¼šè¿›ç¨‹çš„ä¼˜å…ˆçº§åˆ«ï¼Œè¶Šå°è¶Šä¼˜å…ˆè¢«æ‰§è¡Œ
+NIniceï¼šå€¼
+VIRTï¼šè¿›ç¨‹å ç”¨çš„è™šæ‹Ÿå†…å­˜
+RESï¼šè¿›ç¨‹å ç”¨çš„ç‰©ç†å†…å­˜
+SHRï¼šè¿›ç¨‹ä½¿ç”¨çš„å…±äº«å†…å­˜
+Sï¼šè¿›ç¨‹çš„çŠ¶æ€ã€‚Sè¡¨ç¤ºä¼‘çœ ï¼ŒRè¡¨ç¤ºæ­£åœ¨è¿è¡Œï¼ŒZè¡¨ç¤ºåƒµæ­»çŠ¶æ€ï¼ŒNè¡¨ç¤ºè¯¥è¿›ç¨‹ä¼˜å…ˆå€¼ä¸ºè´Ÿæ•°
+%CPUï¼šè¿›ç¨‹å ç”¨CPUçš„ä½¿ç”¨çŽ‡
+%MEMï¼šè¿›ç¨‹ä½¿ç”¨çš„ç‰©ç†å†…å­˜å’Œæ€»å†…å­˜çš„ç™¾åˆ†æ¯”
+TIME+ï¼šè¯¥è¿›ç¨‹å¯åŠ¨åŽå ç”¨çš„æ€»çš„CPUæ—¶é—´ï¼Œå³å ç”¨CPUä½¿ç”¨æ—¶é—´çš„ç´¯åŠ å€¼ã€‚
+COMMANDï¼šè¿›ç¨‹å¯åŠ¨å‘½ä»¤åç§°
 
  
 
  
 
-¡¢¿ÉÒÔÊ¹ÓÃÒÔÏÂÃüÁî²éÊ¹ÓÃÄÚ´æ×î¶àµÄK¸ö½ø³Ì
+ 
 
-·½·¨1£º
+ã€å¯ä»¥ä½¿ç”¨ä»¥ä¸‹å‘½ä»¤æŸ¥ä½¿ç”¨å†…å­˜æœ€å¤šçš„Kä¸ªè¿›ç¨‹
+
+æ–¹æ³•1ï¼š
 
 ps -aux | sort -k4nr | head -K
-Èç¹ûÊÇ10¸ö½ø³Ì£¬K=10£¬Èç¹ûÊÇ×î¸ßµÄÈý¸ö£¬K=3
+å¦‚æžœæ˜¯10ä¸ªè¿›ç¨‹ï¼ŒK=10ï¼Œå¦‚æžœæ˜¯æœ€é«˜çš„ä¸‰ä¸ªï¼ŒK=3
 
-ËµÃ÷£ºps -auxÖÐ£¨aÖ¸´úall¡ª¡ªËùÓÐµÄ½ø³Ì£¬uÖ¸´úuserid¡ª¡ªÖ´ÐÐ¸Ã½ø³ÌµÄÓÃ»§id£¬xÖ¸´úÏÔÊ¾ËùÓÐ³ÌÐò£¬²»ÒÔÖÕ¶Ë»úÀ´Çø·Ö£©
+è¯´æ˜Žï¼šps -auxä¸­ï¼ˆaæŒ‡ä»£allâ€”â€”æ‰€æœ‰çš„è¿›ç¨‹ï¼ŒuæŒ‡ä»£useridâ€”â€”æ‰§è¡Œè¯¥è¿›ç¨‹çš„ç”¨æˆ·idï¼ŒxæŒ‡ä»£æ˜¾ç¤ºæ‰€æœ‰ç¨‹åºï¼Œä¸ä»¥ç»ˆç«¯æœºæ¥åŒºåˆ†ï¼‰
 
-        ps -auxµÄÊä³ö¸ñÊ½ÈçÏÂ£º
+        ps -auxçš„è¾“å‡ºæ ¼å¼å¦‚ä¸‹ï¼š
 
 USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
 root         1  0.0  0.0  19352  1308 ?        Ss   Jul29   0:00 /sbin/init
 root         2  0.0  0.0      0     0 ?        S    Jul29   0:00 [kthreadd]
 root         3  0.0  0.0      0     0 ?        S    Jul29   0:11 [migration/0]
-     sort -k4nrÖÐ£¨k´ú±í´ÓµÚ¼¸¸öÎ»ÖÃ¿ªÊ¼£¬ºóÃæµÄÊý×Ö4¼´ÊÇÆä¿ªÊ¼Î»ÖÃ£¬½áÊøÎ»ÖÃÈç¹ûÃ»ÓÐ£¬ÔòÄ¬ÈÏµ½×îºó£»nÖ¸´únumberic sort£¬¸ù¾ÝÆäÊýÖµÅÅÐò£»rÖ¸´úreverse£¬ÕâÀïÊÇÖ¸·´Ïò±È½Ï½á¹û£¬Êä³öÊ±Ä¬ÈÏ´ÓÐ¡µ½´ó£¬·´Ïòºó´Ó´óµ½Ð¡¡££©¡£±¾ÀýÖÐ£¬¿ÉÒÔ¿´µ½%MEMÔÚµÚ4¸öÎ»ÖÃ£¬¸ù¾Ý%MEMµÄÊýÖµ½øÐÐÓÉ´óµ½Ð¡µÄÅÅÐò¡£
+     sort -k4nrä¸­ï¼ˆkä»£è¡¨ä»Žç¬¬å‡ ä¸ªä½ç½®å¼€å§‹ï¼ŒåŽé¢çš„æ•°å­—4å³æ˜¯å…¶å¼€å§‹ä½ç½®ï¼Œç»“æŸä½ç½®å¦‚æžœæ²¡æœ‰ï¼Œåˆ™é»˜è®¤åˆ°æœ€åŽï¼›næŒ‡ä»£numberic sortï¼Œæ ¹æ®å…¶æ•°å€¼æŽ’åºï¼›ræŒ‡ä»£reverseï¼Œè¿™é‡Œæ˜¯æŒ‡åå‘æ¯”è¾ƒç»“æžœï¼Œè¾“å‡ºæ—¶é»˜è®¤ä»Žå°åˆ°å¤§ï¼Œåå‘åŽä»Žå¤§åˆ°å°ã€‚ï¼‰ã€‚æœ¬ä¾‹ä¸­ï¼Œå¯ä»¥çœ‹åˆ°%MEMåœ¨ç¬¬4ä¸ªä½ç½®ï¼Œæ ¹æ®%MEMçš„æ•°å€¼è¿›è¡Œç”±å¤§åˆ°å°çš„æŽ’åºã€‚
 
-     head -K£¨KÖ¸´úÐÐÊý£¬¼´Êä³öÇ°¼¸Î»µÄ½á¹û£©
+     head -Kï¼ˆKæŒ‡ä»£è¡Œæ•°ï¼Œå³è¾“å‡ºå‰å‡ ä½çš„ç»“æžœï¼‰
 
-     |Îª¹ÜµÀ·ûºÅ£¬½«²éÑ¯³öµÄ½á¹ûµ¼µ½ÏÂÃæµÄÃüÁîÖÐ½øÐÐÏÂÒ»²½µÄ²Ù×÷¡£
+     |ä¸ºç®¡é“ç¬¦å·ï¼Œå°†æŸ¥è¯¢å‡ºçš„ç»“æžœå¯¼åˆ°ä¸‹é¢çš„å‘½ä»¤ä¸­è¿›è¡Œä¸‹ä¸€æ­¥çš„æ“ä½œã€‚
 
-·½·¨2£ºtop £¨È»ºó°´ÏÂM£¬×¢Òâ´óÐ´£©
+æ–¹æ³•2ï¼štop ï¼ˆç„¶åŽæŒ‰ä¸‹Mï¼Œæ³¨æ„å¤§å†™ï¼‰
 
-¶þ¡¢¿ÉÒÔÊ¹ÓÃÏÂÃæÃüÁî²éÊ¹ÓÃCPU×î¶àµÄK¸ö½ø³Ì
+äºŒã€å¯ä»¥ä½¿ç”¨ä¸‹é¢å‘½ä»¤æŸ¥ä½¿ç”¨CPUæœ€å¤šçš„Kä¸ªè¿›ç¨‹
 
-·½·¨1£º
+æ–¹æ³•1ï¼š
 
 ps -aux | sort -k3nr | head -K
-·½·¨2£ºtop £¨È»ºó°´ÏÂP£¬×¢Òâ´óÐ´
+æ–¹æ³•2ï¼štop ï¼ˆç„¶åŽæŒ‰ä¸‹Pï¼Œæ³¨æ„å¤§å†™
 
 
 
-linuxÏÂ²é¿´crontabµÄ¶¨Ê±ÅÜÅúÈÎÎñ
+linuxä¸‹æŸ¥çœ‹crontabçš„å®šæ—¶è·‘æ‰¹ä»»åŠ¡
 crontab -l
 
 
