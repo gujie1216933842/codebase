@@ -14,8 +14,8 @@ connect = pymysql.Connect(
 cursor = connect.cursor()
 
 # 插入数据
-sql = "INSERT INTO jd_mobile (name, raw_add_time) VALUES ( %s, now())"
-data = ('雷军')
+sql = "INSERT INTO jd_mobile (name, good_comment,raw_add_time) VALUES ( %s,%s ,now())"
+data = ('雷军',23)
 cursor.execute(sql , data)
 connect.commit()
 print('成功插入', cursor.rowcount, '条数据')
