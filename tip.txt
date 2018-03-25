@@ -1,46 +1,46 @@
-linux²é¿´½ø³ÌÊÇ·ñÆô¶¯
-ps  -ef | grep redis    ÒÔredisÎªÀı
-ps aux | grep python   ÒÔpythonÎªÀı
-ÏÔÊ¾½á¹û
+linuxæŸ¥çœ‹è¿›ç¨‹æ˜¯å¦å¯åŠ¨
+ps  -ef | grep redis    ä»¥redisä¸ºä¾‹
+ps aux | grep python   ä»¥pythonä¸ºä¾‹
+æ˜¾ç¤ºç»“æœ
 root      7900  0.4  2.5 237752 26492 pts/1    S+   17:21   1:00 python3 server.py
-7900½ø³Ì
+7900è¿›ç¨‹
 kill -9 7900
 
-ps aux | grep xxx   ²é¿´linuxÆô¶¯ÄÄĞ©·şÎñ
+ps aux | grep xxx   æŸ¥çœ‹linuxå¯åŠ¨å“ªäº›æœåŠ¡
 
-ÆßÅ£×¢²áÓÊÏä     gujientsy@163.com
+ä¸ƒç‰›æ³¨å†Œé‚®ç®±     gujientsy@163.com
 
-windowsÏÂ°²×°ÁËpython,µ«ÊÇÃ»ÓĞpip
-°²×°pipÁ÷³Ì
-ÏÈÈ¥¹ÙÍøÏÂÔØhttps://pypi.python.org/pypi/pip#downloads
-pip-9.0.1.tar.gz (md5, pgp)	   Source
-ÏÂÔØµ½±¾µØ,½âÑ¹,½øÈëÏÈ¹ØÎÄ¼ş¼Ğ
-ÔÚµ±Ç°Ä¿Â¼ÏÂ,´ò¿ªcmd,   ÊäÈë  python setup.py install
-¿ÉÒÔ°²×°³É¹¦
+windowsä¸‹å®‰è£…äº†python,ä½†æ˜¯æ²¡æœ‰pip
+å®‰è£…pipæµç¨‹
+å…ˆå»å®˜ç½‘ä¸‹è½½https://pypi.python.org/pypi/pip#downloads
+pip-9.0.1.tar.gz (md5, pgp)    Source
+ä¸‹è½½åˆ°æœ¬åœ°,è§£å‹,è¿›å…¥å…ˆå…³æ–‡ä»¶å¤¹
+åœ¨å½“å‰ç›®å½•ä¸‹,æ‰“å¼€cmd,   è¾“å…¥  python setup.py install
+å¯ä»¥å®‰è£…æˆåŠŸ
 
-È»ºóÅäÖÃpip»·¾³±äÁ¿,   C:\Python34\Scripts;  ¼Ù¶¨¸öÈËµçÄÔ×°µÄpythonÔÚCÏÂ°æ±¾3.4
-Èç¹ûÍ¼Ê¡ÊÂ,¿ÉÖ±½Ó½øscriptÄ¿Â¼,ÓÃpipÏÂÔØ
+ç„¶åé…ç½®pipç¯å¢ƒå˜é‡,   C:\Python34\Scripts;  å‡å®šä¸ªäººç”µè„‘è£…çš„pythonåœ¨Cä¸‹ç‰ˆæœ¬3.4
+å¦‚æœå›¾çœäº‹,å¯ç›´æ¥è¿›scriptç›®å½•,ç”¨pipä¸‹è½½
 
 
 
-linux·şÎñÆ÷½øÈëmysql 
+linuxæœåŠ¡å™¨è¿›å…¥mysql 
 ./mysql -h 127.0.0.1 -uroot -p123
 
 
 
 
 
-Éı¼¶linuxÏÂµÄgit
-°²×°ĞèÇó£º
+å‡çº§linuxä¸‹çš„git
+å®‰è£…éœ€æ±‚ï¼š
 ># yum install curl-devel expat-devel gettext-devel openssl-devel zlib-devel asciidoc
 ># yum install  gcc perl-ExtUtils-MakeMaker
 
-Ğ¶ÔØCentos×Ô´øµÄgit1.7.1:
+å¸è½½Centosè‡ªå¸¦çš„git1.7.1:
 
-Í¨¹ıgit ¨Cversion²é¿´ÏµÍ³´øµÄ°æ±¾£¬Cento6.5Ó¦¸Ã×Ô´øµÄÊÇgit°æ±¾ÊÇ1.7.1
+é€šè¿‡git â€“versionæŸ¥çœ‹ç³»ç»Ÿå¸¦çš„ç‰ˆæœ¬ï¼ŒCento6.5åº”è¯¥è‡ªå¸¦çš„æ˜¯gitç‰ˆæœ¬æ˜¯1.7.1
 
 ># yum remove git
-ÏÂÔØgit2.2.1²¢½«gitÌí¼Óµ½»·¾³±äÁ¿ÖĞ
+ä¸‹è½½git2.2.1å¹¶å°†gitæ·»åŠ åˆ°ç¯å¢ƒå˜é‡ä¸­
 
 ># wget https://github.com/git/git/archive/v2.2.1.tar.gz
 ># tar zxvf v2.2.1.tar.gz
@@ -51,59 +51,59 @@ linux·şÎñÆ÷½øÈëmysql
 ># make install install-doc install-html
 ># echo "export PATH=$PATH:/usr/local/git/bin" >> /etc/bashrc
 ># source /etc/bashrc
-²é¿´°æ±¾ºÅ
+æŸ¥çœ‹ç‰ˆæœ¬å·
 
 ># git --version
 >git version 2.2.1
 
 
 curl "https://github.com"    SSL connect error
-½â¾ö·½·¨:   yum update nss
+è§£å†³æ–¹æ³•:   yum update nss
 
 
-gitÒ»°ã·Ö:
-git status ²é¿´ĞŞ¸ÄÄÚÈİ
-git add . ->½«ĞŞ¸ÄÌí¼ÓÖÁ±¾µØ»º´æ
-git commit -m 'msg' ->½«±¾µØ»º´æ±£´æµ½±¾µØ²Ö¿âÖĞ
-git push ->½«±¾µØ²Ö¿âÍÆËÍÖÁ·şÎñÆ÷
-git pull ->½«·şÎñÆ÷µÄ´úÂë¸üĞÂµ½±¾µØ²Ö¿âÖĞ
+gitä¸€èˆ¬åˆ†:
+git status æŸ¥çœ‹ä¿®æ”¹å†…å®¹
+git add . ->å°†ä¿®æ”¹æ·»åŠ è‡³æœ¬åœ°ç¼“å­˜
+git commit -m 'msg' ->å°†æœ¬åœ°ç¼“å­˜ä¿å­˜åˆ°æœ¬åœ°ä»“åº“ä¸­
+git push ->å°†æœ¬åœ°ä»“åº“æ¨é€è‡³æœåŠ¡å™¨
+git pull ->å°†æœåŠ¡å™¨çš„ä»£ç æ›´æ–°åˆ°æœ¬åœ°ä»“åº“ä¸­
 
 
-.gitignore¹æÔò²»ÉúĞ§µÄ½â¾ö°ì·¨
-°ÑÄ³Ğ©Ä¿Â¼»òÎÄ¼ş¼ÓÈëºöÂÔ¹æÔò£¬°´ÕÕÉÏÊö·½·¨¶¨Òåºó·¢ÏÖ²¢Î´ÉúĞ§£¬
-Ô­ÒòÊÇ.gitignoreÖ»ÄÜºöÂÔÄÇĞ©Ô­À´Ã»ÓĞ±»×·×ÙµÄÎÄ¼ş£¬Èç¹ûÄ³Ğ©ÎÄ¼şÒÑ¾­±»ÄÉÈëÁË°æ±¾¹ÜÀíÖĞ£¬ÔòĞŞ¸Ä.gitignoreÊÇÎŞĞ§µÄ¡£
-ÄÇÃ´½â¾ö·½·¨¾ÍÊÇÏÈ°Ñ±¾µØ»º´æÉ¾³ı£¨¸Ä±ä³ÉÎ´±»×·×Ù×´Ì¬£©£¬È»ºóÔÙÌá½»£º
+.gitignoreè§„åˆ™ä¸ç”Ÿæ•ˆçš„è§£å†³åŠæ³•
+æŠŠæŸäº›ç›®å½•æˆ–æ–‡ä»¶åŠ å…¥å¿½ç•¥è§„åˆ™ï¼ŒæŒ‰ç…§ä¸Šè¿°æ–¹æ³•å®šä¹‰åå‘ç°å¹¶æœªç”Ÿæ•ˆï¼Œ
+åŸå› æ˜¯.gitignoreåªèƒ½å¿½ç•¥é‚£äº›åŸæ¥æ²¡æœ‰è¢«è¿½è¸ªçš„æ–‡ä»¶ï¼Œå¦‚æœæŸäº›æ–‡ä»¶å·²ç»è¢«çº³å…¥äº†ç‰ˆæœ¬ç®¡ç†ä¸­ï¼Œåˆ™ä¿®æ”¹.gitignoreæ˜¯æ— æ•ˆçš„ã€‚
+é‚£ä¹ˆè§£å†³æ–¹æ³•å°±æ˜¯å…ˆæŠŠæœ¬åœ°ç¼“å­˜åˆ é™¤ï¼ˆæ”¹å˜æˆæœªè¢«è¿½è¸ªçŠ¶æ€ï¼‰ï¼Œç„¶åå†æäº¤ï¼š
 git rm -r --cached .
 git add .
 git commit -m 'update .gitignore'
 
 
-git checkout . #±¾µØËùÓĞĞŞ¸ÄµÄ¡£Ã»ÓĞµÄÌá½»µÄ£¬¶¼·µ»Øµ½Ô­À´µÄ×´Ì¬
-git reset --hard HASH #·µ»Øµ½Ä³¸ö½Úµã£¬²»±£ÁôĞŞ¸Ä¡£
-git reset --soft HASH #·µ»Øµ½Ä³¸ö½Úµã¡£±£ÁôĞŞ¸Ä
+git checkout . #æœ¬åœ°æ‰€æœ‰ä¿®æ”¹çš„ã€‚æ²¡æœ‰çš„æäº¤çš„ï¼Œéƒ½è¿”å›åˆ°åŸæ¥çš„çŠ¶æ€
+git reset --hard HASH #è¿”å›åˆ°æŸä¸ªèŠ‚ç‚¹ï¼Œä¸ä¿ç•™ä¿®æ”¹ã€‚
+git reset --soft HASH #è¿”å›åˆ°æŸä¸ªèŠ‚ç‚¹ã€‚ä¿ç•™ä¿®æ”¹
 
 
-json.dumps()  ½«dict×ª»»Îªstr     Ïàµ±ÓÚphpÖĞ   json_encode()
-json.loads()  ½«str×ª»»Îªdict     Ïàµ±ÓÚphpÖĞ   json_decode()
+json.dumps()  å°†dictè½¬æ¢ä¸ºstr     ç›¸å½“äºphpä¸­   json_encode()
+json.loads()  å°†strè½¬æ¢ä¸ºdict     ç›¸å½“äºphpä¸­   json_decode()
 
 
-nohup python3 server.py &   ¹Ø±ÕlinuxÖÕ¶ËÖ®ºó»¹ÄÜpython½Å±¾»¹ÄÜ¼ÌĞøÖ´ĞĞ
+nohup python3 server.py &   å…³é—­linuxç»ˆç«¯ä¹‹åè¿˜èƒ½pythonè„šæœ¬è¿˜èƒ½ç»§ç»­æ‰§è¡Œ
 
 
-linux ¿ª»úÆô¶¯reids·şÎñ
-Ò»¡¢ĞÂ½¨¡¢±àĞ´¿ª»ú×ÔÆô¶¯½Å±¾£¨redis-autoÎªĞÂ½¨µÄÎÄ¼ş£©
+linux å¼€æœºå¯åŠ¨reidsæœåŠ¡
+ä¸€ã€æ–°å»ºã€ç¼–å†™å¼€æœºè‡ªå¯åŠ¨è„šæœ¬ï¼ˆredis-autoä¸ºæ–°å»ºçš„æ–‡ä»¶ï¼‰
 vi /etc/init.d/redis-auto  
  
 
-¶ş¡¢ÔÚÎÄ¼şredis-auto¼ÓÈëÈçÏÂÄÚÈİ£º£¨×¢ÒâRedis¾ßÌåµÄ°²×°Â·¾¶£¬ÄãµÄ¿ÉÄÜ²»Ò»Ñù£©
+äºŒã€åœ¨æ–‡ä»¶redis-autoåŠ å…¥å¦‚ä¸‹å†…å®¹ï¼šï¼ˆæ³¨æ„Rediså…·ä½“çš„å®‰è£…è·¯å¾„ï¼Œä½ çš„å¯èƒ½ä¸ä¸€æ ·ï¼‰
 
-shell½Å±¾´úÂë
+shellè„šæœ¬ä»£ç 
 #!/bin/sh  
 #chkconfig: 2345 80 90  
 # Simple Redis init.d script conceived to work on Linux systems  
 # as it does use of the /proc filesystem.  
 REDISPORT=6379  
-REDISPATH=/home/java/run/redis-3.2.9/bin   #´úÂëĞèÒª¸ù¾İÊµ¼ÊÂ·¾¶ 
+REDISPATH=/home/java/run/redis-3.2.9/bin   #ä»£ç éœ€è¦æ ¹æ®å®é™…è·¯å¾„ 
 EXEC=${REDISPATH}/redis-server  
 CLIEXEC=${REDISPATH}/redis-cli  
 PIDFILE=/var/run/redis_${REDISPORT}.pid  
@@ -146,48 +146,46 @@ esac
 
  
 
-Èı¡¢±£´æÍË³ö
+ä¸‰ã€ä¿å­˜é€€å‡º
 
-Java´úÂë  ÊÕ²Ø´úÂë
+Javaä»£ç   æ”¶è—ä»£ç 
 wq  
-ËÄ¡¢ÉèÖÃÎÄ¼şredis-autoµÄÈ¨ÏŞ£¬ÈÃLinux¿ÉÒÔÖ´ĞĞ
+å››ã€è®¾ç½®æ–‡ä»¶redis-autoçš„æƒé™ï¼Œè®©Linuxå¯ä»¥æ‰§è¡Œ
 
-Java´úÂë  ÊÕ²Ø´úÂë
+Javaä»£ç   æ”¶è—ä»£ç 
 chmod 755 redis-auto  
  
 
-Îå¡¢Æô¶¯Redis·şÎñ²âÊÔ£¬´Ë´¦Æô¶¯ÓÃµÄÊÇµÚ¶ş²½ÉèÖÃµÄÆô¶¯½Å±¾
+äº”ã€å¯åŠ¨RedisæœåŠ¡æµ‹è¯•ï¼Œæ­¤å¤„å¯åŠ¨ç”¨çš„æ˜¯ç¬¬äºŒæ­¥è®¾ç½®çš„å¯åŠ¨è„šæœ¬
 
 /etc/init.d/redis-auto start  
- Èç¹û¿´µ½RedisÆô¶¯µÄĞ¡ºĞ×Ó¾Í±íÊ¾³É¹¦¡£
+ å¦‚æœçœ‹åˆ°Rediså¯åŠ¨çš„å°ç›’å­å°±è¡¨ç¤ºæˆåŠŸã€‚
 
-²»¹ıÄã¿ÉÒÔ½øÒ»²½´ò¿ªredis-cli¿Í»§¶Ë½øĞĞ²âÊÔ
+ä¸è¿‡ä½ å¯ä»¥è¿›ä¸€æ­¥æ‰“å¼€redis-cliå®¢æˆ·ç«¯è¿›è¡Œæµ‹è¯•
 
  
 
-Áù¡¢ÉèÖÃ¿ª»ú×ÔÆô¶¯£¬¼´£º
+å…­ã€è®¾ç½®å¼€æœºè‡ªå¯åŠ¨ï¼Œå³ï¼š
 
 chkconfig redis-auto on  
 
-Æß¡¢¾­¹ı²âÊÔ£¬LinuxÏµÍ³ÔÚÖØĞÂÆô¶¯Ê±£¬RedisµÄÊı¾İ»á×Ô¶¯¶ªÊ§£¬½â¾ö·½°¸¼û£º
-Linux Redis ÖØÆôÊı¾İ¶ªÊ§½â¾ö·½°¸£¬LinuxÖØÆôºóRedisÊı¾İ¶ªÊ§½â¾ö·½°¸
+ä¸ƒã€ç»è¿‡æµ‹è¯•ï¼ŒLinuxç³»ç»Ÿåœ¨é‡æ–°å¯åŠ¨æ—¶ï¼ŒRedisçš„æ•°æ®ä¼šè‡ªåŠ¨ä¸¢å¤±ï¼Œè§£å†³æ–¹æ¡ˆè§ï¼š
+Linux Redis é‡å¯æ•°æ®ä¸¢å¤±è§£å†³æ–¹æ¡ˆï¼ŒLinuxé‡å¯åRedisæ•°æ®ä¸¢å¤±è§£å†³æ–¹æ¡ˆ
 
-²½ÖèÈçÏÂ£º
-1¡¢±à¼­ sysctl.conf ÅäÖÃÎÄ¼ş
+æ­¥éª¤å¦‚ä¸‹ï¼š
+1ã€ç¼–è¾‘ sysctl.conf é…ç½®æ–‡ä»¶
 
 vi /etc/sysctl.conf  
 
-2¡¢ÁíÆğÒ»ĞĞÔö¼Ó²ÎÊı vm.overcommit_memory ÅäÖÃ£¬ÈçÏÂ
+2ã€å¦èµ·ä¸€è¡Œå¢åŠ å‚æ•° vm.overcommit_memory é…ç½®ï¼Œå¦‚ä¸‹
 vm.overcommit_memory = 1  
 
-3¡¢Ê¹ÅäÖÃÎÄ¼şÉúĞ§
+3ã€ä½¿é…ç½®æ–‡ä»¶ç”Ÿæ•ˆ
 sysctl -p   
 
-µ½ÕâÀïÒÑ¾­½áÊø£¬ÔÚRedisÔö¼ÓĞ©Êı¾İ£¬ÔÙÖØÆôLinuxÏµÍ³²é¿´Êı¾İÓĞÃ»ÓĞ¶ªÊ§¡£
+åˆ°è¿™é‡Œå·²ç»ç»“æŸï¼Œåœ¨Rediså¢åŠ äº›æ•°æ®ï¼Œå†é‡å¯Linuxç³»ç»ŸæŸ¥çœ‹æ•°æ®æœ‰æ²¡æœ‰ä¸¢å¤±ã€‚
 
-¾­¹ı±¾ÈË²âÊÔ£¬×îºóÊı¾İÃ»ÓĞ¶ªÊ§£¬½â¾öÁËLinuxÖØÆôºóRedisÊı¾İ¶ªÊ§µÄÎÊÌâ
-
-
+ç»è¿‡æœ¬äººæµ‹è¯•ï¼Œæœ€åæ•°æ®æ²¡æœ‰ä¸¢å¤±ï¼Œè§£å†³äº†Linuxé‡å¯åRedisæ•°æ®ä¸¢å¤±çš„é—®é¢˜
 
 
 
@@ -195,7 +193,9 @@ sysctl -p
 
 
 
-linux¿ª»úÆô¶¯nginx·şÎñ
+
+
+linuxå¼€æœºå¯åŠ¨nginxæœåŠ¡
 #!/bin/sh
 #
 # nginx - this script starts and stops the nginx daemon
@@ -309,39 +309,39 @@ case "$1" in
         exit 2
 esac
 
-È»ºó¾Í Ìí¼Ónginxµ½service·şÎñ
+ç„¶åå°± æ·»åŠ nginxåˆ°serviceæœåŠ¡
 
-¸´ÖÆ´úÂë
-#ĞŞ¸ÄÈ¨ÏŞ
+å¤åˆ¶ä»£ç 
+#ä¿®æ”¹æƒé™
 chmod 755 /etc/init.d/nginx
 
-#Ìí¼Ó nginx·şÎñ
+#æ·»åŠ  nginxæœåŠ¡
 chkconfig --add nginx
 
-#Ìí¼Ó¿ª»ú×Ô¶¯Æô¶¯·şÎñ
+#æ·»åŠ å¼€æœºè‡ªåŠ¨å¯åŠ¨æœåŠ¡
 chkconfig  nginx on
 
 
-#ÒÔÏÂ¾Í¿ÉÒÔÔÊĞíÕâĞ©·şÎñ
+#ä»¥ä¸‹å°±å¯ä»¥å…è®¸è¿™äº›æœåŠ¡
 service nginx start
 service nginx stop
 service nginx reload
-¸´ÖÆ´úÂë
+å¤åˆ¶ä»£ç 
 
 
-python½Å±¾ÉèÖÃÎªlinux·şÎñ
+pythonè„šæœ¬è®¾ç½®ä¸ºlinuxæœåŠ¡
 https://blog.csdn.net/h335146502/article/details/50700776
 https://www.cnblogs.com/niocai/archive/2012/07/12/2587780.html
 
 
-ÊµÏÖ·½·¨£º
+å®ç°æ–¹æ³•ï¼š
 
-1£¬¸ø±àĞ´ºÃµÄpython½Å±¾¿ªÍ·¼ÓÉÏ
+1ï¼Œç»™ç¼–å†™å¥½çš„pythonè„šæœ¬å¼€å¤´åŠ ä¸Š
 
 [python] view plain copy
 #!/usr/bin/python
 
-2£¬Æô¶¯shell ½Å±¾ ±àĞ´
+2ï¼Œå¯åŠ¨shell è„šæœ¬ ç¼–å†™
 vi  pystock.sh
 
 [plain] view plain copy
@@ -350,16 +350,16 @@ vi  pystock.sh
 [plain] view plain copy
 lock="py_stock.py"
 [plain] view plain copy
-#Æô¶¯·şÎñ·½·¨
+#å¯åŠ¨æœåŠ¡æ–¹æ³•
 start(){
         echo "service start...."
-        su root -c "python /root/python/py_stock/src/crawler/py_stock.py &"  #´Ë´¦pythonÓÃ¾ø¶ÔÂ·¾¶
+        su root -c "python /root/python/py_stock/src/crawler/py_stock.py &"  #æ­¤å¤„pythonç”¨ç»å¯¹è·¯å¾„
 }
 [plain] view plain copy
-<pre name="code" class="plain">#Í£Ö¹·şÎñ·½·¨
+<pre name="code" class="plain">#åœæ­¢æœåŠ¡æ–¹æ³•
 stop(){ echo "service stop...." pkill -f $lock}
 [plain] view plain copy
-#²é¿´·şÎñ×´Ì¬
+#æŸ¥çœ‹æœåŠ¡çŠ¶æ€
 status(){
         if [ -e $lock ];then
             echo "$0 service start"
@@ -368,7 +368,7 @@ status(){
         fi
 }
 [plain] view plain copy
-#ÖØĞÂÆô¶¯
+#é‡æ–°å¯åŠ¨
 restart(){
         stop
         start
@@ -391,19 +391,19 @@ case "$1" in
         ;;
 esac
 
-3£¬¸´ÖÆ½Å±¾µ½/etc/init.d/Ä¿Â¼ÏÂ£ºcp pystock.sh /etc/init.d/
-4£¬¸øshell½Å±¾¸³ÓèÖ´ĞĞÈ¨ÏŞ £ºchmod +x /etc/init.d/pystock.sh
+3ï¼Œå¤åˆ¶è„šæœ¬åˆ°/etc/init.d/ç›®å½•ä¸‹ï¼šcp pystock.sh /etc/init.d/
+4ï¼Œç»™shellè„šæœ¬èµ‹äºˆæ‰§è¡Œæƒé™ ï¼šchmod +x /etc/init.d/pystock.sh
 
-5£¬Ìí¼Ó·şÎñ£ºchkconfig --add pystock.sh
+5ï¼Œæ·»åŠ æœåŠ¡ï¼šchkconfig --add pystock.sh
 
-6£¬ÉèÖÃ·şÎñÎª¿ª»úÆô¶¯£ºchkconfig --level 35 pystock.sh on
-
-
+6ï¼Œè®¾ç½®æœåŠ¡ä¸ºå¼€æœºå¯åŠ¨ï¼šchkconfig --level 35 pystock.sh on
 
 
-github¹Ù·½²½Öè
 
-¡­or create a new repository on the command line
+
+githubå®˜æ–¹æ­¥éª¤
+
+â€¦or create a new repository on the command line
  echo "# git-demo" >> README.md
 git init
 git add README.md
@@ -412,12 +412,12 @@ git remote add origin https://github.com/gujie1216933842/git-demo.git
 git push -u origin master
 
 
-¡­or push an existing repository from the command line
+â€¦or push an existing repository from the command line
  git remote add origin https://github.com/gujie1216933842/git-demo.git
 git push -u origin master
 
 
-¡­or import code from another repository
+â€¦or import code from another repository
 You can initialize this repository with code from a Subversion, Mercurial, or TFS project.
 
 
