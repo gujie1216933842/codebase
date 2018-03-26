@@ -15,8 +15,8 @@ django-admin  startproject  mysite
           - manage.py     管理django程序
                      python manage.py    
                      python manage.py  startapp  xx     (在manage.py文件同级下创建)
-                     python manage.py  makemigrations
-                     python manage.py  migrate
+             (之前需要则setting中注册应用)   python manage.py  makemigrations   model写好后生成迁移(本质生成sql语句) 
+                     python manage.py  migrate    执行迁移(本质执行sql语句)
 
 django创建应用提示没有mysqldb模块而报错
 解决方法:
@@ -878,6 +878,24 @@ ps -aux | sort -k3nr | head -K
 
 linux下查看crontab的定时跑批任务
 crontab -l
+
+
+
+
+
+使用django后台管理
+django manage.py createsuperuser
+启动django服务
+访问:localhost:8000/admin
+如果后台想要变成中文
+在setting.py中做修改   #1.8版本之后   中文'zh-hans'  英文 'en-us'
+时区设置    TIME_ZONE = 'Asia/Shanghai'
+
+如果要在admin中查看前台的模型类,需要在应用下的admin.py文件中注册
+
+
+
+
 
 
 
