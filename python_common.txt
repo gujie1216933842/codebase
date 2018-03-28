@@ -441,6 +441,12 @@ git pull origin python2017
  如果已经不幸之前commit workspace.xml 的话，必须执行以下命令
 git rm --cached .idea/workspace.xml
 
+git rm -r --cached .
+git add .
+git commit -m 'update .gitignore'
+
+
+
 
 git 在本地新建分支并推送到远端
 git branch feature/180310_data
@@ -892,6 +898,20 @@ django manage.py createsuperuser
 时区设置    TIME_ZONE = 'Asia/Shanghai'
 
 如果要在admin中查看前台的模型类,需要在应用下的admin.py文件中注册
+如果有编码问题  ,需要在代码中  str.encode(utf8)
+
+
+django设计视图
+需要配置路由
+在项目配置urls.py引入应用的urls.py(此文件需要在应用目录下新建,并非应用自动生成)
+在项目的setting.py文件内需要配置模板文件的路径,参考tiantian项目
+具体参考test1应用
+
+模板传递数据
+return render(request,'test1/index1.html',data)  //data是字段格式{}
+
+
+
 
 
 
