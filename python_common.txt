@@ -938,11 +938,27 @@ django模型类的管理器Manager
 
 知识点:查询
 返回查询集的方法,称为过滤器
+返回集合
 all()  获取所有的
-filter(键1=值1,键2=值2)   筛选  = 
+filter(键1=值1,键2=值2)   筛选  =
+filter(heroinfo__hcontent__contains='八')   表示heroinfo表中的hcontent字段中包含'八'的记录
+fliter().fliter() 等价 fliter(,) 逻辑与的关系
+逻辑或的关系
+fliter(Q()|Q())
+
 exclude()  获取不满足条件的数据 !=
 order_by()  排序
 values()    把模型类对象转化成字典,最终以合成列表返回,不是对象了,可直接向客户端返回json数据,一步到位
+
+返回一条
+get()
+count()
+first()  可写条件
+last()   可写条件
+exists()  是否满足条件
+
+惰性执行(数据:迭代,序列化,if后)
+
 
 
 
