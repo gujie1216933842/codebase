@@ -940,7 +940,7 @@ django模型类的管理器Manager
 返回查询集的方法,称为过滤器
 返回集合
 all()  获取所有的
-filter(键1=值1,键2=值2)   筛选  =
+filter(属性__比较符=值)   筛选  =
 filter(heroinfo__hcontent__contains='八')   表示heroinfo表中的hcontent字段中包含'八'的记录
 fliter().fliter() 等价 fliter(,) 逻辑与的关系
 逻辑或的关系
