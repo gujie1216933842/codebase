@@ -15,7 +15,10 @@ django-admin  startproject  mysite
           - manage.py     管理django程序
                      python manage.py    
                      python manage.py  startapp  xx     (在manage.py文件同级下创建)
-             (之前需要则setting中注册应用)   python manage.py  makemigrations   model写好后生成迁移(本质生成sql语句) 
+             
+              
+             (之前需要则setting中注册应用) INSTALLED_APPS列表中添加应用名  
+             python manage.py  makemigrations   model写好后生成迁移(本质生成sql语句) 
                      python manage.py  migrate    执行迁移(本质执行sql语句)
 
 django创建应用提示没有mysqldb模块而报错
@@ -909,6 +912,20 @@ django设计视图
 
 模板传递数据
 return render(request,'test1/index1.html',data)  //data是字段格式{}
+
+django模型中定义字段的类型都在
+django.db.models中,可以自行去寻找
+
+django模型类的管理器Manager
+1.管理器是django模型进行数据库查询操作的接口,django应用的每个模型拥有至少一个管理器
+2.自定义管理器主要分为两种情况
+  情况一:向管理器类中添加额外的方法:
+  情况二:修改管理器返回原始查询集:重写get_queryset()方法
+
+
+
+
+
 
 
 
