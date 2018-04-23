@@ -18,7 +18,7 @@ django-admin  startproject  mysite
              
               
              (之前需要则setting中注册应用) INSTALLED_APPS列表中添加应用名  
-             python manage.py  makemigrations   model写好后生成迁移(本质生成sql语句) 
+             python manage.py  makemigrations   goods 写好后生成迁移(本质生成sql语句)(以goodsapp为例) 
                      python manage.py  migrate    执行迁移(本质执行sql语句)
 
 django创建应用提示没有mysqldb模块而报错
