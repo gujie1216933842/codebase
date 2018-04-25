@@ -66,7 +66,7 @@ print(a_dc_site)
 print(a_copy==a_deep_copy)
 print(a_copy is a_copy)
 
-a[2] = "ad"
+a[2][0] = "ad"
 print(a_copy)
 print(a_deep_copy)
 
