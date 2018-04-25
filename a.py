@@ -48,26 +48,61 @@ class MyClass(object):
 # o.static_method
 # o.static_method()
 
-
+'''
+深拷贝和浅拷贝
+'''
 import copy
 a = [11,121,[1,3]]
-
+b = a
 a_copy = copy.copy(a)
 a_deep_copy = copy.deepcopy(a)
 
-a_site = id(a)
-a_c_site = id(a_copy)
-a_dc_site = id(a_deep_copy)
+# a_site = id(a)
+# a_c_site = id(a_copy)
+# a_dc_site = id(a_deep_copy)
 
-print(a_site)
-print(a_c_site)
-print(a_dc_site)
+# print(a_site)
+# print(a_c_site)
+# print(a_dc_site)
 
-print(a_copy==a_deep_copy)
-print(a_copy is a_copy)
+# print(a_copy==a_deep_copy)
+# print(a_copy is a_copy)
 
 a[2][0] = "ad"
+a[0] = "asdf"
+print(a)
+print(b)
 print(a_copy)
 print(a_deep_copy)
+
+'''
+列表 a = [11,121,[1,3]] ,在内存中会开辟区域存放三个元素 11,121,[1,3]的内存地址
+       11,121,[1,3] 也会开辟内存存放三个元素
+
+赋值:  a[2][0] = "ad"
+       a[0] = "asdf"     把a[2][0],a[0]存放的内存地址都替换成新的元素 
+       b随着a会同时一起改变
+
+
+       浅拷贝:只赋值了第一层的内存地址,第二层以上的,不会变,
+            所以a第二层以上的元素赋值有变化,a_copy也会跟着一起变化
+
+       深拷贝:内存地址全部赋值,已经开辟了一块新的值,无论原来a如何变化,  a_deep_copy都不会变化  
+'''
+
+import time
+a = time.time()
+b = time.localtime()
+print(int(a))  #当前时间戳取整
+print(b[0])
+# time.sleep(2)
+print(b.tm_year)
+
+d = time.strftime('%Y-%m-%d %H:%M:%S',b)
+print(d)
+
+
+
+
 
 
