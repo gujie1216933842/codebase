@@ -4,7 +4,7 @@
 # @Author: anchen
 # @Date:   2018-04-25 22:30:06
 # @Last Modified by:   anchen
-# @Last Modified time: 2018-04-25 23:03:15
+# @Last Modified time: 2018-04-25 23:39:14
 
 
 
@@ -32,18 +32,7 @@ if __name__ == '__main__':
 
 
 
-def select_index(l,item):
-    low = 0
-    high = len(l)-1
-    while low < high:
-        half = int((low + high)/2)
-        print(half)
-        if l[half] < item:
-           low = half  
-        elif l[half] > item:
-           high = half -1
-        else:
-           return half
+
            
 
 l = [1, 4, 12, 45, 66, 99, 120, 444]
