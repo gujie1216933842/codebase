@@ -29,17 +29,39 @@ if __name__ == '__main__':
     # print (binarySearch(l, 1) )
     # print (binarySearch(l, 13) )
     # print (binarySearch(l, 444) )
-
-
-
-
-           
-
 l = [1, 4, 12, 45, 66, 99, 120, 444]
-print(select_index(l, 12) )
+# print(binarySearch(l, 12) )
 
 
 
+
+
+class A(object):
+    """docstring for ClassName"""
+    # name = ""
+    # age = 0
+    # job = "doctor"
+    def setName(self):
+        #self.name = "xiaoming"
+        #print(self.name)
+        print('hahahaha')
+
+    @classmethod 
+    def setAge(cls):
+        #cls.age = 28 
+        cls().setName()   #此处如果 cls.setName()就会报错
+
+    @staticmethod
+    def jobs():
+        A().setName()
+        print('staticmethod')   #此处如果 A.setName()就会报错
+
+A.jobs()
+A.setAge()
+
+
+
+        
 
 
 
