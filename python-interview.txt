@@ -68,7 +68,23 @@ https://www.cnblogs.com/tom-gao/p/6645859.html
 1.首先在应用层这部分:将数据封装成http协议的报文,
 2.传输层:socket connect werite()      
          socket bind listen  read()
-         
+
+
+
+
+
+
+10.tornado原理理解
+1>.ioloop是tornado运行的核心
+2>.ioloop封装了操作管理epoll的工作
+3>.ioloop实例启动时,ioloop将服务器监听的socket添加到epoll容器中,然后循环等待epoll返回处理socket
+
+4>.当客户端发起连接后,ioloop从epoll容器中拿到服务器监听的socket,并调用服务器实例处理监听socket的方法,接收连接请求,并将新的客户端对应的socket添加到epoll容器中,然后继续循环等待epoll返回可处理的socket
+
+5>当客户端发送过来的请求数据后,ioloop从epoll中拿到了接收数据的socket,并调用服务器实例处理该传输socket的方法,从socket读取处http报文数据,解析后调用application的实例,进行路由分发,实例化具体的http方法,生成响应数据给客户端,完成请求处理
+
+6>当与客户端对应的socket可写是,ioloop从epoll中拿到了对应可写的socket,将缓冲区中对应的响应报文数据写入doasocket中传回给客户端,完成请求处理
+7>epoll每次只返回给ioloop可以处理的socket,然后ioloop对拿到的socket依次进行处理,有效充分地利用cpu时间,进而达到提升支持高并发的能力
 
 
 
