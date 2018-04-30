@@ -11,7 +11,7 @@ def function(a):
     print(c)
 
 function([1,1,3,3,3,8,4,5])
-
+print("我爱你")
 
 
 '''
