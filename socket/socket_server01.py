@@ -4,7 +4,14 @@
 # @Date:   2018-05-02 23:09:42
 # @Last Modified by:   anchen
 # @Last Modified time: 2018-05-02 23:37:23
-
+'''
+步骤:
+1.绑定监听端口
+2.监听
+3.等电话打进来
+4.电话来了
+5.接收数据
+'''
 import socket
 
 server = socket.socket()
