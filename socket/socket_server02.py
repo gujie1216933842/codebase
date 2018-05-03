@@ -18,7 +18,7 @@ server.listen()
 
 conn,addr = server.accept()
 data = conn.recv(1024)
-print('服务端接收数据%s'%(data))
+print('服务端接收数据:%s'%(data.decode()))
 conn.send(data.upper())
 
 server.close()
