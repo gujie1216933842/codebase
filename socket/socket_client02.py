@@ -1,10 +1,10 @@
 
 import socket
-
+import json
 client = socket.socket()
 client.connect(('127.0.0.1',8888))
 
-client.send(b'我爱你')
+client.send(b'我爱你'.encode('utf8'))
 
 #接收数据
 data = client.recv(1024)
