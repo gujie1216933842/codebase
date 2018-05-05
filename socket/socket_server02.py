@@ -14,6 +14,7 @@ import socket
 
 server = socket.socket()
 server.bind(('127.0.0.1',8888))
+#server.bind(('0.0.0.0',8888))   #如果想要在linux上启动socket服务端,解除注释
 server.listen()
 
 conn,addr = server.accept()
