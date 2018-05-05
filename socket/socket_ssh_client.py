@@ -1,5 +1,6 @@
 '''
 用户socket写一个ssh客户端
+存在接收不全的问题
 '''
 
 import socket
