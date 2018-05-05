@@ -20,10 +20,12 @@ while True:
 
     print('客户端发来的信息:%s'%(data))
 
-    cmd_res = os.popen(data).read()
+    cmd_res = os.popen(data.decode()).read()
+    if len(cmd_res) == 0:
+        cmd_res = "ssh no output....."
     print('服务端返回给客户端的信息:%s'%(cmd_res))
 
-    conn.send(cmd_res)
+    conn.send(cmd_res.encode())
 
 server.close()
 

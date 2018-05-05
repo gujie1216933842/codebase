@@ -16,9 +16,9 @@ client.connect(('localhost', 9000))
 while True:
     cmd = input(">>:").strip()
     if len(cmd) == 0: continue
-    client.send(cmd)
+    client.send(cmd.encode())
     cmd_res = client.recv(1024)
-    print('客户端接收服务端返回的信息:%s' % (cmd_res))
+    print('客户端接收服务端返回的信息:%s' % (cmd_res.decode()))
 
 
 client.close()
