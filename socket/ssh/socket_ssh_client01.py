@@ -24,7 +24,6 @@ while True:
     if len(cmd) == 0: continue
     client.send(cmd.encode("utf-8"))
     cmd_size = client.recv(1024)
-    print("服务端返回的信息大小:%s"%(cmd_size))
     content = b''
     size = 0
     while size < int(cmd_size.decode()) :
@@ -33,6 +32,5 @@ while True:
         content +=data
     else:
         print(content.decode())
-    print("客户端打印的的信息大小:%s" % (size))
 
 client.close()
