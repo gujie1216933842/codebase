@@ -111,7 +111,7 @@ print('Use requests+ThreadPoolExecutor cost: {}'.format(time.time() - start))
 #加入协程
 # import asyncio
  
-# async def run_scraper_tasks(executor):
+# xiechen def run_scraper_tasks(executor):
 #     loop = asyncio.get_event_loop()
  
 #     blocking_tasks = []
