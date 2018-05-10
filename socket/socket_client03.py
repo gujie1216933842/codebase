@@ -14,7 +14,7 @@ import socket
 
 
 client = socket.socket()
-client.connect(('localhost',9090))
+client.connect(('47.97.165.75',9000))
 client.send(b'hahaha')
 
 data = client.recv(1024)
