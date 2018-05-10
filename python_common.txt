@@ -51,7 +51,15 @@ app文件夹下自建文件的作用
 主应用文件下没有view.py文件   (主应用文件夹名和django项目名一致)
 
 
-                  
+django 创建后台操作
+python manage.py createsuperuser
+如果需要在admin后台引入想要设置的模型
+现在项目各自应用文件夹下添加文件 admin.py   以项目为例 : tiantian/shopping/goods/下添加admin.py文件
+
+
+
+
+
 
     
 
