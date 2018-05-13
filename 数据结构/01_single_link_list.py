@@ -41,3 +41,10 @@ class SingleLinkList(object):
     def search(self):
         '''查找节点是否存在'''
         pass
+
+
+
+'''测试'''
+if __name__ == "__main__":
+   sll = SingleLinkList()
+
