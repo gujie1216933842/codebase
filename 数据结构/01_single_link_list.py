@@ -20,31 +20,32 @@ class SingleLinkList(object):
 
     def travel(self):
         '''链表遍历'''
+        
+
+
         pass
 
-    def add(self):
+    def add(self, item):
         '''链表头部添加元素'''
         pass
 
-    def append(self):
+    def append(self, item):
         '''链表尾部添加元素'''
         pass
 
-    def insert(self):
+    def insert(self, pos, item):
         '''链表指定位置添加元素'''
         pass
 
-    def remove(self):
+    def remove(self, item):
         '''删除节点'''
         pass
 
-    def search(self):
+    def search(self, item):
         '''查找节点是否存在'''
         pass
 
 
-
 '''测试'''
 if __name__ == "__main__":
-   sll = SingleLinkList()
-
+    sll = SingleLinkList()
