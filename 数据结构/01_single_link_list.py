@@ -20,7 +20,7 @@ class SingleLinkList(object):
 
     def travel(self):
         '''链表遍历'''
-        
+
 
 
         pass
