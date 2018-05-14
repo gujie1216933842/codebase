@@ -1009,7 +1009,27 @@ d.适合遍历很大的数据集合,节省内存,提升速度
 理解生成器和迭代器的区别:
 生成器是用函数中yield语句来创建的。迭代器的创建首先跟函数无关,可以用iter([1,2])方法来创建
 生成器是一种迭代器，是一种特殊的函数
-每个生成器都是一个迭代器，但是反过来不行。通常生成器是通过调用一个或多个yield表达式构成的函数s生成的。同时满足迭代器的定义。     
+每个生成器都是一个迭代器，但是反过来不行。通常生成器是通过调用一个或多个yield表达式构成的函数s生成的。同时满足迭代器的定义。
+
+
+
+理解epoll
+epoll是一种工作机制
+epoll是依赖于linux操作系统的,是linux操作系统给我们提供的一种工具,所以说epoll的实现离不开linux操作系统
+epoll是一个容器,里面可以管理多个socket
+服务器新建连接,服务器开启监听,首先要建立一个socket连接,等待客户端的连接
+epoll 相当于socket的管理人
+
+tornado.ioloop.IoLoop.current().start()   表示tornado不断的循环去询问epoll是否我需要执行什么
+tornado.ioloop.IoLoop类是tornado运行的核心
+tornado.ioloop模块封装了epoll操作socket的操作的接口
+
+
+
+
+
+
+
 
 
 
