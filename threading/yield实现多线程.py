@@ -12,9 +12,9 @@ gen = None
 def long_io():
     def fun():
         global gen
-        print("开始进行好事操作")
+        print("开始进行耗时操作")
         time.sleep(5)
-        print("完成执行好事操作")
+        print("完成执行耗时操作")
         result = "io result"
         try:
             gen.send(result)  #作用:把gen生成器拿过来,把ret等于result,然后继续执行下面的代码
@@ -40,7 +40,7 @@ def req_b():
 def main():
     global gen
     gen = req_a()   #函数中存在yield关键字,所以函数req_a现在就是一个生成器
-    gen.__next__    #执行函数,第一次遇到yield会暂停
+    gen.__next__()    #执行函数,第一次遇到yield会暂停
     req_b()
     while 1:
         pass
