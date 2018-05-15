@@ -17,7 +17,7 @@ def long_io():
         print("完成执行好事操作")
         result = "io result"
         try:
-            gen.send(result)
+            gen.send(result)  #作用:把gen生成器拿过来,把ret等于result,然后继续执行下面的代码
         except StopIteration:
             pass
     threading._start_new_thread(fun,())
