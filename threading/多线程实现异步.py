@@ -6,7 +6,7 @@ def long_io(cb):
         time.sleep(5)
         print("完成执行耗时操作")
         result = "io result"
-        callable(result)
+        callback(result)
     threading._start_new_thread(fun,(cb,))
 
 def on_finish(ret):
