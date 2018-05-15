@@ -1,10 +1,10 @@
 import threading,time
 
-def login_io(cb):
+def long_io(cb):
     def fun(callback):
-        print("开始进行好事操作")
+        print("开始进行耗时操作")
         time.sleep(5)
-        print("完成执行好事操作")
+        print("完成执行耗时操作")
         result = "io result"
         callable(result)
     threading._start_new_thread(fun,(cb,))
@@ -16,7 +16,7 @@ def on_finish(ret):
 
 def req_a():
     print("开始处理请求a")
-    login_io(on_finish)
+    long_io(on_finish)
     print("离开处理请求a")
 
 
