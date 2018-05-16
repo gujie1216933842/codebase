@@ -1022,7 +1022,14 @@ epoll 相当于socket的管理人
 
 tornado.ioloop.IoLoop.current().start()   表示tornado不断的循环去询问epoll是否我需要执行什么
 tornado.ioloop.IoLoop类是tornado运行的核心
+ioloop作为全局的统筹者,不断与linux层的epoll一问一答
 tornado.ioloop模块封装了epoll操作socket的操作的接口
+
+
+
+
+协程:程序之间相互配合运行的一种机制
+
 
 
 
