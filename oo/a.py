@@ -114,7 +114,7 @@ print(d)
 
 #时间戳转换成'2018-04-25 14:59:47'格式
 e = time.strftime('%Y-%m-%d %H:%M:%S',time.localtime(a))
-print(d)
+print('jjjjj',d)
 
 #'2018-04-25 14:59:47'格式转化为struct_time
 f = "2018-04-25 15:10:56"
