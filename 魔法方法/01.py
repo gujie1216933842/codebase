@@ -10,3 +10,34 @@ __getattr__ 是一旦我们尝试访问对象的一个并不存在的属性就�
 
 
 '''
+
+
+class Test01(object):
+    def __init__(self, world):
+        self.world = world
+
+    def __getattr__(self, item):
+        return item
+
+
+t1 = Test01("haha")
+print(t1.__getattr__('nihao'))
+
+b = 'aaa'
+
+
+class Test02(object):
+    name = "xiaoxiong"
+
+    def run(self):
+        return "hello world"
+
+
+t = Test02()
+
+
+
+
+
+
+
