@@ -32,8 +32,23 @@ class Test02(object):
     def run(self):
         return "hello world"
 
-
+'''类方法也是属性'''
+''''''
 t = Test02()
+flag = hasattr(t,'name')
+flag1 = hasattr(t,'run')
+print(flag)
+print(flag1)
+aa = getattr(t,"name")
+print(aa)
+
+setattr(t,'age','18')
+print(t.age)
+
+
+
+
+
 
 
 
