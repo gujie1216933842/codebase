@@ -27,19 +27,21 @@ class Traverse(object):
             return
 
         print(treeNode.value)
-
+        self.pre(treeNode.left)
+        self.pre(treeNode.right)
 
     def mid(self, treeNode):
         '''前序遍历'''
         if not treeNode:
             return
-
+        self.pre(treeNode.left)
         print(treeNode.value)
-
+        self.pre(treeNode.right)
 
     def after(self, treeNode):
         '''前序遍历'''
         if not treeNode:
             return
-
+        self.after(treeNode.left)
         print(treeNode.value)
+        self.after(treeNode.left)
