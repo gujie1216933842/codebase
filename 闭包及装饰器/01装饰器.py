@@ -1,18 +1,5 @@
 # Author:Bob
 
-def check_login(login_status):
-    def inner():
-        if not login_status:
-            print("请先登录")
-        else:
-            print("已登录")
-
-    return inner()  # inner()一定要加括号
-
-
-# @check_login(1)
-# def index():
-#     print("展示index页面")
 
 
 from functools import wraps
