@@ -12,5 +12,8 @@ locate命令的使用实例：
 搜索用户主目录下，所有以m开头的文件，并且忽略大小写。
 
 
+回复vim 默认原始的配置
+vim -u NONE -N搜索 <filename>以默认配置方式打开filename.
+
 
 
