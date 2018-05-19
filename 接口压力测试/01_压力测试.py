@@ -19,12 +19,13 @@ class postRequest():
             print(u"所传递的参数为：\n", parms)
             print(u"服务器返回值为：\n", resp)
         except URLError as e:
-            print(e)
+            print("异常:%s" % e)
 
 
 def Login():  # 定义接口函数
     # 实例化接口对象
-    login = postRequest('http://47.97.165.75:9000/login.html', {"MSG": '00001', "mobile": "13585591803", "password": "123"},
+    login = postRequest('http://47.97.165.75:9000/tologin',
+                        {"MSG": '00001', "mobile": "13585591803", "pwd": "123"},
                         "1.login")
     return login.post()
 
@@ -32,7 +33,7 @@ def Login():  # 定义接口函数
 try:
     i = 0
     tasks = []  # 任务列表
-    task_number = 300
+    task_number = 3000
     while i < task_number:
         t = threading.Thread(target=Login)
         tasks.append(t)  # 加入线程池，按需使用
