@@ -35,6 +35,10 @@ def func(keyword, i, pattern):
 # 当前日期
 # now_date = time.strftime("%Y-%m-%d", time.localtime(time.time()))
 key = "女装"
+pic_dir = os.path.join(os.path.dirname(__file__), 'pic/' + key)
+if not os.path.exists(pic_dir):
+    os.makedirs(pic_dir)
+
 pattern = '"pic_url":"//(.*?).jpg"'
 for i in range(100):
     ret = func(key, i, pattern)
@@ -46,7 +50,8 @@ for i in range(100):
         pic_url = "http://" + ret[j] + ".jpg"
         print(pic_url)
         # 要保存的图片路径
-        pic_file_path = os.path.join(os.path.dirname(__file__), 'pic/page' + str(i) + 'few' + str(j) + '.jpg')
+        pic_file_path = os.path.join(os.path.dirname(__file__),
+                                     'pic/' + key + '/page' + str(i) + 'few' + str(j) + '.jpg')
         print(pic_file_path)
         try:
             urllib.request.urlretrieve(pic_url, filename=pic_file_path)
