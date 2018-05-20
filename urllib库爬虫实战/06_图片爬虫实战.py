@@ -66,5 +66,5 @@ def snatch_pic(key):
                 print("异常:%s" % e)
 
 
-key = "丝袜"
+key = "男装"
 snatch_pic(key)
