@@ -16,4 +16,4 @@ class FirstItem(scrapy.Item):
 
 
 class QsbkItem(scrapy.Item):
-    content = scrapy.Item()
+    content = scrapy.Field()
