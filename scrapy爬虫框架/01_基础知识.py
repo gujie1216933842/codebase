@@ -54,6 +54,11 @@ gujie.py  爬虫文件
 scrapy 中模拟浏览器爬取信息  (如糗事百科就需要模拟)
        在爬虫文件中导入模块
 
+'''
+
+'''
+创建自动爬虫
+scrapy denspider -t crawl haha qiushibaike.com
 
 
 
