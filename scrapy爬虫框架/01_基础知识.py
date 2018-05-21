@@ -33,6 +33,8 @@ xpath表达式(重点)
 
 //div    所有的div标签
 //div[@class='xiaoming']    定位到相应的div
+//div[@class='xiaoming']/a/@href    定位到相应的div,下面a标签下的href属性
+
 
 
 
