@@ -37,6 +37,7 @@ xpath表达式(重点)
 
 爬虫文件创建好了之后
 setting.py   开启piplines,修改first.pipelines.FirstPipeline  修改成自己piplinne中类名
+             ROBOTSTXT_OBEY = False  从初始true改成false
 pipline中   需要处理爬取的数据的话,做处理
 items.py    #创建了一个名为link(名字根据自己的需求定)的容器,创建了不一定用  如: link = scrapy.Field()
 gujie.py  爬虫文件
@@ -49,6 +50,9 @@ gujie.py  爬虫文件
 
 运行爬虫命令:    scrapy crawl gujie --nolog
 
+
+scrapy 中模拟浏览器爬取信息  (如糗事百科就需要模拟)
+       在爬虫文件中导入模块
 
 
 

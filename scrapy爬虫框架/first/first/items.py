@@ -13,3 +13,7 @@ class FirstItem(scrapy.Item):
     content = scrapy.Field()  #创建了一个名为content的容器,创建了不一定用
     link = scrapy.Field()  #创建了一个名为link的容器,创建了不一定用
     pass
+
+
+class QsbkItem(scrapy.Item):
+    content = scrapy.Item()
