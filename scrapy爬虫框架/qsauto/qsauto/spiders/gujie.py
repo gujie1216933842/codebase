@@ -12,7 +12,7 @@ class GujieSpider(CrawlSpider):
     start_urls = ['http://www.qiushibaike.com/']
 
     rules = (
-        Rule(LinkExtractor(allow=r'Items/'), callback='parse_item', follow=True),
+        Rule(LinkExtractor(allow=r'article'), callback='parse_item', follow=True),
     )
 
     def start_requests(self):
@@ -21,6 +21,7 @@ class GujieSpider(CrawlSpider):
         yield Request('http://www.qiushibaike.com/', headers=ua)
 
     def parse_item(self, response):
+        print(1)
         i = QsautoItem()
         i['content'] = response.xpath("//div[@class='content']/span/text()").extract()
         print(i['content'])
