@@ -66,5 +66,9 @@ def snatch_pic(key):
                 print("异常:%s" % e)
 
 
-key = "男装"
+key = "手机"
+start_time = time.time()
 snatch_pic(key)
+end_time = time.time()
+print('**************************************************************************************************')
+print("消耗时间:%s" % (end_time - start_time))  #消耗时间:391.7193102836609
