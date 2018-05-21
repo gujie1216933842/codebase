@@ -18,9 +18,13 @@ spiders文件夹下,可以有多个爬虫文件
           csvfeed  处理csv文件
           xmlfeed  处理xml文件
 
-  创建爬虫文件,在项目名first目录下
+  创建爬虫文件,在项目名first目录下(一个爬虫项目里可以创建多个爬虫文件)
        scrapy genspider -t basic gujie  baidu.com  基于basic模板的一个名为gujie的爬虫文件,限制爬取baidu.com
 
+scrapy list 显示当前爬虫项目中可以运行的爬虫文件,也是在爬虫项目的目录下执行
+scrapy edit gujie 直接通过编辑器来打开爬虫文件,(在windows中时运行不了的,在linux中可以执行)
+
+scrapy parse http://www.baidu.com  直接获取百度首页
 
 
 
