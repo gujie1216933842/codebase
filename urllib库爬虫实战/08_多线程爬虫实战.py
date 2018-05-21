@@ -6,25 +6,28 @@ import threading
 import urllib.request
 import re, time, os
 
+
 class One(threading.Thread):
-    def __init__(self,num):
+    def __init__(self, num, search):
         threading.Thread.__init__(self)
         self.num = num
+        self.search = search
+
     def run(self):
-        if self.num%2==0:
-            for i in range(10):
-                print("我是线程A")
-        else:
-            for i in range(10):
-                print("我是线程A")
+        for i in range(self.num, 100, 2):
+            snatch_pic(i, self.search)
 
 
+class Two(threading.Thread):
+    def __init__(self, num, search):
+        threading.Thread.__init__(self)
+        self.num = num
+        self.search = search
 
+    def run(self):
+        for i in range(self.num, 100, 2):
+            snatch_pic(i, self.search)
 
-a = One(0)  #偶数
-b = One(1)  #奇数
-a.start()
-b.start()
 
 def func(keyword, i, pattern):
     keyword = urllib.request.quote(keyword)  # 用来处理请求字符串中中文
@@ -47,31 +50,37 @@ def func(keyword, i, pattern):
 # now_date = time.strftime("%Y-%m-%d", time.localtime(time.time()))
 
 
-def snatch_pic(key):
-    pic_dir = os.path.join(os.path.dirname(__file__), 'pic/' + key)
+def snatch_pic(i, key):
+    pic_dir = os.path.join(os.path.dirname(__file__), 'pic1/' + key)
     if not os.path.exists(pic_dir):
         os.makedirs(pic_dir)
 
     pattern = '"pic_url":"//(.*?).jpg"'
-    for i in range(100):
-        ret = func(key, i, pattern)
-        # 当天的日期
-        data = time.time
-        for j in range(0, len(ret)):
-            # 这里用urlretrieve爬取图片
-            # 图片链接
-            pic_url = "http://" + ret[j] + ".jpg"
-            print(pic_url)
-            # 要保存的图片路径
-            pic_file_path = os.path.join(os.path.dirname(__file__),
-                                         'pic/' + key + '/page' + str(i) + 'few' + str(j) + '.jpg')
-            print(pic_file_path)
-            try:
-                urllib.request.urlretrieve(pic_url, filename=pic_file_path)
-            except Exception as e:
-                print("异常:%s" % e)
+    ret = func(key, i, pattern)
+    # 当天的日期
+    data = time.time
+    for j in range(0, len(ret)):
+        # 这里用urlretrieve爬取图片
+        # 图片链接
+        pic_url = "http://" + ret[j] + ".jpg"
+        print(pic_url)
+        # 要保存的图片路径
+        pic_file_path = os.path.join(os.path.dirname(__file__),
+                                     'pic1/' + key + '/page' + str(i) + 'few' + str(j) + '.jpg')
+        print(pic_file_path)
+        try:
+            urllib.request.urlretrieve(pic_url, filename=pic_file_path)
+        except Exception as e:
+            print("异常:%s" % e)
 
 
-key = "男装"
-snatch_pic(key)
+key = "手机"
+start_time = time.time()
+a = One(0, key)  # 偶数
+b = One(1, key)  # 奇数
+a.start()
+b.start()
+end_time = time.time()
+print("*****************************************************")
+print("消耗时间%s" % (end_time - start_time))
 
