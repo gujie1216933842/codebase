@@ -35,6 +35,16 @@ xpath表达式(重点)
 //div[@class='xiaoming']    定位到相应的div
 //div[@class='xiaoming']/a/@href    定位到相应的div,下面a标签下的href属性
 
+爬虫文件创建好了之后
+setting.py   开启piplines,修改first.pipelines.FirstPipeline  修改成自己piplinne中类名
+pipline中   需要处理爬取的数据的话,做处理
+items.py    #创建了一个名为link(名字根据自己的需求定)的容器,创建了不一定用  如: link = scrapy.Field()
+gujie.py  爬虫文件
+            导入items  from first.items import FirstItem
+            parse回调方法中写xpath表达式,参考如下
+                item = FirstItem()
+                item['content'] = response.xpath("/html/head/title/text()").extract()
+                yield item
 
 
 运行爬虫命令:    scrapy crawl gujie --nolog
