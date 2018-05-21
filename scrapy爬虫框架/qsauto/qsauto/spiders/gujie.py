@@ -23,6 +23,6 @@ class GujieSpider(CrawlSpider):
     def parse_item(self, response):
         print(1)
         i = QsautoItem()
-        i['content'] = response.xpath("//div[@class='content']/span/text()").extract()
+        i['content'] = response.xpath("//div[@class='content']/text()").extract()
         print(i['content'])
         return i
