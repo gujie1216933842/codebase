@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 import scrapy
-
+from first.items import FirstItem
 
 class GujieSpider(scrapy.Spider):
     name = "gujie"
@@ -10,4 +10,10 @@ class GujieSpider(scrapy.Spider):
     )
 
     def parse(self, response):
-        pass
+        '''
+        固定格式
+        content = response.xpath("").extract()
+        '''
+        item = FirstItem()
+        item['content'] = response.xpath("/html/header/title/text()").extract()
+        yield item

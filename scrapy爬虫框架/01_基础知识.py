@@ -37,6 +37,8 @@ xpath表达式(重点)
 
 
 
+运行爬虫命令:    scrapy crawl gujie --nolog
+
 
 
 
