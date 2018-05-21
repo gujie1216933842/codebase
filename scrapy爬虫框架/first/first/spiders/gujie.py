@@ -15,5 +15,5 @@ class GujieSpider(scrapy.Spider):
         content = response.xpath("").extract()
         '''
         item = FirstItem()
-        item['content'] = response.xpath("/html/header/title/text()").extract()
+        item['content'] = response.xpath("/html/head/title/text()").extract()
         yield item
