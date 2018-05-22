@@ -88,4 +88,19 @@ py3中列表排序,列表中不能有字符
 '''
 
 
+'''
+字典dict 常用操作
+a = {'a':1,'b':2}
+
+a.pop('a')  删除字典中的元素 'a':1  返回1
+
+a.clear()  删除字典中所有元素  执行后a 为空字典
+
+遍历
+for key in dic:
+for value in dic:
+for key,value in dic:
+
+'''
+
 
