@@ -26,7 +26,7 @@ def fetch(a):
 #加入协程
 import asyncio
 '''
-函数前添加 xiechen 关键字 , 定义一个异步函数
+函数前添加 协程 关键字 , 定义一个异步函数
 '''
 async def run_scraper_tasks(executor):
     loop = asyncio.get_event_loop()
