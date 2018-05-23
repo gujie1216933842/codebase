@@ -29,6 +29,7 @@ class GujieSpider(scrapy.Spider):
           如果不为空,则证明有验证码,通过urlretrieve()方法,把图片下载到本地,人工读取,填入验证码
         3.有验证码和没有验证码两种方式传入的post参数不同
         '''
+        print(123)
         captcha = response.xpath("//img[@id='captcha_image']/@src").extract()
         if len(captcha):
             # 这一步表示验证码已经存在了,需要瞎子啊验证码
