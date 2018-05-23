@@ -32,16 +32,19 @@ class GujieSpider(scrapy.Spider):
         captcha = response.xpath("//img[@id='captcha_image']/@src").extract()
         if len(captcha):
             # 这一步表示验证码已经存在了,需要瞎子啊验证码
-            captcha_path = os.path.join(os.path.dirname(__file__), '/captcha')
+            captcha_path = os.path.join(os.path.dirname(__file__), '/captcha.jpg')
             try:
                 urllib.request.urlretrieve(captcha[0], captcha_path)
             except Exception as e:
                 print("验证码图片下载异常:%s" % e)
+            captcha_value = input()  #手动输入读取的验证码图片
+
             data = {
                 'form_email': '13585591803',
                 'form_password': '86917307x',
-                'captcha-solution': ''
+                'captcha-solution': captcha_value
             }
+            
         else:
 
             url = "https://accounts.douban.com/login"
