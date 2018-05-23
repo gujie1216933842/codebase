@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import scrapy
 import urllib.request
-from scrapy.http import Request
+from scrapy.http import Request, FormRequest
 import os
 
 '''
@@ -20,7 +20,7 @@ class GujieSpider(scrapy.Spider):
 
     # meta={'cookiejar':1} 表示cookie开启,保存登录的状态
     def start_requests(self):
-        return [Request("https://accounts.douban.com/login", callable=self.parse, meta={'cookiejar': 1})]
+        return [Request("https://accounts.douban.com/login", callback=self.parse, meta={'cookiejar': 1})]
 
     def parse(self, response):
         '''
@@ -43,14 +43,27 @@ class GujieSpider(scrapy.Spider):
             data = {
                 'form_email': '13585591803',
                 'form_password': '86917307x',
-                'captcha-solution': captcha_value
+                'captcha-solution': captcha_value,
+                'redir': 'https://www.douban.com/people/123390691/'
             }
 
         else:
             print('此时没有验证码...')
             data = {
                 'form_email': '13585591803',
-                'form_password': '86917307x'
+                'form_password': '86917307x',
+                'redir': 'https://www.douban.com/people/123390691/'
             }
         url = "https://accounts.douban.com/login"
-        pass
+        print('登录中...')
+        return [FormRequest.from_response(response,
+                                          headers=self.header,
+                                          meta={'cookiejar': 1},
+                                          formdata=data,
+                                          callback=self.next)]
+
+    def next(self, response):
+        print('此时已完成登录,并开始爬取个人中心的数据...')
+        people_data = response.xpath('//div[@class="note"/text()]').extract()
+        print(people_data)
+        return people_data
