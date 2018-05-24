@@ -3,12 +3,12 @@ def fun(a):
     while a > 1:
         a -= 1
         b = yield a
+        yield b
     return b
 
 bb = fun(5)
 
 print(next(bb))
-print(next(bb))
-print(bb.send(3))
+print(bb.send('hhhhh'))
 
 print(next(bb))
