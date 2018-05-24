@@ -15,7 +15,7 @@ def fun(a):
     b = 0
     while a > 1:
         a -= 1
-        b = yield a
+        b = yield a  #注意:yield表达式可以接收send()发出的参数,如果上一步没有send()方法,则b为None
         yield b
     return b
 bb = fun(5)
@@ -30,15 +30,16 @@ print(next(bb))
 a = 5
 a = 4
 
-yield a   返回 a = 4,函数程序中断,等待生成器下次调用next()或者send)方法激活
+yield a   返回 a = 4,函数程序中断,等待生成器下次调用next()或者send()方法激活
 
-bb.send('hhhhh')  激活生成器
+bb.send('hhhhh')  第1次激活生成器
 yield b  再次中断  此时应为b有有断点赋值  所以返回 hhhhh
 
 在断点处设断点值 'hhhhh'  ,也会返回生成器的值   hhhhh  再次中断
 
-yield b 启动生成器 并返回b的值
+第3次激活  遇到yield a 返回a = 3  中断
 
+第4次激活  遇到yield b 上一步没有send()赋值,所以返回None
 
 
 
