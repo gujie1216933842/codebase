@@ -21,8 +21,8 @@ subject = 'Python SMTP 邮件测试'
 message['Subject'] = Header(subject, 'utf-8')
 
 try:
-    smtpObj = smtplib.SMTP()
-    smtpObj.connect(mail_host, 25)  # 25 为 SMTP 端口号
+    smtpObj = smtplib.SMTP_SSL()
+    smtpObj.connect(mail_host, 25)  # 25 为 SMTP 端口号 ,注意:阿里云服务器上 25端口被禁用了,在阿里云上执行会显示超时
     smtpObj.login(mail_user, mail_pass)
     smtpObj.sendmail(sender, receivers, message.as_string())
     print("邮件发送成功")
