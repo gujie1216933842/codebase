@@ -20,7 +20,8 @@ class GujieSpider(scrapy.Spider):
 
     # meta={'cookiejar':1} 表示cookie开启,保存登录的状态
     def start_requests(self):
-        return [Request("https://accounts.douban.com/login", callback=self.parse, meta={'cookiejar': 1})]
+        return [Request("https://accounts.douban.com/login", callback=self.parse, headers=self.header,
+                        meta={'cookiejar': 1})]
 
     def parse(self, response):
         '''
@@ -34,19 +35,22 @@ class GujieSpider(scrapy.Spider):
         if len(captcha):
             # 这一步表示验证码已经存在了,需要瞎子啊验证码
             print('此时有验证码...')
-            captcha_path = os.path.join(os.path.dirname(__file__), '/captcha.jpg')
+            captcha_path = os.path.join(os.path.dirname(__file__), 'captcha.jpg')
+            print('图片路径:%s' % captcha_path)
             try:
-                urllib.request.urlretrieve(captcha[0], captcha_path)
+                urllib.request.urlretrieve(captcha[0], filename=captcha_path)
             except Exception as e:
                 print("验证码图片下载异常:%s" % e)
-            captcha_value = input()  # 手动输入读取的验证码图片
+            else:
+                print('请查看本地图片并输入验证码')
+                captcha_value = input()  # 手动输入读取的验证码图片
 
-            data = {
-                'form_email': '13585591803',
-                'form_password': '86917307x',
-                'captcha-solution': captcha_value,
-                'redir': 'https://www.douban.com/people/123390691/'
-            }
+                data = {
+                    'form_email': '13585591803',
+                    'form_password': '86917307x',
+                    'captcha-solution': captcha_value,
+                    'redir': 'https://www.douban.com/people/123390691/'
+                }
 
         else:
             print('此时没有验证码...')
