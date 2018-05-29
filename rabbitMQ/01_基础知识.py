@@ -51,3 +51,34 @@ python中的rabbit模块有pika  celery  haigha
 
 
 '''
+
+
+'''
+rabbitmq安装
+建议都是源码安装
+1.安装erlang语言
+********APPLICATIONS DISABLED*****
+只剩下jinterface     : Java compiler disabled by user,可不考虑,直接下不安装
+
+
+2.安装rabbitmq
+
+复制代码
+wget http://www.rabbitmq.com/releases/rabbitmq-server/v3.5.8/rabbitmq-server-3.5.8.tar.gz
+tar -zxvf rabbitmq-server-3.5.8.tar.gz
+cd abbitmq-server-3.5.8
+make
+make TARGET_DIR=/usr/local/rabbitmq SBIN_DIR=/usr/local/rabbitmq/sbin MAN_DIR=/usr/local/rabbitmq/man DOC_INSTALL_DIR=/usr/local/rabbitmq/doc install
+复制代码
+配置erlang环境
+vi /etc/profile #在最后添加下文
+PATH=$PATH:/usr/local/erlang/bin:/usr/local/rabbitmq/sbin
+使环境变量生效
+source /etc/profile
+3. 启动：rabbitmq-server
+
+rabbitmq-server start
+
+
+
+'''
