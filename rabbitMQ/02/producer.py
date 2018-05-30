@@ -14,5 +14,5 @@ body = input(">>请输入消息内容:")
 channel.basic_publish(exchange='',
                       routing_key='hello',  # queue名字
                       body=body)  # 消息内容
-print(" [x] Sent 'Hello World!'")
+print(" [x] Sent %s" % body)
 connection.close()  # 队列关闭
