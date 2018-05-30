@@ -28,7 +28,13 @@ python中的rabbit模块有pika  celery  haigha
 
 
 
+ 一步启动Erlang node和Rabbit应用：./rabbitmq-server
 
+ 在后台启动Rabbit node：./rabbitmq-server -detached
+
+ 关闭整个节点（包括应用）：./rabbitmqctl stop
+
+ rabbitmqctl list_queues  # 查看当前queue数量及queue里消息数量
 
 
 
