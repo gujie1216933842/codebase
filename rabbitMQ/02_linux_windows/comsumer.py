@@ -27,3 +27,7 @@ channel.basic_consume(  # 消费消息
 
 print(' [*] Waiting for messages. To exit press CTRL+C')
 channel.start_consuming()  # 开始消费消息
+
+
+
+#aaa
