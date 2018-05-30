@@ -3,7 +3,7 @@ import time
 
 # 建立实例
 connection = pika.BlockingConnection(pika.ConnectionParameters(
-               '47.97.165.75'))
+               'localhost'))
 # 声明管道
 channel = connection.channel()
 
@@ -29,5 +29,3 @@ print(' [*] Waiting for messages. To exit press CTRL+C')
 channel.start_consuming()  # 开始消费消息
 
 
-
-#aaa
