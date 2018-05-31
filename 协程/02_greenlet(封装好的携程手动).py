@@ -1,7 +1,7 @@
 from greenlet import greenlet
 
 '''
-手动切换协程
+greenlet是手动切换协程
 
 '''
 

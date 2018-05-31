@@ -1,6 +1,16 @@
 from urllib import request
 import gevent, time
 from gevent import monkey
+'''
+gevent是python的一个第三方库,可以轻松的通过gevent实现并发同步或者异步编程
+在gevent中,主要用到的模式是greenlet,它是以C语言扩展模块接入python的轻量级协程.
+greenlet全部运行在主程序操作系统进程的内部,但是他们被协作式的调度
+
+
+gevent是协程自动切换
+
+'''
+
 
 '''
 如何让gevent知道urllib正在进行io操作
