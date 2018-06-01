@@ -19,14 +19,14 @@ conn = pika.BlockingConnection(connParams)
 
 channel = conn.channel()
 
-channel.basic_consume(callable,
-                      queue='hello')
-
-
+#面向过程,回调函数定义要写在调用之前,否则脚本在执行的时候,会解析不到,导致程序报错
 def callback(ch, method, properties, body):
     print(method, properties, body)
     print('recieve:%s' % body)
     ch.basic_ack(delivery_tag=method.delivery_tag)
 
+
+channel.basic_consume(callback,
+                      queue='hello')
 
 channel.start_consuming()
