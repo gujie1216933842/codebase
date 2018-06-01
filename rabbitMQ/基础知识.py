@@ -39,27 +39,6 @@ python中的rabbit模块有pika  celery  haigha
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 '''
 
 
@@ -91,4 +70,10 @@ rabbitmq-server start
 
 
 
+'''
+
+
+'''
+ 学习 使用 django+celery+RabbitMQ 实现异步执行
+ https://blog.csdn.net/dipolar/article/details/22162863
 '''
