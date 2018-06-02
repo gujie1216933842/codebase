@@ -80,6 +80,8 @@ rabbitmq-server start
  
  https://blog.csdn.net/qq415200973/article/details/42562555
  
+ https://www.cnblogs.com/znicy/p/5626040.html
+ 
  https://www.cnblogs.com/mysql-dba/p/6895190.html?utm_source=itdadao&utm_medium=referral
  
  http://python.jobbole.com/88276/
