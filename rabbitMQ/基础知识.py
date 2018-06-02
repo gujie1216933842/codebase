@@ -65,6 +65,7 @@ PATH=$PATH:/usr/local/erlang/bin:/usr/local/rabbitmq/sbin
 使环境变量生效
 source /etc/profile
 3. 启动：rabbitmq-server
+rabbitmq-server -detached 表示在后台启动rabbitmq服务,参考redis
 
 rabbitmq-server start
 
@@ -76,4 +77,21 @@ rabbitmq-server start
 '''
  学习 使用 django+celery+RabbitMQ 实现异步执行
  https://blog.csdn.net/dipolar/article/details/22162863
+ 
+ https://blog.csdn.net/qq415200973/article/details/42562555
+ 
+ https://www.cnblogs.com/mysql-dba/p/6895190.html?utm_source=itdadao&utm_medium=referral
+ 
+ http://python.jobbole.com/88276/
+ 
+ 
+ 
+ celery常用的几个场景
+ 1.Web应用。当用户触发一个动作需要较长时间来执行完成时，可以把它作为任务交给celery异步执行，
+   执行完再返回给用户。这点和你在前端使用ajax实现异步加载有异曲同工之妙。
+ 2.定时任务。假设有多台服务器，多个任务，定时任务的管理是很困难的，你要在不同电脑上写不同的crontab，而且还不好管理。
+   Celery可以帮助我们快速在不同的机器设定不同任务。
+ 3.其他可以异步执行的任务。比如发送短信，邮件，推送消息，清理/设置缓存等。这点还是比较有用的
+ 
+ 
 '''
