@@ -18,9 +18,10 @@ now_day = time.strftime('%Y-%m-%d', time.localtime())
 log_file_path = os.path.join(os.path.dirname(__file__), 'log/' + str(now_day) + '.log')
 print(log_file_path)
 
-log_file_handle = open(log_file_path,'w')
+log_file_handle = open(log_file_path,'a')
 
 log_file_handle.write('你好!')
+log_file_handle.write('\n')
 
 log_file_handle.close()
 
