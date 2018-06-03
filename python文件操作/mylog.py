@@ -8,7 +8,7 @@ import os
 import time
 
 
-def my_log(content):
+def mylog(content):
     # 判断是否存在脚本的兄弟层级中是否存在log文件
     log_path = os.path.join(os.path.dirname(__file__), 'log/')
     try:
@@ -34,4 +34,4 @@ def my_log(content):
 
 
 if __name__ == "__main__":
-    my_log('我爱你...........')
+    mylog('nihao...........')
