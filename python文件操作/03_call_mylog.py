@@ -1,7 +1,4 @@
 import mylog
 
-mylog.mylog('hhhhhh')
-
-
-
-
+name = 'daxiong'
+mylog.mylog('姓名:%s' % name)
