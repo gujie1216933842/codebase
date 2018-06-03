@@ -8,9 +8,8 @@ def my_feature(message):
 
 
 pool = ThreadPoolExecutor(max_workers=2)  # 创建一个最大容纳2个task的线程池
-
-f1 = pool.submit(my_feature,'hello')  #使用submit方法来往线程池中加入一个task,返回一个featrue对象,可以理解为一个未完成的操作
-f2 = pool.submit(my_feature,'nihao')
+f1 = pool.submit(my_feature, 'hello')  # 使用submit方法来往线程池中加入一个task,返回一个featrue对象,可以理解为一个未完成的操作
+f2 = pool.submit(my_feature, 'nihao')
 print(f1.done())
 time.sleep(3)
 print(f2.done())
@@ -30,11 +29,9 @@ True
 hello
 world
 # 在上述程序执行的过程中，通过ps命令我们可以看到三个线程同时在后台运行
-ziwenxie :: ~ » ps -eLf | grep python
-ziwenxie      8361  7557  8361  3    3 19:45 pts/0    00:00:00 python example1.py
-ziwenxie      8361  7557  8362  0    3 19:45 pts/0    00:00:00 python example1.py
-ziwenxie      8361  7557  8363  0    3 19:45 pts/0    00:00:00 python example1.py
-
+ :: ~ » ps -eLf | grep python
+        root     23282 23145 23282  1    3 10:46 pts/1    00:00:00 python3 08_线程池.py
+        root     23282 23145 23283  0    3 10:46 pts/1    00:00:00 python3 08_线程池.py
+        root     23282 23145 23284  0    3 10:46 pts/1    00:00:00 python3 08_线程池.py
 
 '''
-
