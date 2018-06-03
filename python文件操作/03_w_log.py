@@ -2,8 +2,9 @@
 
 import os
 import time
-def my_log(content):
 
+
+def my_log(content):
     # 判断是否存在脚本的兄弟层级中是否存在log文件
     log_path = os.path.join(os.path.dirname(__file__), 'log/')
     try:
@@ -19,11 +20,13 @@ def my_log(content):
 
     log_file_handle = open(log_file_path, 'a')
 
-    log_file_handle.write(content)
+    now_time = time.strftime('Y-m-d H:M:S', time.localtime())
+    log_content = "[%s] %s" % (now_time, content)
+
+    log_file_handle.write(log_content)
     log_file_handle.write('\n')
 
     log_file_handle.close()
-
 
 
 if __name__ == "__main__":
