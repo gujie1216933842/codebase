@@ -25,7 +25,7 @@ print(ret)
 # if ret:
 #     print(True)
 #
-# ret2 = re.search(pattern,'a6j9')
+# ret2 = 正则模块re.search(pattern,'a6j9')
 # print(ret2)
 
 
