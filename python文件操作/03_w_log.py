@@ -20,7 +20,7 @@ def my_log(content):
 
     log_file_handle = open(log_file_path, 'a')
 
-    now_time = time.strftime('Y-m-d H:M:S', time.localtime())
+    now_time = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime())
     log_content = "[%s] %s" % (now_time, content)
 
     log_file_handle.write(log_content)
