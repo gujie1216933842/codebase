@@ -2,20 +2,18 @@
 
 import os
 
+import time
 
-# aa = input()
-#文件名
-file_name = os.path.dirname(__file__) + '/new.txt'
-fn = open(file_name, 'r+')
+# 判断是否存在脚本的兄弟层级中是否存在log文件
+log_path = os.path.join(os.path.dirname(__file__), 'log/')
 
-#content = input()
+if not os.path.exists(log_path):
+    os.makedirs(log_path)
 
-fn.write(u'我爱你')
-fn.close()
-'''
-'r'：只读（缺省。如果文件不存在，则抛出错误）
-'w'：只写（如果文件不存在，则自动创建文件）,文件常用w
-'a'：附加到文件末尾（如果文件不存在，则自动创建文件）
-'r+'：读写（如果文件不存在，则抛出错误）
+print(log_path)
 
-'''
+# 当前时间
+
+
+now_day = time.strftime('%Y-%m-%d', time.localtime())
+print(now_day)

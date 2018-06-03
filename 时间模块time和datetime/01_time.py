@@ -6,6 +6,15 @@ time.strftime()根据时间元组生成时间格式化字符串。
 time.strptime()根据时间格式化字符串生成时间元组。time.strptime()与time.strftime()为互操作。
 time.localtime()根据时间戳生成当前时区的时间元组。
 time.mktime()根据时间元组生成时间戳。
+
+
+区分 strftime()和strptime()的方法,方便记忆
+strftime-  str_format_time    格式化(format)
+strptime-  str_parse_time     解析(parse)
+
+
+
+
 '''
 import time
 a = time.time()

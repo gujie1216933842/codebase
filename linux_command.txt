@@ -29,4 +29,8 @@ netstat -an | grep 3306   //查看所有3306端口使用情况·
 linux查看系统硬盘和内存的使用:   df -h
 
 
+linux查看线程   ps -eLf | grep python
+
+
+
 
