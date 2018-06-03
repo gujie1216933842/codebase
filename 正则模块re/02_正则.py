@@ -58,3 +58,4 @@ print('pattern6:%s' % ret6)
 pattern7 = r'^[a-zA-Z0-9_.-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*\.[a-zA-Z0-9]{2,6}$'
 ret7 = re.match(pattern7, 'gujientsy@163.com')
 print('pattern7:%s' % ret7)
+
