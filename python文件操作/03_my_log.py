@@ -1,4 +1,8 @@
 # coding=utf-8
+'''
+自己写的日志log模块
+'''
+
 
 import os
 import time
