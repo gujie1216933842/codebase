@@ -24,11 +24,20 @@ print(d1)
 print("****************(字典形式)创建dataframe数据*******************")
 
 d2 = pda.DataFrame({
-    'aa': [2, 3, 4],   #列
+    'aa': [2, 3, 4],  # 列
     'bb': [2, 3, 4],
-    'cc': [2, 3, 4],
-})
+    'cc': [5, 3, 8]})
 print(d2)
 
-print(d2.head(1))
 
+print("****************dataframe数据取哪一行哪一列数据*******************")
+print(d2.head(1))
+print(d2.tail(1))
+
+
+print("****************dataframe数据统计分析*******************")
+print(d2.describe())
+
+
+print("****************dataframe数据转置*******************")
+print(d2.T)
