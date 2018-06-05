@@ -19,10 +19,10 @@ sql = "SELECT * from my_test WHERE id = %s limit 1 "
 # data = (1)
 cursor.execute(sql, 1)  # 如果没有参数就不传,大于等于两个需要写成tuple形式
 
-print('行数:%s' % cursor.rowcount)
+print('记录数:%s' % cursor.rowcount)
 ret1 = cursor.fetchall()
+print(ret1)
 #ret2 = cursor.fetchone()  #cursor对象有fetch之后的第一行
-
 # for row in ret1:
 #     print(row)
 # print('共查找出', cursor.rowcount, '条数据')
