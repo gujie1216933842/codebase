@@ -21,7 +21,7 @@ cursor.execute(sql, ('乔布斯'))  # 如果没有参数就不传,大于等于�
 
 print('行数:%s' % cursor.rowcount)
 affect = cursor.rowcount
-connect.commit()   ##提交事务,这行代码一定不能忘记,不然update会不成功
+connect.commit()   ##提交事务,这行代码一定不能忘记,不然update会不成功,commit属于conn对象,而不是cursor对象
 cursor.close()
 connect.close()
 
