@@ -22,6 +22,8 @@ cursor.execute(sql, ('乔布斯'))  # 如果没有参数就不传,大于等于�
 print('行数:%s' % cursor.rowcount)
 affect = cursor.rowcount
 
+cursor.commit()
+
 cursor.close()
 connect.close()
 
