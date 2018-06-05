@@ -14,7 +14,7 @@ connect = pymysql.Connect(
 cursor = connect.cursor()
 
 # 插入数据
-sql = "INSERT INTO jd_mobile (name, good_comment,raw_add_time) VALUES ( %s,%s ,now())"
+sql = "INSERT INTO my_test (name, good_comment,raw_add_time) VALUES ( %s,%s ,now())"
 data = ('雷军',23)
 cursor.execute(sql , data)
 connect.commit()
@@ -22,9 +22,9 @@ print('成功插入', cursor.rowcount, '条数据')
 
 # 修改数据
 
-# sql = "UPDATE trade SET saving = %.2f WHERE account = '%s' "
+# python-pymysql模块 = "UPDATE trade SET saving = %.2f WHERE account = '%s' "
 # data = (8888, '13512345678')
-# cursor.execute(sql % data)
+# cursor.execute(python-pymysql模块 % data)
 # connect.commit()
 # print('成功修改', cursor.rowcount, '条数据')
 
@@ -40,9 +40,9 @@ for row in ret:
 print('共查找出', cursor.rowcount, '条数据')
 #
 # # 删除数据
-# sql = "DELETE FROM trade WHERE account = '%s' LIMIT %d"
+# python-pymysql模块 = "DELETE FROM trade WHERE account = '%s' LIMIT %d"
 # data = ('13512345678', 1)
-# cursor.execute(sql % data)
+# cursor.execute(python-pymysql模块 % data)
 # connect.commit()
 # print('成功删除', cursor.rowcount, '条数据')
 #

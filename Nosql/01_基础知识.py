@@ -1,5 +1,5 @@
 '''
-nosql:  全名 not only sql 指非关系型数据库
+nosql:  全名 not only python-pymysql模块 指非关系型数据库
         随着访问量的上升,网站的数据库性能出现了问题,于是nosql被设计出来
 
 优点:   可扩展性高
