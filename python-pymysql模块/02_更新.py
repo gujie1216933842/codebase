@@ -11,19 +11,17 @@ connect = pymysql.Connect(
 )
 
 # 获取游标
-my_cursor = connect.cursor()  # 最终返回数据类型元组
+cursor = connect.cursor()  # 最终返回数据类型元组
 # cursor = connect.cursor(cursor=pymysql.cursors.DictCursor)  #最终返回数据类型字典
 
 # 查询数据
 sql = "update my_test set name  = %s "
 # data = (1)
-my_cursor.execute(sql, ('乔布斯'))  # 如果没有参数就不传,大于等于两个需要写成tuple形式
+cursor.execute(sql, ('乔布斯'))  # 如果没有参数就不传,大于等于两个需要写成tuple形式
 
-print('行数:%s' % my_cursor.rowcount)
-affect = my_cursor.rowcount
-
-my_cursor.commit()
-
-my_cursor.close()
+print('行数:%s' % cursor.rowcount)
+affect = cursor.rowcount
+connect.commit()
+cursor.close()
 connect.close()
 
