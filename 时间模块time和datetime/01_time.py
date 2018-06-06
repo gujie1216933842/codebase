@@ -31,14 +31,24 @@ print(d)
 
 #时间戳转换成'2018-04-25 14:59:47'格式
 e = time.strftime('%Y-%m-%d %H:%M:%S',time.localtime(a))
-print('jjjjj',d)
+
 
 #'2018-04-25 14:59:47'格式转化为struct_time
+print("***********格式化时间转化成时间戳*************")
 f = "2018-04-25 15:10:56"
 g = time.strptime(f,'%Y-%m-%d %H:%M:%S')
-print(g)
-
-
 # struct_time转换成时间戳
 h = time.mktime(g)
 print(int(h))
+
+
+
+
+
+
+
+
+
+
+
+
