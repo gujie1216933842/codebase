@@ -31,6 +31,16 @@ linux查看系统硬盘和内存的使用:   df -h
 
 linux查看线程   ps -eLf | grep python
 
+pscp 命令实现windows和linux之间上传下载文件 (注意:这里用powershell会出错,识别不了pscp命令,最好用cmd操作)
+　(一)上传
+　　2.开始→运行→cmd进入到dos模式 输入以下命令
+　　pscp D:\java\apache-tomcat-5.5.27\webapps\szfdc.rar dev@192.168.68.249:/home/dev
+　　3.输入密码 ok 文件已经上传到目标机器的/home/dev目录下了
+　　(二)下载
+　　1、开始→运行→cmd进入到dos模式 输入以下命令
+　　pscp dev@192.168.68.248:/home/dev/gren.sql d:\gren.sql;输入密码。ok！
+　　其中：dev为linux的用户名，192.168.68.248为远程Linux主机ip地址，/home/dev/gren.sql为linux下的文件 ，d:\gren.sql为保存在本地的文件
+
 
 
 
