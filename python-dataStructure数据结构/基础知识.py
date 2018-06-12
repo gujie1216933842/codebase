@@ -37,8 +37,8 @@ s9.remove(1)
 
 
 python中的可变类型和不可变类型
-可变数据类型:value值改变,id(value)值不变       整形,字符串,布尔
-可变数据类型:value值改变,id(value)值跟着改变   元组,字典,列表
+可变数据类型:value值改变,id(value)值不变       整型,字符串,元组
+可变数据类型:value值改变,id(value)值跟着改变    字典,列表
 
 
 '''
