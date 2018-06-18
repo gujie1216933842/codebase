@@ -25,6 +25,14 @@ a5 = None
 if not a5:
     print("a5")
 
+
+print('************开始区分None和空字符串*****************')
 a6 = None
-if not a6:
+if a6 is None :
     print("a6")
+
+a7 = ''
+if a7 is None:
+    print('a7')
+
+

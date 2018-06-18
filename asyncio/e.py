@@ -25,7 +25,6 @@ def fun2(m):
 	
 b = fun2(5)
 
-yield from b
 
 # print(b)
 
