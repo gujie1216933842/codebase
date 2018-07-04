@@ -90,10 +90,10 @@ csrf先注释掉     settings.py中middleware中找到
 
 
 django 模板语言中for循环和if
-{ % for  item in items %}
+{% for  item in items %}
    {{ item.name }}
    {{ item.age }}
-{ % endfor %}
+{% endfor %}
 
 条件判断 {% if 条件 %}{% else %}{% endif %}
 
