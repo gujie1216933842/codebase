@@ -21,10 +21,6 @@ class RedisQueue(object):
 
         else:
             item = self.__db.lpop(self.key)
-
-        if item:
-            item = item[1]
-
         return item
 
     def get_nowait(self):
