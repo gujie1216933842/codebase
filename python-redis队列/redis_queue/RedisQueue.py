@@ -4,7 +4,7 @@ import redis
 class RedisQueue(object):
     def __init__(self, name, namespace, **kwargs):
         self.__db = redis.StrictRedis(**kwargs)
-        self.key = "%s%s" % (namespace, name)
+        self.key = "%s:%s" % (namespace, name)
 
     def qsize(self):
         return self.__db.llen(self.key)
@@ -29,3 +29,8 @@ class RedisQueue(object):
 
     def get_nowait(self):
         return self.get(False)
+
+
+if __name__ == '__main__':
+    q = RedisQueue('test', 'queue', host="localhost", port=6379, db=1)
+    q.put('hello world')
