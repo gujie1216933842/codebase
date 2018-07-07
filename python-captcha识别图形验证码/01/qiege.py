@@ -1,3 +1,6 @@
+
+import cv2
+
 def cutting_img(im, im_position, img, xoffset=1, yoffset=1):
     filename = './out_img/' + img.split('.')[0]
     # 识别出的字符个数

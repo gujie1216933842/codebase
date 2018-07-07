@@ -1,3 +1,5 @@
+import cv2,os
+
 # 识别验证码
 cutting_img_num = 0
 for file in os.listdir('./out_img'):

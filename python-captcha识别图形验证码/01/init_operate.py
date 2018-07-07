@@ -1,3 +1,5 @@
+import cv2
+
 # 自适应阀值二值化
 def _get_dynamic_binary_image(filedir, img_name):
   filename =   './out_img/' + img_name.split('.')[0] + '-binary.jpg'
@@ -9,7 +11,6 @@ def _get_dynamic_binary_image(filedir, img_name):
   th1 = cv2.adaptiveThreshold(im, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY, 21, 1)
   cv2.imwrite(filename,th1)
   return th1
-
 
 
 

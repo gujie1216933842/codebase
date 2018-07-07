@@ -1,3 +1,5 @@
+import cv2
+
 # 干扰线降噪
 def interference_line(img, img_name):
     filename = './out_img/' + img_name.split('.')[0] + '-interferenceline.jpg'
