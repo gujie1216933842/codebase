@@ -29,8 +29,29 @@ https://blog.csdn.net/c465869935/article/details/53242126
 6.wsgi将返回值打包,转发给uWSGI
 7.uWSGI接收后转发给nginx,nginx最终将返回值返回给客户端(浏览器)
 
+'''
 
 
+'''
+django的运行方式
+在开发和测试中,会用到runserver()方法,使用django自己的web server
+另一种就是使用fastcgi,uWSGI等协议运行django项目(生产环境)
+
+uWSGI和nginx是在生产环境中最常见的运行django项目的方式,这里先了解一下WSGI和uWSGI
+
+WSGI: 是一种协议,全称 web server gateway interface ,是为python语言定义的web服务器与web应用程序之间一种简单而通用的接口
+      基于现存的CGI标准设计,
+      WSGI其实就是一个网关(gateway),作用是在协议之间进行转换
+      以上是WSGI的一些简单介绍,详情可继续搜索
+      
+uWSGI: 是一个web服务器, 它实现了uWSGI,uwsgi,http等协议,注意,这里的uwsgi也只是一个通信协议,
+       而uWSGI是实现uwsgi协议和WSGI协议的web服务器.
+       uWSGI具有超快性能,低内存占用,和多app应用管理等优点 
+       
+wsgi.py  django项目携带的一个wsgi的接口文件
+         如果项目名为mysite,此文件就位于mysite/mysite/wsgi.py            
+      
+      
 
 
 
