@@ -22,25 +22,4 @@ ioloop模块式tornado的核心,他封装了操作管理epoll的工作
 
 当与客户端的socket可写的时候,ioloop从epoll中拿到对应可写的socket,将缓存区中对应响应报文数据写入到socket中传回给客户端
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 '''

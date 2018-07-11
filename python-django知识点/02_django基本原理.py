@@ -33,6 +33,7 @@ https://blog.csdn.net/c465869935/article/details/53242126
 
 
 '''
+https://blog.csdn.net/qq_33387669/article/details/78748236
 django的运行方式
 在开发和测试中,会用到runserver()方法,使用django自己的web server
 另一种就是使用fastcgi,uWSGI等协议运行django项目(生产环境)
