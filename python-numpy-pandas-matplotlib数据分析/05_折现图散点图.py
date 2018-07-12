@@ -3,6 +3,16 @@ import os
 import pandas as pda
 import matplotlib.pylab as pyl
 
+
+'''
+matplotlib.use('Agg')
+如果要在linux中断查看需要加上这点代码
+并且  因为linux终端没有gui,所以pyl.show(),不会直接显示图像
+      处理方法: pyl.savefig("aa.png")  采用把图像保存为图片的方式
+
+'''
+
+
 '''
 解决可视化的问题
 绘制折线图
@@ -11,6 +21,8 @@ import matplotlib.pylab as pyl
 file_path = os.path.join(os.path.dirname(__file__), 'dd.csv')
 fn = open(file_path)
 ret = pda.read_csv(fn)
+
+
 
 # print(ret.describe())
 

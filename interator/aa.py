@@ -15,6 +15,16 @@ b = enumerate(a)
 a = [ i+1 for i in a ]
 
 print(a)
+print(type(a))
+
+
+a1 = [1,2,3]
+b1 = (i+1 for i in a1)
+print(b1)
+print(b1.__next__())
+print(b1.__next__())
+print(b1.__next__())
+
 
 
 
