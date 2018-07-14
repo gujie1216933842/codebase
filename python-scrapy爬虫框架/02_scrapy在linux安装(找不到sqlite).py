@@ -176,9 +176,7 @@ python命令行下输入：import sqlite3。
 2）No module named _sqlite3
 通过步骤1-6，以上错误都能解决。
 
-2017年7月13日 22:48 于家中床前
 
-作者：铭毅天下
 转载请标明出处，原文地址：
 http://blog.csdn.net/laoyang360/article/details/75094004
 如果感觉本文对您有帮助，请点击‘顶’支持一下，您的支持是我坚持写作最大的动力，谢谢！
