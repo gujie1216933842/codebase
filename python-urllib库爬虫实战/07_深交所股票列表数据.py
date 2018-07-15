@@ -1,57 +1,42 @@
-
 import urllib.request
-import re, time, os
+import json, re, random
+import pymysql.cursors
 
 
-def func(keyword, i, pattern):
-    keyword = urllib.request.quote(keyword)  # 用来处理请求字符串中中文
-    url = "https://s.taobao.com/search?q=" + keyword + "&imgfile=&commend=all" \
-                                                       "&ssid=s5-e&search_type=item" \
-                                                       "&sourceId=tb.index&spm=a21bo.2017.201856-taobao-item.1" \
-                                                       "&ie=utf8&initiative_id=tbindexz_20170306&bcoffset=3" \
-                                                       "&ntoffset=3&p4ppushleft=1%2C48&s=" + str(i * 44)
-    try:
-        html = urllib.request.urlopen(url).read().decode('utf-8')
-    except Exception as e:
-        html = ''
-        print('爬取网页异常:%s' % e)
+def insert_mysql(item):
+    # 连接数据库
+    connect = pymysql.Connect(
+        host='47.97.165.75',
+        port=3306,
+        user='root',
+        passwd='123',
+        db='stock',
+        charset='utf8'
+    )
+    # 获取游标
+    cursor = connect.cursor()  # 最终返回数据类型元组
 
-    ret = re.compile(pattern).findall(html)
-    return ret
-
-
-# 当前日期
-# now_date = time.strftime("%Y-%m-%d", time.localtime(time.time()))
-
-
-def snatch_pic(key):
-    pic_dir = os.path.join(os.path.dirname(__file__), 'pic/' + key)
-    if not os.path.exists(pic_dir):
-        os.makedirs(pic_dir)
-
-    pattern = '"pic_url":"//(.*?).jpg"'
-    for i in range(100):
-        ret = func(key, i, pattern)
-        # 当天的日期
-        data = time.time
-        for j in range(0, len(ret)):
-            # 这里用urlretrieve爬取图片
-            # 图片链接
-            pic_url = "http://" + ret[j] + ".jpg"
-            print(pic_url)
-            # 要保存的图片路径
-            pic_file_path = os.path.join(os.path.dirname(__file__),
-                                         'pic/' + key + '/page' + str(i) + 'few' + str(j) + '.jpg')
-            print(pic_file_path)
-            # try:
-            urllib.request.urlretrieve(pic_url, filename=pic_file_path)
-            # except Exception as e:
-            #     print("异常:%s" % e)
+    # 查询数据
+    sql = "insert into sz_stock_list(company_code ,A_code,A_short_name,stock_date,general_capital,flow_capital,trade ,name, detail_url,raw_add_time) " \
+          "VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,now())"
+    param = tuple(item.values())
+    print(param)
+    cursor.execute(sql, param)  # 如果没有参数就不传,大于等于两个需要写成tuple形式
+    affect = cursor.rowcount
+    connect.commit()  ##提交事务,这行代码一定不能忘记,不然update会不成功
+    cursor.close()
+    connect.close()
 
 
-key = "洗衣机"
-start_time = time.time()
-snatch_pic(key)
-end_time = time.time()
-print('**************************************************************************************************')
-print("消耗时间:%s" % (end_time - start_time))  #消耗时间:391.7193102836609
+if __name__ == "__main__":
+    for i in range(1, 107):
+        url = "http://www.szse.cn/api/report/ShowReport/data?SHOWTYPE=JSON&CATALOGID=1110&TABKEY=tab1&PAGENO=%s&random=%s" % (
+            i, random.random())
+        data = urllib.request.urlopen(url).read()
+        dict_data = json.loads(data)
+        for item in dict_data[0]['data']:
+            print(item)
+            item['name'] = re.compile("<u>(.*?)</u></a>").findall(item['gsjc'])[0]
+            item['detail_url'] = re.compile("href='(.*?)'").findall(item['gsjc'])[0]
+            item.pop('gsjc')
+            insert_mysql(item)
