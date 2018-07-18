@@ -19,7 +19,7 @@ def insert_mysql(item):
     # 查询数据
     sql = "insert into sz_senior_stock_change_list(stock_code ,stock_name,senior_name,change_date,change_amount,price" \
           ",reason ,change_rate, day_stock_amount,change_name,duty,relationship,raw_add_time) " \
-          "VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,now())"
+          "VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,now())"
     param = tuple(item.values())
     print(param)
     cursor.execute(sql, param)  # 如果没有参数就不传,大于等于两个需要写成tuple形式
@@ -30,23 +30,12 @@ def insert_mysql(item):
 
 
 if __name__ == "__main__":
-    # for i in range(1, 107):
-    #     url = "http://www.szse.cn/api/report/ShowReport/data?SHOWTYPE=JSON&CATALOGID=1110&TABKEY=tab1&PAGENO=%s&random=%s" % (
-    #         i, random.random())
-    #     data = urllib.request.urlopen(url).read()
-    #     dict_data = json.loads(data)
-    #     for item in dict_data[0]['data']:
-    #         print(item)
-    #         item['name'] = re.compile("<u>(.*?)</u></a>").findall(item['gsjc'])[0]
-    #         item['detail_url'] = re.compile("href='(.*?)'").findall(item['gsjc'])[0]
-    #         item.pop('gsjc')
-    #         insert_mysql(item)
-
-    url = "http://www.szse.cn/api/report/ShowReport/data?SHOWTYPE=JSON&CATALOGID=1801_cxda&TABKEY=tab1&PAGENO=2&random=%s" % (
-        random.random())
-
-    data = urllib.request.urlopen(url).read()
-    dict_data = json.loads(data)
-    print(dict_data[0]['data'])
-    for item in dict_data[0]['data']:
-        insert_mysql(item)
+    for i in range(1159, 3227):  #爬取的页码随时修改
+        print(i)
+        url = "http://www.szse.cn/api/report/ShowReport/data?SHOWTYPE=JSON&CATALOGID=1801_cxda&TABKEY=tab1&PAGENO=%s&random=%s" % (
+            i, random.random())
+        data = urllib.request.urlopen(url).read()
+        dict_data = json.loads(data)
+        # 爬取的时候打开注释
+        # for item in dict_data[0]['data']:
+        #     insert_mysql(item)

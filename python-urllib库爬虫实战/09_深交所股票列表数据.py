@@ -39,4 +39,5 @@ if __name__ == "__main__":
             item['name'] = re.compile("<u>(.*?)</u></a>").findall(item['gsjc'])[0]
             item['detail_url'] = re.compile("href='(.*?)'").findall(item['gsjc'])[0]
             item.pop('gsjc')
-            insert_mysql(item)
+            # insert_mysql(item)
+            # 实际爬取的时候,打开注释
