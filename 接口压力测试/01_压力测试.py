@@ -24,7 +24,7 @@ class postRequest():
 
 def Login():  # 定义接口函数
     # 实例化接口对象
-    login = postRequest('http://47.97.165.75:9000/tologin',
+    login = postRequest('http://47.97.165.75:9000/stock/szlist/',
                         {"MSG": '00001', "mobile": "13585591803", "pwd": "123"},
                         "1.login")
     return login.post()
