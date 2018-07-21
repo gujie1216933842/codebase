@@ -48,10 +48,11 @@ class FreeProxyGetter(object, metaclass=ProxyMetaclass):
             ip_adress = re.compile(
                 '<td data-title="IP">(.*)</td>\s*<td data-title="PORT">(\w+)</td>'
             )
-            re_ip_adress = ip_adress.findall(html)
-            for adress, port in re_ip_adress:
-                result = adress + ':' + port
-                yield result.replace(' ', '')
+            if isinstance(html,bytes) or isinstance(html,str):
+                re_ip_adress = ip_adress.findall(html)
+                for adress, port in re_ip_adress:
+                    result = adress + ':' + port
+                    yield result.replace(' ', '')
 
     def crawl_xicidaili(self):
         for page in range(1, 4):
@@ -61,10 +62,11 @@ class FreeProxyGetter(object, metaclass=ProxyMetaclass):
                 '<td class="country"><img src="http://fs.xicidaili.com/images/flag/cn.png" alt="Cn" /></td>\s*<td>(.*?)</td>\s*<td>(.*?)</td>'
             )
             # \s* 匹配空格，起到换行作用
-            re_ip_adress = ip_adress.findall(html)
-            for adress, port in re_ip_adress:
-                result = adress + ':' + port
-                yield result.replace(' ', '')
+            if isinstance(html,bytes) or isinstance(html,str):
+                re_ip_adress = ip_adress.findall(html)
+                for adress, port in re_ip_adress:
+                    result = adress + ':' + port
+                    yield result.replace(' ', '')
 
     def crawl_daili66(self, page_count=4):
         start_url = 'http://www.66ip.cn/{}.html'
