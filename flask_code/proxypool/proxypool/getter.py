@@ -35,10 +35,11 @@ class FreeProxyGetter(object, metaclass=ProxyMetaclass):
         html = get_page(start_url)
         ip_adress = re.compile('<tr.*?>\s*<td>(.*?)</td>\s*<td>(.*?)</td>')
         # \s* 匹配空格，起到换行作用
-        re_ip_adress = ip_adress.findall(html)
-        for adress, port in re_ip_adress:
-            result = adress + ':' + port
-            yield result.replace(' ', '')
+        if isinstance(html, bytes) or isinstance(html, str):
+            re_ip_adress = ip_adress.findall(html)
+            for adress, port in re_ip_adress:
+                result = adress + ':' + port
+                yield result.replace(' ', '')
 
     def crawl_kuaidaili(self):
         for page in range(1, 4):
@@ -90,10 +91,11 @@ class FreeProxyGetter(object, metaclass=ProxyMetaclass):
                 ' <ul class="l2">\s*<span><li>(.*?)</li></span>\s*<span style="width: 100px;"><li class=".*">(.*?)</li></span>'
             )
             # \s * 匹配空格，起到换行作用
-            re_ip_adress = ip_adress.findall(html)
-            for adress, port in re_ip_adress:
-                result = adress + ':' + port
-                yield result.replace(' ', '')
+            if isinstance(html, bytes) or isinstance(html, str):
+                re_ip_adress = ip_adress.findall(html)
+                for adress, port in re_ip_adress:
+                    result = adress + ':' + port
+                    yield result.replace(' ', '')
 
     def crawl_kxdaili(self):
         for i in range(1, 4):
@@ -101,10 +103,11 @@ class FreeProxyGetter(object, metaclass=ProxyMetaclass):
             html = get_page(start_url)
             ip_adress = re.compile('<tr.*?>\s*<td>(.*?)</td>\s*<td>(.*?)</td>')
             # \s* 匹配空格，起到换行作用
-            re_ip_adress = ip_adress.findall(html)
-            for adress, port in re_ip_adress:
-                result = adress + ':' + port
-                yield result.replace(' ', '')
+            if isinstance(html, bytes) or isinstance(html, str):
+                re_ip_adress = ip_adress.findall(html)
+                for adress, port in re_ip_adress:
+                    result = adress + ':' + port
+                    yield result.replace(' ', '')
 
     def crawl_premproxy(self):
         for i in ['China-01', 'China-02', 'China-03', 'China-04', 'Taiwan-01']:
@@ -113,9 +116,10 @@ class FreeProxyGetter(object, metaclass=ProxyMetaclass):
             html = get_page(start_url)
             if html:
                 ip_adress = re.compile('<td data-label="IP:port ">(.*?)</td>')
-                re_ip_adress = ip_adress.findall(html)
-                for adress_port in re_ip_adress:
-                    yield adress_port.replace(' ', '')
+                if isinstance(html, bytes) or isinstance(html, str):
+                    re_ip_adress = ip_adress.findall(html)
+                    for adress_port in re_ip_adress:
+                        yield adress_port.replace(' ', '')
 
     def crawl_xroxy(self):
         for i in ['CN', 'TW']:
