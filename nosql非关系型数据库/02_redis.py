@@ -72,6 +72,11 @@ linsert  key  before / after  已知的value  插入的value
 rpop key  右侧拿
 
 lpop key  左侧拿
+
+
+lrange list_name  0 -1   查看列表内的所有元素
+
+
 '''
 
 '''
