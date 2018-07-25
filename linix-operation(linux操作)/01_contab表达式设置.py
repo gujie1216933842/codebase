@@ -8,7 +8,7 @@ crontab表达式添加在
 在每天19:00和20:00之间每分钟发送邮件
 * 19-20 * * * curl "http://47.97.165.75:9000/mail/send/"
 
-每天10:00执行一次
+每天10:30执行一次
 30 10 * * * python3 /home/gujie/project/codebase/scripts/sz_stock_update.py
 
 
