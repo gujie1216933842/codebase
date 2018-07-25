@@ -81,4 +81,4 @@ if __name__ == "__main__":
 
         for item in dict_data_new[0]['data']:
             print(item)
-            # insert_mysql(item)
+            insert_mysql(item)
