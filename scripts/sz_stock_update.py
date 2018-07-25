@@ -20,12 +20,14 @@ def insert_mysql(item):
     sql = "insert into sz_senior_stock_change_list(stock_code ,stock_name,senior_name,change_date,change_amount,price" \
           ",reason ,change_rate, day_stock_amount,change_name,duty,relationship,raw_add_time) " \
           "VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,now())"
-    param = tuple(item.values())
+    param = (
+        item['zqdm'], item['zqjc'], item['gdxm'], item['jyrq'], item['bdgs'], item['bdjj'], item['bdyy'],
+        item['cgbdbl'], item['cgzs'], item['gdxm'], item['zw'], item['gxlb'])
     print(sql)
     print(param)
     cursor.execute(sql, param)  # 如果没有参数就不传,大于等于两个需要写成tuple形式
     affect = cursor.rowcount
-    connect.commit()  ##提交事务,这行代码一定不能忘记,不然update会不成功
+    connect.commit()  # 提交事务,这行代码一定不能忘记,不然update会不成功
     cursor.close()
     connect.close()
 
@@ -63,6 +65,7 @@ if __name__ == "__main__":
     url = "http://www.szse.cn/api/report/ShowReport/data?SHOWTYPE=JSON&CATALOGID=1801_cxda&TABKEY=tab1&PAGENO=1&txtStart=%s&txtEnd=%s&random=%s" % (
         new_last_date, now, random.random())
 
+    print(url)
     data = urllib.request.urlopen(url).read()
     dict_data = json.loads(data.decode())
 
