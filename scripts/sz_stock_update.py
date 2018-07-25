@@ -64,7 +64,6 @@ if __name__ == "__main__":
         new_last_date, now, random.random())
 
     data = urllib.request.urlopen(url).read()
-    print(type(data))
     dict_data = json.loads(data.decode())
 
     # 页数
