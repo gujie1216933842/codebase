@@ -77,7 +77,7 @@ if __name__ == "__main__":
         print(url1)
 
         data = urllib.request.urlopen(url1).read()
-        dict_data_new = json.loads(data)
+        dict_data_new = json.loads(data.decode())
 
         for item in dict_data_new[0]['data']:
             print(item)
