@@ -64,7 +64,8 @@ if __name__ == "__main__":
         new_last_date, now, random.random())
 
     data = urllib.request.urlopen(url).read()
-    dict_data = json.loads(data)
+    print(type(data))
+    dict_data = json.loads(data.decode())
 
     # 页数
     pages = dict_data[0]['metadata']['pagecount']
@@ -80,4 +81,4 @@ if __name__ == "__main__":
 
         for item in dict_data_new[0]['data']:
             print(item)
-            insert_mysql(item)
+            # insert_mysql(item)

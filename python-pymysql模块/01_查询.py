@@ -1,9 +1,8 @@
 import pymysql.cursors
-import pymysql
 
 # 连接数据库
 connect = pymysql.Connect(
-    host='47.97.165.75',
+    host='localhost',
     port=3306,
     user='root',
     passwd='123',
