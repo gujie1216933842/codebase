@@ -15,6 +15,7 @@ locate命令的使用实例：
 回复vim 默认原始的配置
 vim -u NONE -N搜索 <filename>以默认配置方式打开filename.
 
+ps ant  查看进程
 
 netstat -ntlp   //查看当前所有tcp端口·
 netstat -ntulp |grep 80   //查看所有80端口使用情况·
