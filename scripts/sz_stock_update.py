@@ -21,6 +21,7 @@ def insert_mysql(item):
           ",reason ,change_rate, day_stock_amount,change_name,duty,relationship,raw_add_time) " \
           "VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,now())"
     param = tuple(item.values())
+    print(sql)
     print(param)
     cursor.execute(sql, param)  # 如果没有参数就不传,大于等于两个需要写成tuple形式
     affect = cursor.rowcount
@@ -58,7 +59,6 @@ if __name__ == "__main__":
     last_date = ret[0][0].strftime("%Y-%m-%d")
     # 数据库中最新日期前一天
     new_last_date = (ret[0][0] + datetime.timedelta(days=+1)).strftime("%Y-%m-%d")
-    print(new_last_date)
 
     url = "http://www.szse.cn/api/report/ShowReport/data?SHOWTYPE=JSON&CATALOGID=1801_cxda&TABKEY=tab1&PAGENO=1&txtStart=%s&txtEnd=%s&random=%s" % (
         new_last_date, now, random.random())
@@ -68,16 +68,13 @@ if __name__ == "__main__":
 
     # 页数
     pages = dict_data[0]['metadata']['pagecount']
-    print(pages)
 
     for i in range(1, pages + 1, 1):
         url1 = "http://www.szse.cn/api/report/ShowReport/data?SHOWTYPE=JSON&CATALOGID=1801_cxda&TABKEY=tab1&PAGENO=%s&txtStart=%s&txtEnd=%s&random=%s" % (
             i, new_last_date, now, random.random())
-        print(url1)
 
         data = urllib.request.urlopen(url1).read()
         dict_data_new = json.loads(data.decode())
 
         for item in dict_data_new[0]['data']:
-            print(item)
             insert_mysql(item)
