@@ -60,7 +60,7 @@ class A(object):
 # A.setAge()
 
 '''
-线程
+多线程
 '''
 
 import threading

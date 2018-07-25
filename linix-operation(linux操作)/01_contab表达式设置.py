@@ -6,10 +6,10 @@ crontab表达式添加在
 把crontab表达式添加进root文件即可
 
 在每天19:00和20:00之间每分钟发送邮件
-*/1 19-20 * * * curl "http://47.97.165.75:9000/mail/send/"
+* 19-20 * * * curl "http://47.97.165.75:9000/mail/send/"
 
 每天10:00执行一次
-*/1 19-20 * * * python3
+30 10 * * * python3 /home/gujie/project/codebase/scripts/sz_stock_update.py
 
 
 实现Linux定时任务有:cron、anacron、at等，这里主要介绍cron服务。

@@ -10,15 +10,17 @@ class MyThread(Thread):
     def run(self):
         sleep_time = random.randint(1, 10)  # 左右的是闭区间
         time.sleep(sleep_time)
-        print('线程睡了:%s秒,线程%s' % (sleep_time, current_thread()))
+        print('线程睡了:%s秒,多线程%s' % (sleep_time, self.getName()))
 
 
 t1 = MyThread('hh')
 t2 = MyThread('jj')
-t1.setDaemon(False)
-t2.setDaemon(True)  #把子线程设置为守护线程,默认不是:false
+# t1.setDaemon(False)
+# t2.setDaemon(True)  #把子线程设置为守护线程,默认不是:false
 t1.start()
+t1.join()      #主线程运行到这里暂停,等t1子线程启动到结束,主线程才继续往下运行,
 t2.start()
+t2.join()      #主线程运行到这里暂停,等t2子线程启动到结束,主线程才继续往下运行
 print('程序结束')
 
 '''
