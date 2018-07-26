@@ -1,5 +1,6 @@
 import requests
 from urllib.parse import urlencode
+from pyquery import PyQuery as pq
 
 # 进行索引也的抓取
 base_url = "http://weixin.sogou.com/weixin?"
@@ -11,18 +12,53 @@ headers = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36',
 }
 
+proxy_pool_url = "http://127.0.0.1:5000/get"
 
-def get_html(url):
+proxy = None
+
+max_count = 10
+
+
+def get_proxy():
     try:
-        response = requests.get(url, allow_redirects=False, headers=headers)
+        response = requests.get(proxy_pool_url)
+        if response.status_code == 200:
+            return response.text
+        else:
+            return None
+    except ConnectionError:
+        return None
+
+
+def get_html(url, count=1):
+    global proxy  # 作用:引用全局变量
+
+    '''下面这段代码:注释的原因,因为代理池中的ip是一个公用ip,即同一时刻还在其他地方使用,所以不建议用max_count,否则一直会处在此时超限的判断中'''
+    # if count >= max_count:
+    #     print("Tried Too Many Counts")
+    #     return None
+
+    try:
+        if proxy:
+            proxies = {'http': 'http://' + proxy}
+            response = requests.get(url, allow_redirects=False, headers=headers, proxies=proxies)
+        else:
+            response = requests.get(url, allow_redirects=False, headers=headers)
         print(response.status_code)
         if response.status_code == 200:
             return response.text
-        if response.status_code == 302:
-            # Need Proxy
-            pass
+        if response.status_code in [302, 301]:
+            proxy = get_proxy()
+            if proxy:
+                print("Using Proxy", proxy)
+                return get_html(url)
+            else:
+                print("Get Proxy Failed")
+                return None
     except ConnectionError as e:
-        return get_html(url)  # 如果失败,重新递归调用自己
+        print("Error Occur")
+        count += 1
+        return get_html(url, count)  # 如果失败,重新递归调用自己
 
 
 def get_index(keyword, page):
@@ -34,18 +70,28 @@ def get_index(keyword, page):
 
     queries = urlencode(data)
     url = base_url + queries
-    print(url)
 
     html = get_html(url)
-    # print(html)
+    return html
+
+
+def parse_index(html):
+    doc = pq(html)
+    items = doc('.txt-box h3 a').items()
+    for item in items:
+        yield item.attr('href')
 
 
 def main():
-    for i in range(1000):
-        print(i)
-        get_index('风景', i)
+    for i in range(1, 101):
+        print('循环次数:',i)
+        html = get_index('风景', i)
+        print(html)
+        if html:
+            article_urls = parse_index(html)
+            for article_url in article_urls:
+                print(article_url)
 
 
 if __name__ == "__main__":
-    # get_index('风景', 1)
     main()
