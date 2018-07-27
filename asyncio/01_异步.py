@@ -1,5 +1,7 @@
 import time, asyncio, random
-
+'''
+https://blog.csdn.net/soonfly/article/details/78361819
+'''
 
 async def mygen(alist):
     while len(alist) > 0:
