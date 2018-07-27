@@ -1,6 +1,6 @@
 from flask import Flask
 from flask import request
-
+import platform
 app = Flask(__name__)
 
 
@@ -27,4 +27,8 @@ def signin():
 
 
 if __name__ == '__main__':
-    app.run()
+    operation = platform.platform()
+    if 'Linux' in operation:
+        app.run(host="0.0.0.0",port='5000')
+    else:
+        app.run()
