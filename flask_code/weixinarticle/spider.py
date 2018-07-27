@@ -84,9 +84,8 @@ def parse_index(html):
 
 def main():
     for i in range(1, 101):
-        print('循环次数:',i)
+        print('循环次数:', i)
         html = get_index('风景', i)
-        print(html)
         if html:
             article_urls = parse_index(html)
             for article_url in article_urls:
