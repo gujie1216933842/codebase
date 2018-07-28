@@ -14,7 +14,7 @@ import aiohttp
 import aiomysql
 
 stopping = False
-start_url = "http://www.jobhole.com"
+start_url = "http://www.jobbole.com/"
 '''因为协程是单线程的,所以我们可以用列表来进行通信'''
 waitting_urls = []  # 等待爬取的urls
 seen_urls = set()  # 已经爬取过的urls
@@ -23,6 +23,7 @@ seen_urls = set()  # 已经爬取过的urls
 async def fetch(url, session):  # 定义了一个协程
     try:
         async  with session.get(url) as resp:  # get(url)是一个耗费网络io的过程
+            print('response status {}'.format(resp.status))
             if resp.status in [200, 201]:
                 data = await resp.text()
                 return data
@@ -39,7 +40,7 @@ def extrack_urls(html):
     for link in pq.items('a'):
         url = link.attr('href')
         # 判断url,踢出不符合条件的url
-        if url and url.startswith('http') and url in waitting_urls:
+        if url and url.startswith('http') and url not in seen_urls:
             urls.append(url)
             waitting_urls.append(url)
     return urls
@@ -64,11 +65,11 @@ async def article_handler(url, session, pool):
     extrack_urls(html)  # 把url放入待爬取队列
     pq = PyQuery(html)
     title = pq('title').text()
-
     # 用aiomysql数据入库
     async with pool.acquire() as conn:
         async with conn.cursor() as cur:
-            insert_sql = " insert into testaiomysql (title)values ({})".format(title)
+            insert_sql = " insert into testaiomysql (title)values ('{}')".format(title)
+            print('jjjjjjjjjjjjjjjj:{}'.format(insert_sql))
             await cur.excute(insert_sql)
 
 
@@ -76,15 +77,15 @@ async def article_handler(url, session, pool):
 
 
 async def consumer(pool):
-    async with aiohttp.ClientSession as session:  # 建立连接
+    async with aiohttp.ClientSession() as session:  # 建立连接
         while not stopping:
             if len(waitting_urls) == 0:
                 await asyncio.sleep(0.5)
                 continue
             url = waitting_urls.pop()
-            print('start get url {}'.format(url))
+            # print('start get url {}'.format(url))
             # 开始解析
-            if re.match('http://jobbole.com/\d+/', url):
+            if re.match('http://.*?jobbole.com/\d+/', url):
                 if url not in seen_urls:
                     # 把创建的协程扔到时间循环中来
                     asyncio.ensure_future(article_handler(url, session, pool))
