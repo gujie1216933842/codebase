@@ -36,14 +36,15 @@ async def fetch(url, session):  # 定义了一个协程
 
 def extrack_urls(html):
     urls = []
-    pq = PyQuery(html)
-    for link in pq.items('a'):
-        url = link.attr('href')
-        # 判断url,踢出不符合条件的url
-        if url and url.startswith('http') and url not in seen_urls:
-            urls.append(url)
-            waitting_urls.append(url)
-    return urls
+    if html:
+        pq = PyQuery(html)
+        for link in pq.items('a'):
+            url = link.attr('href')
+            # 判断url,踢出不符合条件的url
+            if url and url.startswith('http') and url not in seen_urls:
+                urls.append(url)
+                waitting_urls.append(url)
+        return urls
 
 
 '''定义一个协程'''
@@ -62,15 +63,16 @@ async def init_urls(url, session):
 async def article_handler(url, session, pool):
     html = await fetch(url, session)
     seen_urls.add(url)  # 获取过的url添加进集合
-    extrack_urls(html)  # 把url放入待爬取队列
-    pq = PyQuery(html)
-    title = pq('title').text()
-    # 用aiomysql数据入库
-    async with pool.acquire() as conn:
-        async with conn.cursor() as cur:
-            insert_sql = " insert into testaiomysql (title)values ('{}')".format(title)
-            print('jjjjjjjjjjjjjjjj:{}'.format(insert_sql))
-            await cur.excute(insert_sql)
+    if html:
+        extrack_urls(html)  # 把url放入待爬取队列
+        pq = PyQuery(html)
+        title = pq('title').text()
+        # 用aiomysql数据入库
+        async with pool.acquire() as conn:
+            async with conn.cursor() as cur:
+                insert_sql = " insert into testaiomysql (title)values ('{}')".format(title)
+                print(insert_sql)
+                await cur.execute(insert_sql)
 
 
 '''定义一个消费者模型协程'''
