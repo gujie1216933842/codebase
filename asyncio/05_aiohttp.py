@@ -39,7 +39,7 @@ def extrack_urls(html):
     for link in pq.items('a'):
         url = link.attr('href')
         # 判断url,踢出不符合条件的url
-        if url and url.startwith('http') and url in waitting_urls:
+        if url and url.startswith('http') and url in waitting_urls:
             urls.append(url)
             waitting_urls.append(url)
     return urls
@@ -99,7 +99,7 @@ async def consumer(pool):
 
 async def main(loop):
     # 等待mysql连接池建立好
-    pool = await aiomysql.create_pool(host='47.97.165.75', port=3306, user='root', password='123', db='testaiomysql',
+    pool = await aiomysql.create_pool(host='47.97.165.75', port=3306, user='root', password='123', db='test',
                                       loop=loop, charset='utf8', autocommit=True)
 
     async with aiohttp.ClientSession() as session:
