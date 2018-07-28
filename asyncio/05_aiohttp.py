@@ -20,7 +20,7 @@ waitting_urls = []  # 等待爬取的urls
 seen_urls = set()  # 已经爬取过的urls
 
 
-async def fetch_url(url, session):  # 定义了一个协程
+async def fetch(url, session):  # 定义了一个协程
     try:
         async  with session.get(url) as resp:  # get(url)是一个耗费网络io的过程
             if resp.status in [200, 201]:
@@ -49,7 +49,7 @@ def extrack_urls(html):
 
 
 async def init_urls(url, session):
-    html = await fetch_url(url, session)
+    html = await fetch(url, session)
     seen_urls.add(url)
     # 需要从html中解析出所有的url
     urls = extrack_urls(html)
@@ -59,7 +59,7 @@ async def init_urls(url, session):
 
 
 async def article_handler(url, session, pool):
-    html = await fetch_url(url, session)
+    html = await fetch(url, session)
     seen_urls.add(url)  # 获取过的url添加进集合
     extrack_urls(html)  # 把url放入待爬取队列
     pq = PyQuery(html)
@@ -103,7 +103,7 @@ async def main(loop):
                                       loop=loop, charset='utf8', autocommit=True)
 
     async with aiohttp.ClientSession() as session:
-        html = await fetch_url(start_url, session)
+        html = await fetch(start_url, session)
         seen_urls.add(start_url)
         extrack_urls(html)
     asyncio.ensure_future(consumer(pool))
