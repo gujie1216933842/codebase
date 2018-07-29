@@ -2,17 +2,18 @@ import urllib.request
 import json, re, random
 import pymysql.cursors
 
+# 连接数据库
+connect = pymysql.Connect(
+    host='47.97.165.75',
+    port=3306,
+    user='root',
+    passwd='123',
+    db='stock_bak',
+    charset='utf8'
+)
+
 
 def insert_mysql(item):
-    # 连接数据库
-    connect = pymysql.Connect(
-        host='47.97.165.75',
-        port=3306,
-        user='root',
-        passwd='123',
-        db='stock',
-        charset='utf8'
-    )
     # 获取游标
     cursor = connect.cursor()  # 最终返回数据类型元组
 
