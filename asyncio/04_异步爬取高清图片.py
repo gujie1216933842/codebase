@@ -57,12 +57,13 @@ async def get_html(url):
             fp.close()
 
 
-def get_many(urls):
+# def get_many(urls):
+if __name__ == "__main__":
     loop = asyncio.get_event_loop()
-    tasks = [get_html(url) for url in urls]
+    tasks = [get_html(url) for url in pic_list]
 
     loop.run_until_complete(asyncio.wait(tasks))
     loop.close()
 
 
-get_many(pic_list)
+#get_many(pic_list)
