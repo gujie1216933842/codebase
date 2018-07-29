@@ -8,7 +8,7 @@ connect = pymysql.Connect(
     port=3306,
     user='root',
     passwd='123',
-    db='stock_bak',
+    db='stock',
     charset='utf8'
 )
 

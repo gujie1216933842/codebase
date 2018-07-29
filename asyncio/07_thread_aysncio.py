@@ -51,8 +51,9 @@ if __name__ == "__main__":
     loop = asyncio.get_event_loop()
     excutor = ThreadPoolExecutor()
     tasks = []
-    for i in range(114165,114185):
-        url = "http://blog.jobbole.com/{}/".format(i)
+    for i in range(20):
+        url = "http://www.baidu.com/"
+        print(url)
         task = loop.run_in_executor(excutor, get_url, url)
         tasks.append(task)
     loop.run_until_complete(asyncio.wait(tasks))
