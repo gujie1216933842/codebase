@@ -37,10 +37,16 @@ class User():
     def __getattr__(self, item):
         return 'none attr'
 
-    def __getattribute__(self, item):
-        return 'get attr'
+    # def __getattribute__(self, item):
+    #     print('in getattibute')
+
+    def __get__(self, instance, owner):
+        print('in get ')
+
 
 
 if __name__ == "__main__":
     user = User('tom', date(year=1990, month=11, day=7))
     print(user.age)
+    user.age = 100
+    print(user.__dict__)
