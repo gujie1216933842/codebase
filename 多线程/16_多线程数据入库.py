@@ -38,15 +38,15 @@ def get_data(url):
     if res.status_code == 200:
         dict_data = json.loads(res.text)
         list_data = dict_data[0]['data']
-        insert_mysql(list_data)
-
+        res = insert_mysql(list_data)
+        return res
 
 if __name__ == "__main__":
     start_time = time.time()
     excutor = ThreadPoolExecutor(max_workers=1)
     all_tasks = [excutor.submit(get_data, (
             "http://www.szse.cn/api/report/ShowReport/data?SHOWTYPE=JSON&CATALOGID=1801_cxda&TABKEY=tab1&PAGENO=%s&random=%s" % (
-        i, random.random()))) for i in range(1, 5)]
+        i, random.random()))) for i in range(1, 2)]
 
     '''as_complete是一个生成器'''
     for future in as_completed(all_tasks):
