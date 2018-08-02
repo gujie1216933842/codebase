@@ -1,3 +1,6 @@
+
+fun =  lambda x, y: x*y  #函数输入是x和y，输出是它们的积x*y
+
 x = lambda x: x + 1
 print(x(1))
 
