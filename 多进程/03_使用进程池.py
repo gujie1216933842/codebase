@@ -16,8 +16,10 @@ if __name__ == "__main__":
     print('cup:{}'.format(multiprocessing.cpu_count()))
     pool = multiprocessing.Pool(multiprocessing.cpu_count())
     result = pool.apply_async(get_html,args=(3,))
+    result1 = pool.apply_async(get_html,args=(3,))
 
     #等待所有任务完成
     pool.close()
     pool.join()
+    '''获取线程返回的值'''
     print(result.get())
