@@ -1034,7 +1034,30 @@ tornado.ioloop模块封装了epoll操作socket的操作的接口
 
 
 
+jupyter notebook
 
+pip install --upgrade jupyterthemes
+1
+然后可以查看所有可用的主题：
+
+usename$ jt -l
+
+Available Themes:
+   chesterish
+   grade3
+   monokai
+   oceans16
+   onedork
+   solarizedd
+   solarizedl
+
+可以用下面命令选择要用的主题。
+
+username$ jt -t 主题名称
+1
+如果要恢复默认：
+
+username$ jt -r
 
 
 
