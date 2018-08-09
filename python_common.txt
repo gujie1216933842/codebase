@@ -1060,6 +1060,9 @@ username$ jt -t 主题名称
 username$ jt -r
 
 
+修改字体直接开谷歌浏览器字体设置
+
+
 
 
 
