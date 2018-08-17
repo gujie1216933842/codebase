@@ -1,14 +1,23 @@
 import requests
-import re, json
+import re, json, platform
 from requests.exceptions import RequestException
 from multiprocessing import Pool
 
-proxy_pool_url = 'http://127.0.0.1:5000/get'
+
+def get_proxy_url():
+    op = platform.platform()
+    if 'Linux' in op:
+        proxy_pool_url = 'http://127.0.0.1:5000/get'
+    else:
+        proxy_pool_url = 'http://47.97.165.75/get'
+
+    return proxy_pool_url
 
 
 def get_proxy():
     try:
-        response = requests.get(proxy_pool_url)
+        proxy_url = get_proxy_url()
+        response = requests.get(proxy_url)
         if response.status_code == 200:
             return response.text
         else:
