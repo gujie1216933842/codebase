@@ -67,7 +67,7 @@ def write_to_file(content):
 
 
 def main(offset):
-    url = 'http://maoyan.com/board/4?offset='.format(offset)
+    url = 'http://maoyan.com/board/4?offset={}'.format(offset)
     html = get_one_page(url)
     # print(html)
     for item in parse_one_page(html):
