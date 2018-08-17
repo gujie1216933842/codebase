@@ -7,9 +7,9 @@ from multiprocessing import Pool
 def get_proxy_url():
     op = platform.platform()
     if 'Linux' in op:
-        proxy_pool_url = 'http://127.0.0.1:5000/get'
+         proxy_pool_url = 'http://47.97.165.75:5000/get'
     else:
-        proxy_pool_url = 'http://47.97.165.75:5000/get'
+        proxy_pool_url = 'http://127.0.0.1:5000/get'
 
     return proxy_pool_url
 
