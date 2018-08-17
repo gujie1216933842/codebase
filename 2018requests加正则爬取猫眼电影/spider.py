@@ -52,6 +52,7 @@ def parse_one_page(html):
         '<dd>.*?title="(.*?)".*?data-src="(.*?)"', re.S)
 
     items = re.findall(pattern, html)
+    print(items)
     for item in items:
         yield {
             'title': item[0],
