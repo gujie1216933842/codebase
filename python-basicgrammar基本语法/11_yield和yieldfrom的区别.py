@@ -1,19 +1,25 @@
 '''yield'''
-
+'''
+1
+None
+2
+None
+1
+3
+None
+2
+4
+None
+'''
 
 def foo(x):
     for i in range(x):
         a = yield i + 1
         yield a
         yield i
-
-
 '''
 函数foo数一个生成器对象,即a就是一个生成器对象
 遇到yield暂停,遇到next()或者send()方法重新触发程序
-
-
-
 '''
 a = foo(5)
 
