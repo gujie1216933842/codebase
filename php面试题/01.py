@@ -28,9 +28,17 @@ PHP的优化方案
 说下你目前框架所用到的核心概念
 mvc
 什么是CSRF攻击，XSS攻击？如何防范
-csrf:
+csrf:跨站请求伪造 cross site request forgrey(伪造),是一种对网站的恶意利用
+xss:跨站脚本攻击
+xss 利用的是站点内的信任用户
+而 csrf 则通过伪装来自受信任用户的请求
 
 你了解RESTful API吗？说说干什么用的。
+restful api
+
+
+
+
 设计的原则
 如果实现自动加载？不用composer如何实现？PSR-4是什么？
 
