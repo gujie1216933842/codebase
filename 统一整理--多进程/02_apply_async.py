@@ -10,4 +10,5 @@ if __name__ == '__main__':
     pool = Pool()
     pool.apply_async(get_html,args=(3,))
     pool.apply_async(get_html,args=(3,))
-    # pool.close()
+    pool.close()
+    pool.join()
