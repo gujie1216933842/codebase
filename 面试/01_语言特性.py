@@ -116,11 +116,20 @@ fun((1, 2, 3), {'a': 5})
    
 21.lambda函数
    写一个lambda函数       
+   匿名函数优点：
+　　- 使用Python写一些脚本时，使用lambda可以省去定义函数的过程，让代码更加精简。
+　　- 对于一些抽象的，不会被别的地方再重复使用的函数，有时候函数起个名字也是个难题，使用lambda不需要考虑命名的问题
+　　- 使用lambda在某些时候然后代码更容易理解
+
+
 '''
 import time
 
-now = lambda: time.time()
-x = lambda x: x + 1
+now = lambda: time.time()  # 相当于没有参数的函数
+x = lambda x: x + 1        # 有参数的函数
+
+
+
 
 
 '''
