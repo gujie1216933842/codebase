@@ -26,5 +26,6 @@ search()会扫描整个字符串并返回第一个成功的匹配
 
 print(re.search(‘super’, ‘insuperable’).span())返回(2, 7)
 
+!!!match()比较挑剔啊！
 
 '''
