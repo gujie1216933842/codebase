@@ -19,6 +19,7 @@ $  符号是结束边界
 '''
 
 ret = re.match(pattern2, "99")
+print(ret.end())
 print(ret)
 
 # if ret:

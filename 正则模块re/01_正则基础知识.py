@@ -51,6 +51,33 @@ $     匹配字符串结尾
 
 '''
 
+'''
+一、模式串匹配
+前几天了解到正则语法和有穷自动机的等价性，因此特意来复习一下RE的基本用法（太久没用了，手生）。
+日常来说，正则表达式的主要方法是re.method()这样的模式串匹配，一共有四种常用方法：
+
+1、match
+re.match(pattern, string[, flags])  
+
+从首字母开始开始匹配，string如果包含pattern子串，则匹配成功，返回Match对象，失败则返回None，
+若要完全匹配，pattern要以$结尾。
+
+2、search
+re.search(pattern, string[, flags])  
+若string中包含pattern子串，则返回Match对象，否则返回None，注意，如果string中存在多个pattern子串，
+只返回第一个。
+
+3、findall
+re.findall(pattern, string[, flags])  
+返回string中所有与pattern相匹配的全部字串，返回形式为数组。
+
+4、finditer
+re.finditer(pattern, string[, flags])  
+返回string中所有与pattern相匹配的全部字串，返回形式为迭代器。
+
+'''
+
+
 import re
 
 pattern = "gujie1"  #校验规则,可以使string,或者是正则表达式
