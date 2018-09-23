@@ -1,18 +1,40 @@
-import zipfile
+# -*- coding: utf-8 -*-
+# python2 环境 执行
 
-# 默认模式r,读
-azip = zipfile.ZipFile('bb.zip')  # ['bb/', 'bb/aa.txt']
-# 返回所有文件夹和文件
-print(azip.namelist())
-# # 返回该zip的文件名
-print(azip.filename)
-#
-# # 压缩文件里bb文件夹下的aa.txt
-# azip_info = azip.getinfo('bb/aa.txt')
-# # 原来文件大小
-# print(azip_info.file_size)
-# # 压缩后大小
-# print(azip_info.compress_size)
-#
-# # 这样可以求得压缩率，保留小数点后两位
-# print('压缩率为{:.2f}'.format(azip_info.file_size/azip_info.compress_size))
+import zipfile, os
+folder = 'F:\\shuju\\aa\\'
+
+def un_zip(file_name):
+    """unzip zip file"""
+    print('file_name:{}'.format(os.path.join(folder,file_name)))
+    zip_file = zipfile.ZipFile(os.path.join(folder,file_name))
+    if os.path.isdir("G:\\data\\"):
+        pass
+    else:
+        os.mkdir( "G:\\data\\")
+    for names in zip_file.namelist():
+        # print(str(names.encode(),encoding='utf-8'))
+        zip_file.extract(names, "G:\\data\\")
+    zip_file.close()
+
+def main():
+    zip_file_list = os.listdir(folder)
+    print(zip_file_list)
+    for item in zip_file_list:
+        # print(type(item))
+        print(item.decode('gbk'))
+        # item = item.decode('gbk').encode('cp437')
+        print(item)
+        print(type(item))
+        un_zip(item)
+
+
+
+if __name__ == '__main__':
+    # main()
+    pass
+
+
+
+
+
