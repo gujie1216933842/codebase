@@ -53,7 +53,6 @@ def select_mysql(sql):
 
 if __name__ == "__main__":
 
-    ret = requests.get("http://47.97.165.75:9000/stock/szchangelist/")
     sql = "select change_date from sz_senior_stock_change_list  group  by change_date order by change_date desc"
     ret = select_mysql(sql)
     now = datetime.date.today().strftime("%Y-%m-%d")
